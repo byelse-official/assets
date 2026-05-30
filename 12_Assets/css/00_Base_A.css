@@ -1,0 +1,53 @@
+/* ==========================================================================
+   css/00_Base_A.css (High-End Base Forest)
+   🏮 바이엘스 마스터 스탠다드 A-레이어: 최고 존엄 럭셔리 본-화이트 및 가속 렌더링
+   - 전체 시스템 서체 렌더링을 앤티앨리어싱 가속하여 대기업급 질감으로 초고도화합니다.
+   ========================================================================== */
+
+/* 1. 디자인 시스템 토큰 및 명품 변수 정의 (787번 앤티크 골드 전환) */
+:root {
+    --brand-color-primary: #c5a880;   /* 바이엘스 시그니처 앤티크 골드로 전격 이관 */
+    --brand-color-accent: #d4af37;    /* 바이엘스 황금빛 골드 */
+    --bg-bone-white: #faf9f6;         /* 따뜻하고 은은한 상아빛 명품 배경 */
+    
+    --brand-font-main: 'Outfit', sans-serif;
+    --brand-font-sub: 'Noto Sans KR', sans-serif;
+}
+
+/* 2. 전역 초기화 및 브라우저 하드웨어 가속 렌더링 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* 폰트 렌더링 모바일/데스크탑 최고화 */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    font-family: var(--brand-font-sub);
+    background-color: var(--bg-bone-white);
+    color: #111111;
+    overflow-x: hidden;
+    line-height: 1.65; /* 명품 편집숍 표준 자간 및 행간 호흡 수축 */
+    letter-spacing: -0.04em; /* 극도의 밀도감을 제공하는 프리미엄 자간 */
+}
+
+/* 3. 명품 커스텀 스크롤바 디자인 (골드 아우라 스크롤바) */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-bone-white);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(197, 168, 128, 0.25); /* 골드 아크릴 썸 적용 */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--brand-color-primary); /* 골드 썸 호버 가속 */
+}
