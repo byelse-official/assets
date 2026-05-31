@@ -1,0 +1,134 @@
+/* ==========================================================================
+   css/03_Lab_C3.css (Minimal Badge & Process Overlay)
+   🏮 바이엘스 마스터 스탠다드 C3-레이어: 배지 정밀 미니멀화 및 공정 카드
+   - 배지의 조잡한 검정 테두리를 100% 거부하고 극도로 정제된 미니멀 데코로 개편합니다.
+   ========================================================================== */
+
+/* 1. 미니멀 명품 배지 수술 (Benchmark B 전역 상속 완공) */
+
+/* 2. 프로세스 공정 이미지 카드 오버레이 (.info-overlay-12) */
+.info-overlay-12 {
+    position: absolute;
+    top: 18%;
+    /* 사장님 어령: 기계와 인물 머리 윤곽에 전혀 걸치지 않는 상단 극강의 그늘막 영역인 top 18% 지점으로 완벽 상향 이동 */
+    transform: translateY(-50%);
+    /* 중앙 센터링 */
+    right: 40px;
+    /* 우측 명품 배치 */
+    left: auto;
+    /* 좌측 해제 */
+    width: 250px;
+    /* 우측 한정 레이아웃 */
+    padding: 0;
+    text-align: right;
+    /* 사장님 이미지 대칭: 완벽한 우측 정렬 가독성 확보 */
+    color: #ffffff;
+    z-index: 3;
+    /* 가상 레이어보다 최상위 부양 */
+}
+
+/* 3. 라이트 버전 미니멀 텍스처 */
+.card-num-light {
+    font-family: var(--brand-font-main);
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #c5a880;
+    /* 시그니처 앤티크 골드 통합 */
+    font-weight: 700;
+    display: block;
+    margin-bottom: 12px;
+}
+
+/* 4. [사장님 특명] 소문자 byelse 투명 아크릴 씰 복원 (좌측 하단 부양) */
+.premium-badge {
+    position: absolute;
+    bottom: 25px;
+    /* 3:4 프레임 하단 배치 */
+    left: 25px;
+    /* 사장님 캡쳐본의 절대 위치인 좌측 하단 수복 */
+    background: rgba(255, 255, 255, 0.12);
+    /* 고급스러운 그레이 투명 아크릴 질감 */
+    backdrop-filter: blur(10px);
+    /* 맑게 투과되는 유리 뒷배경 흐림 */
+    -webkit-backdrop-filter: blur(10px);
+    color: #ffffff;
+    font-size: 11px;
+    /* 캡쳐본에 대칭되는 최적 명도 글씨 크기 */
+    letter-spacing: 0.5px;
+    padding: 8px 18px;
+    /* 명품 부양감을 만드는 패딩 볼륨 */
+    font-weight: 500;
+    border-radius: 30px;
+    /* 라운드 캡슐 보존 */
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    /* 은은한 투명 액자 선 */
+    text-transform: none;
+    /* 대문자 오염 전면 박멸 및 소문자 byelse 완벽 수복 */
+    z-index: 3;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================================================
+   5. 3번 PROCESS 공정 카드 전용 3:4 종횡비 철통 보존 및 1.32배 물리 줌인 완치 수술
+   ========================================================================== */
+.section-process .img-wrap {
+    aspect-ratio: 3 / 4; /* [사장님 절대 헌법] 3:4 세로 프레임 100% 완전 보존 (윗 사진 건드림 원천 차단) */
+    overflow: hidden;
+    position: relative;
+    border: none;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+}
+
+.section-process .img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+/* [단독 격실 저격] 오직 공장 전경 이미지만 1.42배 강력 줌인 및 2차 충돌 방지 앵글 피팅 */
+.section-process .img-wrap img[src*="factory_asian"] {
+    transform: scale(1.42); /* [한방 완치] 1.42배 강력 줌인으로 전체 팽창 */
+    transform-origin: center center; /* [여백 참살 핵심] 기준점을 중앙으로 두어 좌우로 균등 팽창시켜 여유 면적 확보 */
+    object-position: -16% center; /* [한방 완치] 중앙 팽창 상태에서 -16% 앵글을 가해, 왼쪽 공백 누출은 0% 통제하며 우측 인물은 완벽 퇴장시키고 팔만 노출 완성 */
+}
+
+/* [사장님 특명] 우->좌 수평 시네마틱 그라데이션 장막 (사람은 밝게 살리고 우측 글자가 칼처럼 선명해지는 효과) */
+.section-process .img-wrap::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 65%;
+    /* 사람은 완벽하게 밝게 살리고, 우측 35% 영역만 그림자 포커싱 */
+    height: 100%;
+    background: linear-gradient(to left,
+            rgba(0, 0, 0, 0.85) 0%,
+            /* 우측 글씨 영역은 깊은 쉐도우 */
+            rgba(0, 0, 0, 0.4) 50%,
+            rgba(0, 0, 0, 0) 100%
+            /* 왼쪽 기계 및 사람 쪽으로 올수록 완벽한 투명 소멸 */
+        );
+    z-index: 2;
+    /* 이미지 위, 글자(z-index: 3) 아래 배치 */
+    pointer-events: none;
+}
+
+/* [사장님 특명] 브라우저 이미지 덮어쓰기 하드웨어 가속 버그를 영구 소멸시키는 최상위 실물 아크릴 액자 테두리 */
+.section-process .border-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(0, 0, 0, 0.45);
+    /* 100% 영롱하게 터져 나오는 초선명 고대비 액자 테두리 선 */
+    border-radius: 20px;
+    /* 모서리 곡률 정밀 매칭 */
+    pointer-events: none;
+    /* 사용자 마우스 이벤트 통과 */
+    z-index: 4;
+    /* 모든 이미지와 오버레이 텍스트보다 높게 두어 덮어쓰기 사전 원천 봉쇄 */
+    box-sizing: border-box;
+    /* 테두리가 경계 안쪽으로 렌더링되게 통제 */
+}
