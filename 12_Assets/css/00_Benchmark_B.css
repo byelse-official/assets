@@ -1,0 +1,50 @@
+/* ==========================================================================
+   css/00_Benchmark_B.css (Luxury Mask & Motion)
+   🏮 바이엘스 마스터 스탠다드 B-레이어: 760px 데스크탑 마스크 및 Reveal 스크롤 모션
+   - PC 정중앙 760px 마스크 가이드라인과 스크롤 렉 없는 스무스한 Reveal 모션을 완비합니다.
+   ========================================================================== */
+
+/* 1. 760px 데스크탑 명품 가이드라인 마스크 */
+.container {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 2. 스크롤 렉(Lag)이 0%에 수렴하는 하드웨어 가속형 Reveal 모션 */
+.reveal {
+    opacity: 0;
+    transform: translateY(45px);
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
+}
+
+/* 3. Reveal 애니메이션이 스크롤을 통해 트리거되어 활성화되는 시점 */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 4. 상세페이지 전역 공통 럭셔리 타이틀 배지 (787번 골든 골드 태그) */
+.section-tag {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 5px; /* 더 넓고 우아하게 연출한 자간 */
+    color: #c5a880; /* 787번의 맑고 우아한 앤티크 골드 톤 */
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    text-indent: 5px; /* 자간 중앙 대칭 보정 */
+    font-weight: 600;
+    text-align: center;
+    border: none !important;
+    background: none;
+    padding: 0;
+}
+
+/* 5. 상세페이지 전역 카피라이팅 볼드 앤티크 골드 수복 엔진 */
+strong {
+    font-weight: 700;
+    color: #c5a880 !important; /* W3C 무오염: 빨강 테러를 전역 차단하고 골드로 일체화 */
+    text-shadow: 0 1px 4px rgba(197, 168, 128, 0.2); /* 은은하게 피어나는 입체 발광 */
+}
