@@ -1,0 +1,96 @@
+/* ==========================================================================
+   css/01_Hook_C1.css (Artistic Hook Frame)
+   🏮 바이엘스 마스터 스탠다드 C1-레이어: 훅 비주얼 및 타이포 텍스처
+   - 본문 밋밋한 글꼴을 Outfit 300과 시그니처 레드 강세 텍스처로 대수술합니다.
+   ========================================================================== */
+
+/* 1. 공용 구역 섹션 프레임 */
+.section {
+    padding: 70px 40px; /* 세로 여백을 미세하게 늘려 럭셔리한 숨 구멍 확보 */
+    background-color: #faf9f6; /* 본-화이트 매칭 유지 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* 2. 정갈한 배지 및 태그 가이드라인 (Benchmark B에 공통 통합 완료) */
+
+/* 3. 타이포 리듬과 카피라이팅 볼륨 */
+.section-title {
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* 글자 간 세로 여백 호흡 개선 */
+}
+
+.section-title .t-top {
+    font-size: 16px;
+    font-weight: 300;
+    color: #777777;
+    letter-spacing: -0.5px;
+}
+
+.section-title .t-bot {
+    font-size: 27px; /* 미세 볼륨업으로 가독성 최적화 */
+    font-weight: 700;
+    color: #111111;
+    letter-spacing: -0.5px; /* 787번 표준 자간 정합 */
+    line-height: 1.4;
+}
+
+/* 4. 명품 래핑 이미지 프레임 (사장님 특명: 1페이지 제외 전역 3:4 종횡비 탑재) */
+.img-wrap {
+    width: 100%;
+    aspect-ratio: 3 / 4; /* 사장님 절대 지침: 1페이지를 제외한 전역 3:4 세로 명품 룩북 비율 완비 */
+    margin-bottom: 35px;
+    border-radius: 20px; /* 사장님 절대 지침: 테두리 곡률 20px 패밀리 룩 동기화 및 유지 */
+    overflow: hidden;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.06); /* 부드러운 투명 럭셔리 섀도우 극대화 */
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    position: relative; /* 내부 오버레이 배치 안정성 확보 */
+}
+
+.img-wrap img {
+    width: 100%;
+    height: 100%; /* 부모의 3:4 비율을 100% 장악 */
+    display: block;
+    object-fit: cover; /* 가로세로 왜곡 없이 우아하게 세로 프레임 크롭 */
+}
+
+/* 5. 미학적 서브 훅 및 볼드/레드 하이브리드 강세 강조 */
+.subtle-hook {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.subtle-hook .t-top-small {
+    font-size: 14px;
+    font-weight: 300;
+    color: #888888;
+    letter-spacing: -0.5px;
+}
+
+.subtle-hook .t-bot-small {
+    font-size: 16px;
+    font-weight: 300;
+    color: #222222;
+    letter-spacing: -0.5px;
+    line-height: 1.8;
+}
+
+/* 시그니처 텍스처 볼드 변주 (787번 앤티크 골드 전환) */
+.subtle-hook .t-bot-small strong,
+.section-title .t-bot strong {
+    font-weight: 700;
+    color: #c5a880; /* 바이엘스 명품 브랜드 시그니처 앤티크 골드 톤 */
+    text-shadow: 0 1px 4px rgba(197, 168, 128, 0.15);
+}
+
+/* 레깅스 영단어 오염 구제용 (앤티크 골드 필터 적용) */
+.text-red {
+    color: #c5a880; /* 빨간색 오염을 차단하고 골드로 보정 */
+    font-weight: 700;
+}
