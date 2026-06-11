@@ -1,0 +1,28 @@
+/* ==========================================================
+   00_Master Engine v10 (Pristine 23-Line Dual-Safety Loader)
+   ========================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Outfit:wght@300;400;600;700;800&display=swap');
+/* 1. 글로벌 공통 A/B Layer (숲) */
+@import "css/00_Base_A.css";
+@import "css/00_Benchmark_B.css";
+
+/* 2. 에디터 세부 구역별 C Layer (나무) */
+@import "css/00_Hero_C0.css";
+@import "css/01_Hook_C1.css";
+@import "css/02_Fabric_C2.css";
+@import "css/03_Lab_C3_Fabric.css";
+@import "css/03_Lab_C3_Factory.css";
+@import "css/04_Trust_C4.css";
+@import "css/05_Safety_C5.css";
+@import "css/06_Lab_C6.css";
+@import "css/07_Review_C7.css";
+@import "css/08_Care_C8.css";
+@import "css/09_Info_C9.css";
+@import "css/10_Footer_C10.css";
+
+/* 3. 전역 레이아웃 리셋 (W3C 스펙 준수를 위해 하단 배치) */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
