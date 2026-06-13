@@ -658,7 +658,7 @@ body.theme-style-b .page-section:first-child .story-footer .highlight-gold {
         font-size: 17px; /* 27px -> 19px -> 17px 추가 축소 (가장 긴 'byelse Precision Lab의 정밀 공정' 1줄 확보) */
         line-height: 1.3;
         letter-spacing: -0.8px; /* 자간 극한 압축 */
-        white-space: nowrap; /* 사장님 지침 완수: 모든 섹션 메인 제목 무조건 1줄 강제 고정 */
+        word-break: keep-all; /* 모바일 반응형 수호: 영문 등 긴 텍스트 자연스러운 줄바꿈 허용 */
     }
 }
 
@@ -826,7 +826,7 @@ body .container .glass-grid .glass-card:hover {
     body .container .spec-table tr td.spec-label {
         text-align: center;
         word-break: keep-all;
-        white-space: nowrap; /* 원단 혼용 강제 1줄 유지 */
+        /* 모바일 반응형 수호: white-space: nowrap 삭제하여 줄바꿈 허용 */
         width: 30%; /* 라벨 영역 살짝 축소하여 값 영역 확보 */
         font-size: 14.5px; /* 메인 제목이므로 크기 유지/확장 */
         font-weight: 700;
@@ -1219,7 +1219,7 @@ body .container .partnership-frame .partnership-core-banner {
 body .container .partnership-frame .partnership-core-banner .core-banner-image {
     width: 100%;
     height: 100%;
-    background-image: url('https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/brand_certification.jpg?v=20260614_013727');
+    background-image: url('https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/brand_certification.jpg?v=20260614_014059');
     background-repeat: no-repeat;
     background-size: 100% 100%; /* [오염물질 완벽 소각] 135% 억지 줌인 폐기! 사장님께서 완벽하게 잘라주셨으므로 틀 안에 100% 꽉 채움! */
     background-position: center center; /* [오염물질 완벽 소각] 63.5% 억지 렌즈 이동 폐기! 정중앙 고정! */
@@ -1254,7 +1254,7 @@ body .container .sr-only {
         letter-spacing: -0.5px; /* 극한의 자간 압축으로 가로폭 방어 */
         padding-right: 70px; /* 배지 안전거리 최소화하여 텍스트 영역 최대한 확보 */
         word-break: keep-all;
-        white-space: nowrap; /* 2줄 바꿈 절대 금지 (1줄 강제 고정) */
+        /* 모바일 반응형 수호: white-space: nowrap 삭제하여 줄바꿈 허용 */
     }
 
     body .container .glass-card .card-desc {
@@ -2083,7 +2083,7 @@ body {
 
         <!-- 0. HERO (Master Square & Mystic Gradient) -->
         <section class="hero active">
-            <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10123_CK-365_bootcut_leggings/A_01_hero.jpg?v=20260614_013727" alt="Hero" class="hero-img">
+            <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10123_CK-365_bootcut_leggings/A_01_hero.jpg?v=20260614_014059" alt="Hero" class="hero-img">
             <div class="hero-overlay-12"></div>
             <div class="hero-content reveal active">
                 <div class="hero-brand">byelse</div>
@@ -2099,7 +2099,7 @@ body {
                 <span class="t-bot">Chosen by insight, <strong>overwhelming silhouette</strong></span>
             </div>
             <div class="img-wrap">
-                <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10123_CK-365_bootcut_leggings/A_02_seamless.jpg?v=20260614_013727" alt="Perfect Seamless Y-Zone">
+                <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10123_CK-365_bootcut_leggings/A_02_seamless.jpg?v=20260614_014059" alt="Perfect Seamless Y-Zone">
             </div>
             <div class="subtle-hook reveal active">
                 <span class="t-top-small">Born from an uncompromising philosophy of quality</span>
@@ -2155,7 +2155,7 @@ body {
                 <span class="t-bot">Value of a masterpiece<br>created by a <strong>sophisticated process</strong></span>
             </div>
             <div class="img-wrap">
-                <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/premium_black_fabric_macro.jpg?v=20260614_013727" alt="Premium Fabric">
+                <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/premium_black_fabric_macro.jpg?v=20260614_014059" alt="Premium Fabric">
             </div>
         </section>
 
@@ -2166,7 +2166,7 @@ body {
                 <span class="t-bot">overwhelming <strong>difference in detail</strong> is made.</span>
             </div>
             <div id="factory-img-wrap" class="img-wrap">
-                <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/factory_asian.jpg?v=20260614_013727" alt="Factory Process">
+                <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/factory_asian.jpg?v=20260614_014059" alt="Factory Process">
                 <div class="info-overlay-12">
                     <span class="card-num-light">Precision Process 05</span>
                     <div class="card-title">Computer <strong>Precision Pattern Cutting</strong></div>
@@ -2185,12 +2185,12 @@ body {
             </div>
             <div class="glass-grid">
                 <div class="glass-card">
-                    <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/test_report_safety.jpg?v=20260614_013727" alt="안전성 인증"
+                    <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/test_report_safety.jpg?v=20260614_014059" alt="안전성 인증"
                         class="full-img">
                     <p class="card-desc-center">National certified agency safety verification completed</p>
                 </div>
                 <div class="glass-card">
-                    <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/test_report_hazardous.jpg?v=20260614_013727" alt="Test Report"
+                    <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/test_report_hazardous.jpg?v=20260614_014059" alt="Test Report"
                         class="full-img">
                     <p class="card-desc-center">Judged as no harmful substances detected</p>
                 </div>
@@ -2263,7 +2263,7 @@ body {
                 <div class="lab-video-unit">
                     <div class="img-wrap">
                         <video autoplay loop muted playsinline>
-                            <source src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/process_fabric.mp4?v=20260614_013727" type="video/mp4">
+                            <source src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/process_fabric.mp4?v=20260614_014059" type="video/mp4">
                         </video>
                     </div>
                     <p class="card-desc-center">High-density knitting process</p>
@@ -2271,7 +2271,7 @@ body {
                 <div class="lab-video-unit">
                     <div class="img-wrap">
                         <video autoplay loop muted playsinline>
-                            <source src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/process_sewing.mp4?v=20260614_013727" type="video/mp4">
+                            <source src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/process_sewing.mp4?v=20260614_014059" type="video/mp4">
                         </video>
                     </div>
                     <p class="card-desc-center">Seamless finishing treatment</p>
