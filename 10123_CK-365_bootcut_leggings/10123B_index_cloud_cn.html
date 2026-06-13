@@ -123,8 +123,7 @@ body {
 
     /* 섹션 태그 → 중앙 (피라미드 꼭대기 날카롭게 수축) */
     body .container .section-tag {
-        letter-spacing: 0.5px;
-        /* 2px에서 0.5px로 축소하여 t-top보다 무조건 짧게 보이도록 유도 */
+        letter-spacing: 0.5px; /* 2px에서 0.5px로 축소하여 t-top보다 무조건 짧게 보이도록 유도 */
         text-align: center;
     }
 
@@ -155,15 +154,12 @@ body {
         content: " ";
     }
 
-    /* [사장님 지침 완수] 모바일에서 페이지 간격(줄 위아래 여백) 대폭 축소 
-       ※ [5001_Incident_Banned_CSS_Tags.md 참조] PC 여백 세팅 우선순위를 모바일에서만 확실하게 
-       덮어쓰기 위해 제한적으로 !important 외부 방어막을 허용합니다. */
+    /* [사장님 지침 완수] 모바일에서 페이지 간격(줄 위아래 여백) 대폭 축소 */
     body .section,
     body .review-section {
         padding-top: 40px !important;
         padding-bottom: 40px !important;
     }
-
     body section.section:first-of-type,
     body .hero+.section {
         margin-top: 45px !important;
@@ -658,7 +654,7 @@ body.theme-style-b .page-section:first-child .story-footer .highlight-gold {
         font-size: 17px; /* 27px -> 19px -> 17px 추가 축소 (가장 긴 'byelse Precision Lab의 정밀 공정' 1줄 확보) */
         line-height: 1.3;
         letter-spacing: -0.8px; /* 자간 극한 압축 */
-        word-break: keep-all; /* 모바일 반응형 수호: 영문 등 긴 텍스트 자연스러운 줄바꿈 허용 */
+        white-space: nowrap; /* 사장님 지침 완수: 모든 섹션 메인 제목 무조건 1줄 강제 고정 */
     }
 }
 
@@ -718,10 +714,9 @@ body.theme-style-b .grid-card .card-desc {
 .spec-container {
     width: 100%;
     margin-bottom: 50px;
-    /* 사장님 지침: 앞의 사진(0.95)처럼 너무 새까맣게 진하게 하지 말고, 뒤의 사진(0.85)처럼 투명하고 고급스럽게 통일 */
-    background: rgba(17, 17, 17, 0.85); 
-    backdrop-filter: blur(25px); /* 두 번째 카드와 동일한 블러 수치 적용 */
-    -webkit-backdrop-filter: blur(25px);
+    background: rgba(17, 17, 17, 0.95); /* 시선을 장악하는 럭셔리 딥 차콜 아크릴 */
+    backdrop-filter: blur(35px); /* 787번 최정점 가속 */
+    -webkit-backdrop-filter: blur(35px);
     border-radius: 20px; /* 메인 히어로 24px 패밀리 룩에 맞춘 모서리 둥글기 확장 */
     padding: 22px 30px; /* 내부 가독성을 위한 넓고 장엄한 여백 피팅 */
     box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15); /* 묵직하게 가라앉으며 떠오르는 입체 섀도우 */
@@ -826,7 +821,7 @@ body .container .glass-grid .glass-card:hover {
     body .container .spec-table tr td.spec-label {
         text-align: center;
         word-break: keep-all;
-        /* 모바일 반응형 수호: white-space: nowrap 삭제하여 줄바꿈 허용 */
+        white-space: nowrap; /* 원단 혼용 강제 1줄 유지 */
         width: 30%; /* 라벨 영역 살짝 축소하여 값 영역 확보 */
         font-size: 14.5px; /* 메인 제목이므로 크기 유지/확장 */
         font-weight: 700;
@@ -1219,7 +1214,7 @@ body .container .partnership-frame .partnership-core-banner {
 body .container .partnership-frame .partnership-core-banner .core-banner-image {
     width: 100%;
     height: 100%;
-    background-image: url('https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/brand_certification.jpg?v=20260614_014438');
+    background-image: url('https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/brand_certification.jpg?v=20260614_015355');
     background-repeat: no-repeat;
     background-size: 100% 100%; /* [오염물질 완벽 소각] 135% 억지 줌인 폐기! 사장님께서 완벽하게 잘라주셨으므로 틀 안에 100% 꽉 채움! */
     background-position: center center; /* [오염물질 완벽 소각] 63.5% 억지 렌즈 이동 폐기! 정중앙 고정! */
@@ -1254,7 +1249,7 @@ body .container .sr-only {
         letter-spacing: -0.5px; /* 극한의 자간 압축으로 가로폭 방어 */
         padding-right: 70px; /* 배지 안전거리 최소화하여 텍스트 영역 최대한 확보 */
         word-break: keep-all;
-        /* 모바일 반응형 수호: white-space: nowrap 삭제하여 줄바꿈 허용 */
+        white-space: nowrap; /* 2줄 바꿈 절대 금지 (1줄 강제 고정) */
     }
 
     body .container .glass-card .card-desc {
@@ -2092,7 +2087,7 @@ body {
                 <span class="t-bot">为什么总是要忍受不适？</span>
             </div>
             <div class="main-img-box">
-                <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10123_CK-365_bootcut_leggings/B_01_hero.jpg?v=20260614_014438" alt="byelse 01">
+                <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10123_CK-365_bootcut_leggings/B_01_hero.jpg?v=20260614_015355" alt="byelse 01">
                 <div class="hero-overlay-12"></div>
             </div>
             <div class="story-footer">
@@ -2120,7 +2115,7 @@ body {
                 </div>
             </div>
             <div class="img-wrap">
-                <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10123_CK-365_bootcut_leggings/B_02_seamless.jpg?v=20260614_014438" alt="byelse 03">
+                <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10123_CK-365_bootcut_leggings/B_02_seamless.jpg?v=20260614_015355" alt="byelse 03">
             </div>
             <div class="subtle-hook">
                 <span class="t-top-small">经过严格的试穿测试</span>
@@ -2176,7 +2171,7 @@ body {
                 <span class="t-bot"><strong>精密工艺创造的名品价值</strong></span>
             </div>
             <div class="img-wrap">
-                <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/premium_black_fabric_macro.jpg?v=20260614_014438" alt="Premium Fabric">
+                <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/premium_black_fabric_macro.jpg?v=20260614_015355" alt="Premium Fabric">
             </div>
         </section>
 
@@ -2187,7 +2182,7 @@ body {
                 <span class="t-bot"><strong>创造压倒性的细节差异。</strong></span>
             </div>
             <div id="factory-img-wrap" class="img-wrap">
-                <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/factory_asian.jpg?v=20260614_014438" alt="Factory Process">
+                <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/factory_asian.jpg?v=20260614_015355" alt="Factory Process">
                 <div class="info-overlay-12">
                     <span class="card-num-light">精密工艺 05</span>
                     <div class="card-title"><strong>电脑 精密图案剪裁</strong></div>
@@ -2206,12 +2201,12 @@ body {
             </div>
             <div class="glass-grid">
                 <div class="glass-card">
-                    <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/test_report_safety.jpg?v=20260614_014438" alt="안전성 인증"
+                    <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/test_report_safety.jpg?v=20260614_015355" alt="안전성 인증"
                         class="full-img">
                     <p class="card-desc-center">国家认证机构安全验证完毕</p>
                 </div>
                 <div class="glass-card">
-                    <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/test_report_hazardous.jpg?v=20260614_014438" alt="Test Report"
+                    <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/test_report_hazardous.jpg?v=20260614_015355" alt="Test Report"
                         class="full-img">
                     <p class="card-desc-center">判定未检测出有害物质</p>
                 </div>
@@ -2284,7 +2279,7 @@ body {
                 <div class="lab-video-unit">
                     <div class="img-wrap">
                         <video autoplay loop muted playsinline>
-                            <source src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/process_fabric.mp4?v=20260614_014438" type="video/mp4">
+                            <source src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/process_fabric.mp4?v=20260614_015355" type="video/mp4">
                         </video>
                     </div>
                     <p class="card-desc-center">高密度编织工艺</p>
@@ -2292,7 +2287,7 @@ body {
                 <div class="lab-video-unit">
                     <div class="img-wrap">
                         <video autoplay loop muted playsinline>
-                            <source src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/process_sewing.mp4?v=20260614_014438" type="video/mp4">
+                            <source src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/process_sewing.mp4?v=20260614_015355" type="video/mp4">
                         </video>
                     </div>
                     <p class="card-desc-center">无缝整理工艺</p>
@@ -2493,14 +2488,14 @@ body {
                 <span class="t-bot">以本质价值证明的价值</span>
             </div>
             <div class="main-img-box">
-                <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10123_CK-365_bootcut_leggings/B_03_finale.jpg?v=20260614_014438" alt="byelse 브랜드 피날레">
+                <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10123_CK-365_bootcut_leggings/B_03_finale.jpg?v=20260614_015355" alt="byelse 브랜드 피날레">
             </div>
             <div class="story-footer">
                 <span class="sub-txt">坚持本质，而不是复制华丽的视觉效果</span>
                 <span class="main-txt">实现以本质价值证明的价值，而不是盲目追求流行</span>
             </div>
             <div class="media-box logo-media-box">
-                <img src="https://raw.githubusercontent.com/byelse-official/assets/main/00_Logo/logo_black_master.png?v=20260614_014438" alt="byelse 로고" class="footer-logo">
+                <img src="https://raw.githubusercontent.com/byelse-official/assets/main/00_Logo/logo_black_master.png?v=20260614_015355" alt="byelse 로고" class="footer-logo">
             </div>
         </div>
 
