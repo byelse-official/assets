@@ -1,0 +1,2498 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style id="byelse-master-design">
+/* ==========================================================
+   00_Master Engine v10 (Pristine 23-Line Dual-Safety Loader)
+   ※ [5001_Incident_Banned_CSS_Tags.md 참조]
+   ※ 원본 훼손 방지를 위해 이 코어 파일 및 C레이어에서는 !important를 엄격히 금지합니다.
+   ========================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Outfit:wght@300;400;600;700;800&display=swap');
+/* 1. 글로벌 공통 A/B Layer (숲) */
+/* --- Inlined: css/00_Base_A.css --- */
+/* ==========================================================================
+   css/00_Base_A.css (High-End Base Forest)
+   ?룼 諛붿씠?섏뒪 留덉뒪???ㅽ깲?ㅻ뱶 A-?덉씠?? 理쒓퀬 議댁뾼 ??뀛由?蹂??붿씠??諛?媛???뚮뜑留?   - ?꾩껜 ?쒖뒪???쒖껜 ?뚮뜑留곸쓣 ?ㅽ떚?⑤━?댁떛 媛?랁븯???湲곗뾽湲?吏덇컧?쇰줈 珥덇퀬?꾪솕?⑸땲??
+   ========================================================================== */
+
+/* 1. ?붿옄???쒖뒪???좏겙 諛?紐낇뭹 蹂???뺤쓽 (787踰??ㅽ떚??怨⑤뱶 ?꾪솚) */
+:root {
+    --brand-color-primary: #c5a880;
+    /* 諛붿씠?섏뒪 ?쒓렇?덉쿂 ?ㅽ떚??怨⑤뱶濡??꾧꺽 ?닿? */
+    --brand-color-accent: #d4af37;
+    /* 諛붿씠?섏뒪 ?⑷툑鍮?怨⑤뱶 */
+    --bg-bone-white: #faf9f6;
+    /* ?곕쑜?섍퀬 ?????곸븘鍮?紐낇뭹 諛곌꼍 */
+
+    --brand-font-main: 'Outfit', sans-serif;
+    --brand-font-sub: 'Noto Sans KR', sans-serif;
+}
+
+/* 2. ?꾩뿭 珥덇린??諛?釉뚮씪?곗? ?섎뱶?⑥뼱 媛???뚮뜑留?*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* ?고듃 ?뚮뜑留?紐⑤컮???곗뒪?ы깙 理쒓퀬??*/
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    font-family: var(--brand-font-sub);
+    background-color: var(--bg-bone-white);
+    color: #111111;
+    overflow-x: hidden;
+    line-height: 1.65;
+    /* 紐낇뭹 ?몄쭛???쒖? ?먭컙 諛??됯컙 ?명씉 ?섏텞 */
+    letter-spacing: -0.04em;
+    /* 洹밸룄??諛?꾧컧???쒓났?섎뒗 ?꾨━誘몄뾼 ?먭컙 */
+}
+
+/* 3. 紐낇뭹 而ㅼ뒪? ?ㅽ겕濡ㅻ컮 ?붿옄??(怨⑤뱶 ?꾩슦???ㅽ겕濡ㅻ컮) */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-bone-white);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(197, 168, 128, 0.25);
+    /* 怨⑤뱶 ?꾪겕由????곸슜 */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--brand-color-primary);
+    /* 怨⑤뱶 ???몃쾭 媛??*/
+}
+
+/* ==========================================================================
+   4. 紐⑤컮????댄룷洹몃옒???뺣젹 諛⑹뼱 ?꾨줈?좎퐳 (?쇰씪誘몃뱶 蹂댄샇留?
+   - 媛濡???씠 醫곸? 紐⑤컮???붾㈃?먯꽌 湲?臾몄옣?ㅼ쓽 ?⑥뼱媛 湲고삎?곸쑝濡?履쇨컻吏嫄곕굹
+   - 遺덇퇋移숉븯寃?媛쒗뻾?섏뼱 ?꾨쫫?ㅼ슫 ??궪媛곹삎/?쇰씪誘몃뱶 ?移?씠 臾대꼫吏??李몄궗瑜?諛뺣㈇?⑸땲??
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+
+    /* [PC ?숈씪] ?뱀뀡 ?곷떒 ?쒕ぉ ?곸뿭 (?대?吏 ??怨듦컙) ??以묒븰 ?쇰씪誘몃뱶 ?좎? */
+    body .container .section-title,
+    body .container .section-title span {
+        word-break: keep-all;
+        overflow-wrap: break-word;
+        text-align: center;
+    }
+
+
+
+    /* ?덉뼱濡??ㅻ쾭?덉씠 ??댄룷 (1踰??대?吏) ??醫뚯륫 ?좎? */
+    body .container .hero-title,
+    body .container .hero-brand {
+        text-align: left;
+        word-break: keep-all;
+    }
+
+    /* 湲?섏뒪 移대뱶 諛?由щ럭쨌耳???대? 蹂몃Ц ??醫뚯륫 ?좎? (理쒖쥌 吏移? */
+    body .container .glass-card,
+    body .container .glass-card .card-num,
+    body .container .glass-card .card-title,
+    body .container .review-author,
+    body .container .care-desc {
+        text-align: left;
+        word-break: keep-all;
+        overflow-wrap: break-word;
+    }
+
+
+
+    /* ?쑣룸퀎??二쇱꽍 ??醫뚯륫 (?ㅽ럺 ?뚯씠釉??쒖쇅) */
+    body .container .info-table-footer td,
+    body .container .card-desc-pad {
+        text-align: left;
+        word-break: keep-all;
+        overflow-wrap: break-word;
+    }
+
+
+
+    /* ?뱀뀡 ?쒓렇 ??以묒븰 (?쇰씪誘몃뱶 瑗??湲??좎뭅濡?쾶 ?섏텞) */
+    body .container .section-tag {
+        letter-spacing: 0.5px;
+        /* 2px?먯꽌 0.5px濡?異뺤냼?섏뿬 t-top蹂대떎 臾댁“嫄?吏㏐쾶 蹂댁씠?꾨줉 ?좊룄 */
+        text-align: center;
+    }
+
+    /* 怨듭젙 ?대?吏 ?ㅻ쾭?덉씠 移대뱶 (3, 4踰??대?吏) ??醫뚯륫 ?좊┝ ?좎? */
+    body .container #factory-img-wrap .info-overlay-12 {
+        top: 25%;
+        right: 0;
+        left: 0;
+        width: 90%;
+        margin: 0;
+        text-align: left;
+        transform: translateY(-50%);
+    }
+
+    body .container #factory-img-wrap .info-overlay-12 .card-title {
+        text-align: left;
+        word-break: keep-all;
+        margin-bottom: 10px;
+    }
+
+
+
+    /* 紐⑤컮?쇱뿉?쒕뒗 PC??br ?쒓렇 媛쒗뻾 ?댁젣 */
+    body .container .section-title br,
+    body .container .hero-title br,
+    body .container .subtle-hook br {
+        display: inline;
+        content: " ";
+    }
+
+    /* [?ъ옣??吏移??꾩닔] 紐⑤컮?쇱뿉???섏씠吏 媛꾧꺽(以??꾩븘???щ갚) ???異뺤냼 
+       ??[5001_Incident_Banned_CSS_Tags.md 李몄“] PC ?щ갚 ?명똿 ?곗꽑?쒖쐞瑜?紐⑤컮?쇱뿉?쒕쭔 ?뺤떎?섍쾶 
+       ??뼱?곌린 ?꾪빐 ?쒗븳?곸쑝濡?!important ?몃? 諛⑹뼱留됱쓣 ?덉슜?⑸땲?? */
+    body .section,
+    body .review-section {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+    }
+
+    body section.section:first-of-type,
+    body .hero+.section {
+        margin-top: 45px !important;
+        padding-top: 40px !important;
+    }
+}
+
+
+
+
+/* ==========================================================================
+   5. [?ъ옣???덈? ?뚮쾿 ?밸챸 ?꾧났] ?ㅽ넗???꾩뿭 ?뱀뀡(?섏씠吏) 1~2mm ?????ㅽ겕 ?곸븘鍮?留덉씠?щ줈 ?ㅼ꽑 ?붾컮?대뜑 (0.00% ?ㅼ뿼???꾨━!)
+   - 諛뗫컠?섍퀬 ?됲룊?섍쾶 ?댁뼱???ㅽ겕濡???由щ뵫 ?쇰줈瑜?二쇰뜕 ?꾩씠蹂대━ 諛뷀깢諛곌꼍??   - ?섏씠吏? ?섏씠吏 ?ъ씠留덈떎 1.5px??湲고뭹 ?덈뒗 ?ㅽ겕 ?곸븘鍮??ㅼ꽑?쇰줈 ?묐삊 紐낇솗???딆뼱二쇱뼱
+   - ??留됲엳??洹뱀긽??媛?낆꽦怨???뀛由ы븳 ?곸꽭?섏씠吏 ?щ∼ 洹쒓꺽(荑좏뙜/?ㅼ씠踰? ?⑷툑 留덉쭊???섎┰?⑸땲??
+   ========================================================================== */
+body .section,
+body .review-section {
+    position: relative;
+    border-top: 1.5px solid #d2cbb8;
+    /* ?섏씠吏? ?섏씠吏 寃쎄퀎???ㅽ겕 ?곸븘鍮?移쇱꽑 */
+    padding-top: 80px;
+    /* 寃쎄퀎 移쇱꽑 異붽????곕Ⅸ ?щ갚 80px ?섏텞 ?ㅼ씠?댄듃 */
+    padding-bottom: 80px;
+    box-sizing: border-box;
+    box-shadow:
+        inset 0 15px 30px rgba(0, 0, 0, 0.015),
+        0 -10px 25px rgba(0, 0, 0, 0.01);
+    /* 寃쎄퀎???꾩븘?섎줈 源딆씠媛먯쓣 二쇱뼱 ?섏씠吏媛 ?곹긽 ?묓엳硫??대━??怨좉툒?ㅻ윭???뚭컖 ?낆껜 ??꾩슦 ??*/
+}
+
+/* [?ъ옣??泥쒖옱???꾪궎?띿쿂 ?꾩튂] 蹂대뜑 怨좎갑 踰뺤튃??諛붽묑 留덉쭊(Margin)?쇰줈 ?뺤꽍 寃⑺뙆!
+   - ?ㅼ꽑 ?먯껜媛 2?섏씠吏 癒몃━? ?④퍡 ?꾨옒濡?90px 吏湲뗭씠 ?대젮?됱븘 ?꾨꼍???뺢??대뜲 ?⑦넻 ?섎┰! */
+body section.section:first-of-type,
+body .hero+.section {
+    margin-top: 90px;
+    /* ?ㅼ꽑 ?먯껜瑜??꾨옒濡????⑥뼱?몃젮 二쇰뒗 湲곗쟻??諛붽묑 ?щ갚! */
+    padding-top: 80px;
+    /* ???꾨옒 蹂몃Ц ?щ갚???⑥젙?섍쾶 80px 肄ㅽ뙥???듭씪! */
+}
+
+/* [?ъ옣???밸챸 ?꾧났] 湲濡쒕쾶 ??댄룷洹몃옒???꾩뼱?곌린 ?됰컮轅?媛뺤젣 洹쒖튃 (湲??以묎컙 ?섎┝ ?먯쿇 諛뺣㈇!) */
+h1,
+h2,
+h3,
+.section-title,
+.hero-title,
+.t-top,
+.t-bot,
+.review-text,
+p,
+strong,
+.card-desc,
+.card-title,
+td {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+/* --- Inlined: css/00_Benchmark_B.css --- */
+/* ==========================================================================
+   css/00_Benchmark_B.css (Luxury Mask & Motion)
+   ?룼 諛붿씠?섏뒪 留덉뒪???ㅽ깲?ㅻ뱶 B-?덉씠?? 760px ?곗뒪?ы깙 留덉뒪??諛?Reveal ?ㅽ겕濡?紐⑥뀡
+   - PC ?뺤쨷??760px 留덉뒪??媛?대뱶?쇱씤怨??ㅽ겕濡????녿뒗 ?ㅻТ?ㅽ븳 Reveal 紐⑥뀡???꾨퉬?⑸땲??
+   ========================================================================== */
+
+/* 1. 760px ?곗뒪?ы깙 紐낇뭹 媛?대뱶?쇱씤 留덉뒪??*/
+.container {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 2. ?ㅽ겕濡???Lag)??0%???섎졃?섎뒗 ?섎뱶?⑥뼱 媛?랁삎 Reveal 紐⑥뀡 */
+.reveal {
+    opacity: 0;
+    transform: translateY(45px);
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
+}
+
+/* 3. Reveal ?좊땲硫붿씠?섏씠 ?ㅽ겕濡ㅼ쓣 ?듯빐 ?몃━嫄곕릺???쒖꽦?붾릺???쒖젏 */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 4. ?곸꽭?섏씠吏 ?꾩뿭 怨듯넻 ??뀛由???댄? 諛곗? (787踰?怨⑤뱺 怨⑤뱶 ?쒓렇) */
+body .container .section-tag {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 5px; /* ???볤퀬 ?곗븘?섍쾶 ?곗텧???먭컙 */
+    color: #c5a880; /* 787踰덉쓽 留묎퀬 ?곗븘???ㅽ떚??怨⑤뱶 ??*/
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    text-indent: 5px; /* ?먭컙 以묒븰 ?移?蹂댁젙 */
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+/* 5. ?곸꽭?섏씠吏 ?꾩뿭 移댄뵾?쇱씠??蹂쇰뱶 ?ㅽ떚??怨⑤뱶 ?섎났 ?붿쭊 */
+body .container strong {
+    font-weight: 700;
+    color: #c5a880; /* W3C 臾댁삤?? 鍮④컯 ?뚮윭瑜??꾩뿭 李⑤떒?섍퀬 怨⑤뱶濡??쇱껜??*/
+    text-shadow: 0 1px 4px rgba(197, 168, 128, 0.2); /* ???섍쾶 ?쇱뼱?섎뒗 ?낆껜 諛쒓킅 */
+}
+
+@media screen and (max-width: 768px) {
+    body .container .section-tag {
+        margin-bottom: 3px; /* 紐⑤컮?쇱뿉???쒓렇? ??댄? ?ъ씠??嫄곕???媛꾧꺽 異붽? ?뺤텞 */
+    }
+}
+
+
+/* 2. ?먮뵒???몃? 援ъ뿭蹂?C Layer (?섎Т) */
+
+
+/* 2. 에디터 세부 구역별 C Layer (나무) */
+/* --- Inlined: css/00_Hero_C0.css --- */
+/* ==========================================================================
+   css/00_Hero_C0.css (Artistic Hero Frame)
+   ?룼 諛붿씠?섏뒪 留덉뒪???ㅽ깲?ㅻ뱶 C0-?덉씠?? ?덉뼱濡?鍮꾩＜??諛?誘몄뒪???ㅻ쾭?덉씠
+   - 12-pro_hero ?대?吏????뀛由??섑븨 諛?媛먭컖?곸씤 ?꾪겕由???댄룷瑜??대떦?⑸땲??
+   ========================================================================== */
+
+/* 1. ?덉뼱濡?硫붿씤 ?뱀뀡 ?꾨젅??(蹂명솕?댄듃 諛뷀깢 ?꾩뿉 遺?좏븯???섏씠?붾뱶 ?≪옄 ?? */
+.hero {
+    position: relative;
+    width: calc(100% - 80px); /* 2?섏씠吏 Hook??醫뚯슦 ?⑤뵫 40px ?쇱씤怨??뺥솗???섑룊 ?쇱껜??*/
+    margin: 40px auto 10px auto; /* ?곷떒 諛??섎떒???곗븘???명씉 ?щ갚??遺?ы븯???≪옄 ?뺥깭濡?遺??*/
+    height: auto;
+    aspect-ratio: 1 / 1; /* 787踰?留덉뒪?고뵾???쒖?: 1:1 ?뺤궗媛곹삎 紐낇뭹 留덉뒪???꾨젅??*/
+    overflow: hidden;
+    background-color: #111111;
+    border-radius: 24px; /* 2?섏씠吏 ???곸뿭???덉젣???⑷툑 怨〓쪧怨??꾨꼍???숆린??*/
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08); /* 遺?쒕윭???섏씠?붾뱶 洹몃┝???꾩슦??*/
+    border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+/* 2. ?덉뼱濡?紐낇뭹 鍮꾩＜???대?吏 */
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 3. 誘몄뒪??洹몃씪?곗씠??紐낇뭹 ?ㅻ쾭?덉씠 (1?섏씠吏 怨좎쑀?곸뿭 - ?쒕꽕留덊떛 移좏쓳 ?λ쭑) */
+body .container .hero .hero-overlay-12 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* ?ъ옣??吏移??꾩닔: "?덇퉭?ㅺ? ?듭떖! ?곗륫 ?섎떒??洹몃씪?곗씠??諛뺣㈇!" */
+    /* 醫뚯륫 ??댄룷洹몃옒???곸뿭留??뺣? ?寃⑺븯???대몼寃??섍퀬, ?곗륫 ?섎떒(?덇퉭????? 100% ?먮낯 諛앷린 ?좎? */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 55%),
+                radial-gradient(ellipse at bottom left, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 65%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* 4. ?덉뼱濡???댄룷 ?띿뒪泥??덉씠?꾩썐 (787踰??쒖젙: 醫뚯륫 ?섎떒 臾듭쭅??紐낃꺽 諛곗튂) */
+.hero-content {
+    position: absolute;
+    bottom: 8%; /* ?덉젙?곸씤 諛뷀? 鍮꾩쑉 怨좎젙 */
+    left: 8%;
+    right: auto; /* ?곗륫 ?쒓퀎???댁젣?섏뿬 ?먯뿰?ㅻ윭???띿뒪???명씉 ?뺣낫 */
+    text-align: left; /* 787踰??덈? 洹쒖튃: 醫뚯륫 ?뺣젹 ?덉씠?꾩썐 */
+    z-index: 2;
+}
+
+/* 5. 釉뚮옖???꾩씠?댄떚???쒓렇?덉쿂 (?뚮Ц??byelse & ck-365? ?숈씪 而щ윭 ?μ갑) */
+.hero-brand {
+    font-family: var(--brand-font-main);
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 14px; /* ???볤퀬 ?곗븘?섍쾶 ???щ뒗 ??댄룷 媛꾧꺽 */
+    color: #c5a880; /* ?ъ옣??理쒖쥌 吏移? ck365 怨⑤뱶? 100% ?숈씪??而щ윭 二쇱엯 */
+    text-transform: lowercase; /* ?ъ옣??理쒖쥌 吏移? ?꾩뿭 ?뚮Ц??byelse 媛뺤젣??*/
+    margin-bottom: 22px;
+    text-indent: 0px; /* 醫뚯륫 ?뺣젹?대?濡??ㅼ뿬?곌린 由ъ뀑?섏뿬 泥?湲???섑룊 ?쇱껜??*/
+    text-shadow: 0 2px 10px rgba(197, 168, 128, 0.35); /* 怨⑤뱶鍮?誘몄꽭 ?낆껜 ?꾩슦??*/
+}
+
+/* 6. 硫붿씤 移댄뵾?쇱씠???ㅻ뱶?쇱씤 */
+.hero-title {
+    font-family: var(--brand-font-sub);
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1.6; /* 媛?낆꽦 ???명씉 媛쒖꽑 */
+    letter-spacing: -0.5px;
+    color: #ffffff;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.6); /* 787踰??쒖?: 紐낇뭹 ??꾩슦 */
+    max-width: 320px; /* [W3C br 諛뺣㈇] br ?쒓렇 ??移??놁씠??醫뚯륫 ?뺣젹 2???⑷툑 鍮꾩쑉 媛뺤젣 ?섑샇 */
+}
+
+/* 7. 釉뚮옖???쒓렇?덉쿂 ?ㅽ떚??怨⑤뱶 ?섏씠?쇱씠??(?댁젣 ?섏젙 ?붽뎄 ?꾩튂) */
+.hero-title strong {
+    font-weight: 700;
+    color: #c5a880; /* 諛붿씠?섏뒪 ?쒓렇?덉쿂 ?ㅽ떚??怨⑤뱶 */
+    text-shadow: 0 2px 10px rgba(197, 168, 128, 0.45); /* ?⑷툑鍮?誘몄꽭 諛쒓킅 ?꾩슦??*/
+}
+
+/* ==========================================================================
+   [紐⑤컮????댄룷洹몃옒???뺣? ?쒕떇] 75% PC 以??⑷툑 鍮꾩쑉 ?댁떇
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    .hero-brand {
+        font-size: 15px;
+        letter-spacing: 9px;
+        margin-bottom: 8px;
+        /* 諛곌꼍??諛앹쓣 ?뚮? ?鍮꾪빐 濡쒓퀬 ?먯껜?먮룄 媛뺣젰???ㅽ겕 ??꾩슦 異붽? 諛⑹뼱 */
+        text-shadow: 0 2px 15px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); 
+    }
+    .hero-title {
+        font-size: 18px; /* 28px -> 18px 異뺤냼 */
+        line-height: 1.35;
+        /* ?ъ옣??吏移? "媛???꾨꼍???륁쓣 ?꾪븳 \n 媛먭컖??誘명븰, CK-365" 濡?以꾨컮轅??섎룄濡??덈퉬 ??댄듃?섍쾶 ?뺤텞 */
+        max-width: 175px; 
+    }
+}
+
+
+/* --- Inlined: css/00_Hero_C0_StyleB.css --- */
+/* ==========================================================
+/* 洹몃씪?곗씠???ㅻ쾭?덉씠 媛뺤젣 ?뚮벑 ?댁젣 (?뚯뒪?몄슜) */
+/*
+body.theme-style-b .hero-overlay-12,
+body.theme-style-b .hero-overlay {
+    display: none;
+}
+*/
+
+/* B?ㅽ????섍꼍??留욎떠 洹몃씪?곗씠??臾쇰━???뚮뜑留?媛뺤젣 二쇱엯 */
+body.theme-style-b .main-img-box .hero-overlay-12 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* ?ъ옣??吏?? ?щ엺(紐⑤뜽)?먭쾶 ?우? ?딅룄濡?洹몃씪?곗씠???볦씠瑜?諛섏쑝濡????異뺤냼 (25%, 35%) */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 25%),
+                radial-gradient(ellipse at bottom left, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 35%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+body.theme-style-b .page-section { 
+    padding: 30px 30px 60px 30px; /* ?곷떒 ?щ갚 ?덈컲?쇰줈 異붽? 異뺤냼 (60px -> 30px), ?섎떒? 60px ?좎? */
+    border-bottom: 1px solid #f2f2f2; 
+    text-align: center; 
+    background-color: #ffffff; 
+}
+body.theme-style-b .page-section:last-child { 
+    border-bottom: none; 
+}
+
+body.theme-style-b .brand-header { 
+    margin-bottom: 30px; /* ?ㅻ뜑? ??댄? ?ъ씠 媛꾧꺽 異뺤냼 (60px -> 30px) */
+}
+body.theme-style-b .brand-name { 
+    font-family: 'Outfit', sans-serif;
+    font-size: 38px; /* ?먮옒 ?ъ씠利?蹂듦뎄 */
+    font-weight: 800; 
+    letter-spacing: 6px; /* ?ъ옣??吏?? ???먭컙) 諛섑닾留?異뺤냼 (12px -> 6px) */
+    margin-bottom: 10px; 
+    color: #c5a880; /* ?묐뀗: ?ㅽ떚??怨⑤뱶 釉뚮옖??而щ윭 遺??*/
+}
+body.theme-style-b .brand-sub { 
+    font-size: 14px; /* ?먮옒 ?ъ씠利?蹂듦뎄 */
+    font-weight: 500;
+    color: #a39178; /* ?쒕툕 ?띿뒪?몃룄 ?쒗넠(怨⑤뱶洹몃젅???쇰줈 ?듭씪 */
+    letter-spacing: 4px; 
+    text-transform: uppercase;
+}
+
+body.theme-style-b .section-main-title {
+    margin-bottom: 35px;
+}
+body.theme-style-b .section-main-title .t-top { 
+    display: block; 
+    font-size: clamp(16px, 4vw, 24px); /* 怨좎젙 ?쎌? 痍⑥냼?섍퀬 ?먮옒 諛섏쓳???띿뒪???ш린濡?蹂듦뎄 */
+    font-weight: 500;
+    color: #8a7d6d; 
+    margin-bottom: 8px; 
+    letter-spacing: -0.5px;
+}
+body.theme-style-b .section-main-title .t-bot { 
+    display: block; 
+    font-size: clamp(18px, 5.5vw, 28px); /* 怨좎젙 ?쎌? 痍⑥냼?섍퀬 ?먮옒 ?띿뒪???ш린濡?蹂듦뎄 */
+    font-weight: 700;
+    color: #111;
+    letter-spacing: -1px;
+    line-height: 1.4;
+    word-break: keep-all;
+}
+
+body.theme-style-b .main-img-box { 
+    position: relative; /* 洹몃씪?곗씠???ㅻ쾭?덉씠瑜?媛?먭린 ?꾪븳 ?꾩닔 ?띿꽦 */
+    margin-bottom: 24px; /* ?ъ쭊怨??띿뒪?몃? ???꾨젅?꾩쑝濡?臾띔린 ?꾪빐 媛꾧꺽 ???異뺤냼 (50px -> 24px) */
+    border-radius: 16px; 
+    overflow: hidden; 
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06); 
+    transform: translateY(0);
+    transition: transform 0.5s ease;
+}
+body.theme-style-b .main-img-box:hover {
+    transform: translateY(-5px); 
+}
+body.theme-style-b .main-img-box img { 
+    width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+/* ?덉뼱濡??섎떒 ?ㅽ넗由??명꽣 (?꾨젅???댄깉 諛⑹? 諛?寃고빀) */
+body.theme-style-b .page-section:first-child .story-footer {
+    background: transparent; /* ?명꽣???뚯깋 諛곌꼍 ?곸냽 李⑤떒 */
+    padding: 0 10px;
+    margin: 0; /* ?명꽣??留덉씠?덉뒪 留덉쭊 ?곸냽 李⑤떒?섏뿬 ?꾨젅???덉쑝濡??뚯뼱?ㅼ엫 */
+}
+body.theme-style-b .page-section:first-child .story-footer .sub-txt {
+    display: block;
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+}
+body.theme-style-b .page-section:first-child .story-footer .main-txt {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #222; /* ?꾩껜 ?띿뒪?몃뒗 ?ㅼ떆 ?ㅽ겕洹몃젅?대줈 蹂듦뎄 */
+    line-height: 1.5;
+    word-break: keep-all;
+}
+
+/* 吏?뺣맂 ?띿뒪??援ш컙留??ъ씤??而щ윭 ?곸슜 */
+body.theme-style-b .page-section:first-child .story-footer .highlight-gold {
+    color: #c5a880;
+    font-weight: 800;
+}
+
+@media (max-width: 600px) {
+    body.theme-style-b .page-section { padding: 30px 20px 50px 20px; }
+    body.theme-style-b .brand-name { font-size: 32px; letter-spacing: 8px; }
+    body.theme-style-b .section-main-title .t-bot { font-size: 24px; }
+    body.theme-style-b .page-section .story-footer .main-txt { font-size: 15px; }
+}
+
+
+/* --- Inlined: css/01_Hook_C1.css --- */
+/* ==========================================================================
+   css/01_Hook_C1.css (Artistic Hook Frame)
+   ?룼 諛붿씠?섏뒪 留덉뒪???ㅽ깲?ㅻ뱶 C1-?덉씠?? ??鍮꾩＜??諛???댄룷 ?띿뒪泥?   - 蹂몃Ц 諛뗫컠??湲瑗댁쓣 Outfit 300怨??쒓렇?덉쿂 ?덈뱶 媛뺤꽭 ?띿뒪泥섎줈 ??섏닠?⑸땲??
+   ========================================================================== */
+
+/* 1. 怨듭슜 援ъ뿭 ?뱀뀡 ?꾨젅??*/
+.section {
+    padding: 70px 40px; /* ?몃줈 ?щ갚??誘몄꽭?섍쾶 ?섎젮 ??뀛由ы븳 ??援щ찉 ?뺣낫 */
+    background-color: #faf9f6; /* 蹂??붿씠??留ㅼ묶 ?좎? */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* 2. ?뺢컝??諛곗? 諛??쒓렇 媛?대뱶?쇱씤 (Benchmark B??怨듯넻 ?듯빀 ?꾨즺) */
+
+/* 3. ??댄룷 由щ벉怨?移댄뵾?쇱씠??蹂쇰ⅷ */
+.section-title {
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* 湲??媛??몃줈 ?щ갚 ?명씉 媛쒖꽑 */
+}
+
+.section-title .t-top {
+    font-size: 16px;
+    font-weight: 300;
+    color: #777777;
+    letter-spacing: -0.5px;
+}
+
+.section-title .t-bot {
+    font-size: 27px; /* 誘몄꽭 蹂쇰ⅷ?낆쑝濡?媛?낆꽦 理쒖쟻??*/
+    font-weight: 700;
+    color: #111111;
+    letter-spacing: -0.5px; /* 787踰??쒖? ?먭컙 ?뺥빀 */
+    line-height: 1.4;
+}
+
+/* 4. 紐낇뭹 ?섑븨 ?대?吏 ?꾨젅??(?ъ옣???밸챸: 1?섏씠吏 ?쒖쇅 ?꾩뿭 3:4 醫낇슒鍮??묒옱) */
+.img-wrap {
+    width: 100%;
+    aspect-ratio: 3 / 4; /* ?ъ옣???덈? 吏移? 1?섏씠吏瑜??쒖쇅???꾩뿭 3:4 ?몃줈 紐낇뭹 猷⑸턿 鍮꾩쑉 ?꾨퉬 */
+    margin-bottom: 35px;
+    border-radius: 20px; /* ?ъ옣???덈? 吏移? ?뚮몢由?怨〓쪧 20px ?⑤?由?猷??숆린??諛??좎? */
+    overflow: hidden;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.06); /* 遺?쒕윭???щ챸 ??뀛由???꾩슦 洹밸???*/
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    position: relative; /* ?대? ?ㅻ쾭?덉씠 諛곗튂 ?덉젙???뺣낫 */
+}
+
+.img-wrap img {
+    width: 100%;
+    height: 100%; /* 遺紐⑥쓽 3:4 鍮꾩쑉??100% ?μ븙 */
+    display: block;
+    object-fit: cover; /* 媛濡쒖꽭濡??쒓끝 ?놁씠 ?곗븘?섍쾶 ?몃줈 ?꾨젅???щ∼ */
+}
+
+/* 5. 誘명븰???쒕툕 ??諛?蹂쇰뱶/?덈뱶 ?섏씠釉뚮━??媛뺤꽭 媛뺤“ */
+.subtle-hook {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.subtle-hook .t-top-small {
+    font-size: 14px;
+    font-weight: 300;
+    color: #888888;
+    letter-spacing: -0.5px;
+}
+
+.subtle-hook .t-bot-small {
+    font-size: 16px;
+    font-weight: 300;
+    color: #222222;
+    letter-spacing: -0.5px;
+    line-height: 1.8;
+}
+
+/* ?쒓렇?덉쿂 ?띿뒪泥?蹂쇰뱶 蹂二?(787踰??ㅽ떚??怨⑤뱶 ?꾪솚) */
+.subtle-hook .t-bot-small strong,
+.section-title .t-bot strong {
+    font-weight: 700;
+    color: #c5a880; /* 諛붿씠?섏뒪 紐낇뭹 釉뚮옖???쒓렇?덉쿂 ?ㅽ떚??怨⑤뱶 ??*/
+    text-shadow: 0 1px 4px rgba(197, 168, 128, 0.15);
+}
+
+/* ?덇퉭???곷떒???ㅼ뿼 援ъ젣??(?ㅽ떚??怨⑤뱶 ?꾪꽣 ?곸슜) */
+.text-red {
+    color: #c5a880; /* 鍮④컙???ㅼ뿼??李⑤떒?섍퀬 怨⑤뱶濡?蹂댁젙 */
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   [紐⑤컮????댄룷洹몃옒???뺥솕 援ъ뿭] Base_A?먯꽌 ?댁떇???고듃 ?ш린 媛뺤젣 ?쒖뼱 (?ㅼ뿼 0.00%)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    /* [?ъ옣???밸챸 ?꾧났] 2?깃툒: ?쇰씪誘몃뱶 以묒링/?쒕툕 ??댄? 源⑥븣 湲??A) + ?쒖껜諛??B) ?듯빀 ?뺣? 寃⑹긽 ?섏닠 */
+    body .container .section-title {
+        gap: 0px;
+        margin-bottom: 20px;
+    }
+
+    body .container .img-wrap {
+        margin-bottom: 12px;
+    }
+
+    body .container .subtle-hook {
+        margin-top: 5px;
+        gap: 0px;
+    }
+
+    body .container .subtle-hook,
+    body .container .subtle-hook span {
+        word-break: keep-all;
+        overflow-wrap: break-word;
+        text-align: center;
+        font-size: 14.5px;
+        font-weight: 500;
+        letter-spacing: -0.3px;
+        opacity: 0.85;
+        line-height: 1.35;
+    }
+
+    body .container .subtle-hook .t-bot-small {
+        line-height: 1.35;
+    }
+
+    /* 75% PC ?⑷툑 鍮꾩쑉 ?댁떇 (??댄? ?고듃 異뺤냼) */
+    body .container .section-title .t-top {
+        font-size: 14px;
+        line-height: 1.3;
+        margin-bottom: 2px;
+    }
+
+    body .container .section-title .t-bot {
+        font-size: 17px; /* 27px -> 19px -> 17px 異붽? 異뺤냼 (媛??湲?'byelse Precision Lab???뺣? 怨듭젙' 1以??뺣낫) */
+        line-height: 1.3;
+        letter-spacing: -0.8px; /* ?먭컙 洹뱁븳 ?뺤텞 */
+        word-break: keep-all; /* 紐⑤컮??諛섏쓳???섑샇: ?곷Ц ??湲??띿뒪???먯뿰?ㅻ윭??以꾨컮轅??덉슜 */
+    }
+}
+
+
+/* --- Inlined: css/01_Hook_C1_StyleB.css --- */
+/* ==========================================================
+   01_Hook_C1_StyleB.css (Style B Unique Hook)
+   ========================================================== */
+
+body.theme-style-b .content-grid { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; 
+    margin: 40px 0; 
+    text-align: left; 
+}
+body.theme-style-b .grid-card { 
+    background-color: #fafafa; 
+    border: 1px solid #f0f0f0; 
+    padding: 25px 20px; 
+    box-sizing: border-box; 
+    border-radius: 10px; 
+}
+body.theme-style-b .grid-card .card-num { 
+    font-size: 12px; 
+    font-weight: 700; 
+    color: #A1000E; 
+    margin-bottom: 8px; 
+    display: block; 
+}
+body.theme-style-b .grid-card .card-title { 
+    font-size: 16px; 
+    font-weight: 700; 
+    color: #111111; 
+    margin-bottom: 10px; 
+    display: block; 
+}
+body.theme-style-b .grid-card .card-desc { 
+    font-size: 13.5px; 
+    color: #333333; 
+    line-height: 1.6; 
+    display: block; 
+}
+
+@media (max-width: 600px) {
+    body.theme-style-b .content-grid { grid-template-columns: 1fr; gap: 12px; }
+}
+
+
+/* --- Inlined: css/02_Fabric_C2.css --- */
+/* ==========================================================================
+   css/02_Fabric_C2.css (High-End Fabric Card & Slit Border)
+   ?룼 諛붿씠?섏뒪 留덉뒪???ㅽ깲?ㅻ뱶 C2-?덉씠?? ?꾨━誘몄뾼 ?꾪겕由?移대뱶 諛??щ챸 怨⑤뱶 ?щ┸
+   - ?⑥닚 ?ш컖 移대뱶瑜??湲곗뾽???뺣룄?섎뒗 誘몄꽭 怨⑤뱶 蹂대뜑? 愿묓솢??洹몃┝?먮줈 珥덇퀬?꾪솕?⑸땲??
+   ========================================================================== */
+
+/* 1. ?꾨━誘몄뾼 ?ㅽ럺 而⑦뀒?대꼫 (787踰?怨⑤뱶-?ㅽ겕 ?꾪겕由??듯빀 由щえ?몃쭅)
+   - ?덉뿉 ???ㅼ뼱?ㅻ뒗 ?몃젴?????꾪겕由??낆껜媛??곗륫)怨?留묎퀬 怨좏뭹寃⑹씤 V10 ??댄룷(醫뚯륫)???μ젏留뚯쓣 ?⑷툑 援먮같 ?꾨즺 */
+.spec-container {
+    width: 100%;
+    margin-bottom: 50px;
+    /* ?ъ옣??吏移? ?욎쓽 ?ъ쭊(0.95)泥섎읆 ?덈Т ?덇퉴留ｊ쾶 吏꾪븯寃??섏? 留먭퀬, ?ㅼ쓽 ?ъ쭊(0.85)泥섎읆 ?щ챸?섍퀬 怨좉툒?ㅻ읇寃??듭씪 */
+    background: rgba(17, 17, 17, 0.85); 
+    backdrop-filter: blur(25px); /* ??踰덉㎏ 移대뱶? ?숈씪??釉붾윭 ?섏튂 ?곸슜 */
+    -webkit-backdrop-filter: blur(25px);
+    border-radius: 20px; /* 硫붿씤 ?덉뼱濡?24px ?⑤?由?猷⑹뿉 留욎텣 紐⑥꽌由??κ?湲??뺤옣 */
+    padding: 22px 30px; /* ?대? 媛?낆꽦???꾪븳 ?볤퀬 ?μ뾼???щ갚 ?쇳똿 */
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15); /* 臾듭쭅?섍쾶 媛?쇱븠?쇰ŉ ?좎삤瑜대뒗 ?낆껜 ??꾩슦 */
+    border: 1px solid rgba(197, 168, 128, 0.25); /* ?ㅽ떚??怨⑤뱶 ?щ┸ ?ｌ? ?μ갑 */
+}
+
+/* 2. 28:72 ?ㅽ럺 ?곗씠???뚯씠釉?洹쒓꺽 */
+.spec-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.spec-table tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08); /* ?ㅽ겕 ?⑤꼸 ???뉕퀬 留묒? ?붿씠???ㅻ젅??*/
+}
+
+.spec-table tr:last-child {
+    border-bottom: none;
+}
+
+.spec-table td {
+    padding: 22px 10px; /* 787踰???뀛由??몃줈 22px ?⑤뵫 ?꾨꼍 蹂댁〈 */
+    font-size: 14px;
+    letter-spacing: -0.5px;
+}
+
+.spec-label {
+    width: 28%;
+    font-weight: 700;
+    color: #c5a880; /* ?ㅽ겕 ?꾪겕由??꾩뿉??湲고뭹 ?덇쾶 遺덇퐙???대뒗 ?ㅽ떚??怨⑤뱶 ?쇰꺼 */
+    font-family: var(--brand-font-sub);
+    text-shadow: 0 1px 5px rgba(197, 168, 128, 0.3);
+    text-align: center;
+}
+
+.spec-value {
+    width: 72%;
+    font-weight: 300;
+    color: #faf9f6; /* 醫뚯륫 V10 ?뱀쑀??留묎퀬 ?곗븘??蹂명솕?댄듃 媛移??띿뒪???묒옱 */
+    text-align: left;
+    padding-left: 25px; /* ?쇱そ ?뺣젹 ??怨⑤뱶 ?쇰꺼 寃쎄퀎?좉낵 ?곸젅????뀛由??щ갚 ?앹꽦 */
+    text-shadow: 0 1px 4px rgba(255, 255, 255, 0.1);
+}
+
+/* 3. 怨듦컙 ?꾪겕由??낆껜 移대뱶 洹몃━??(湲곕낯 2???移??꾩튂 + 誘몄꽭 怨⑤뱶 ?щ┸) */
+body .container .glass-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* [洹몃━???꾩튂] 臾댁“嫄??꾨쫫?ㅼ슫 醫뚯슦 2???移?諛곗튂 媛뺤젣 */
+    gap: 28px;
+    width: 100%;
+}
+
+body .container .glass-grid .glass-card {
+    background: rgba(255, 255, 255, 0.6); /* ?щ챸 ?꾪겕由?留묎린 怨좊룄??*/
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border-radius: 20px; /* 紐낇뭹 20px ?쇱슫??*/
+    padding: 30px 24px 24px 24px; /* [李뚭렇?ъ쭚 ?꾩튂] 怨쇰룄??醫뚯슦 ?⑤뵫??以꾩뿬 ?대?吏 媛濡쒗룺 洹밸???*/
+    text-align: left;
+    position: relative;
+    /* 珥덈???怨⑤뱶 ?щ챸 ?щ┸ ?쇱씤 ?μ갑 */
+    border: 1px solid rgba(212, 175, 55, 0.15); 
+    /* 愿묓솢?섍퀬 ?щ챸?섍쾶 ?⑸퓣由щ뒗 怨좉툒 ??꾩슦 */
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.03); 
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    letter-spacing: -0.04em; /* 洹밸룄??移대뱶 諛?꾧컧 ?섏뿬 */
+    box-sizing: border-box; /* ?⑤뵫???꾩껜 ?덈퉬 怨꾩궛???ы븿?섍쾶 李⑤떒 */
+}
+
+body .container .glass-grid .glass-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(212, 175, 55, 0.45); /* 787踰??쒖?: 以묓썑??怨⑤뱶 ?몃쾭 */
+    box-shadow: 0 40px 90px rgba(212, 175, 55, 0.08); /* 留묒? 怨⑤뱶 ?낆껜 遺?묎컧 ?꾩슦??*/
+}
+
+/* [珥덈???諛섏쓳???ㅺ퀎] 600px ?댄븯??洹밸룄濡??묒냼???ㅻ쭏?명룿 紐⑤컮???붾㈃?먯꽌留??덉쟾?섍쾶 1???ㅽ깭??*/
+@media (max-width: 600px) {
+    body .container .glass-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    body .container .glass-grid .glass-card {
+        padding: 20px 18px 16px 18px; /* 紐⑤컮?쇱슜 ?щ┝ 蹂쇰ⅷ 理쒖쟻??*/
+    }
+}
+
+/* 4. ?꾪겕由?移대뱶 ?대? 誘몃땲硫 ??댄룷 */
+.card-num {
+    font-family: var(--brand-font-main);
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #c5a880; /* ??鍮④컯 ???787踰??쒖? ?ㅽ떚??怨⑤뱶濡??뺥솕 */
+    font-weight: 700;
+    display: block;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    text-shadow: 0 1px 4px rgba(197, 168, 128, 0.15);
+}
+
+@media screen and (max-width: 768px) {
+    /* [?ъ옣???밸챸 ?꾧났] 4?깃툒: ?ㅽ럺 ?뚯씠釉??쒕ぉ 諛??댁슜 媛?源⑥븣 湲??鍮꾩쑉 ?뺥빀 寃⑹긽 */
+    body .container .spec-table tr td.spec-label {
+        text-align: center;
+        word-break: keep-all;
+        /* 紐⑤컮??諛섏쓳???섑샇: white-space: nowrap ??젣?섏뿬 以꾨컮轅??덉슜 */
+        width: 30%; /* ?쇰꺼 ?곸뿭 ?댁쭩 異뺤냼?섏뿬 媛??곸뿭 ?뺣낫 */
+        font-size: 14.5px; /* 硫붿씤 ?쒕ぉ?대?濡??ш린 ?좎?/?뺤옣 */
+        font-weight: 700;
+        letter-spacing: -0.3px;
+    }
+
+    body .container .spec-table tr td.spec-value {
+        text-align: left;
+        padding-left: 15px; /* ?щ갚 ?ㅼ씠?댄듃 */
+        width: 70%; /* 2以꾨줈 ?덉걯寃??⑥뼱吏?꾨줉 媛??곸뿭 ?덈퉬 70%濡??뺤옣 */
+        word-break: keep-all;
+        overflow-wrap: break-word;
+        font-size: 13.5px; /* ?ъ옣??吏移? ?쇰꺼蹂대떎 ?묎쾶 異뺤냼 */
+        font-weight: 300; /* ???뉕퀬 ?몃젴?섍쾶 */
+        letter-spacing: -0.3px;
+        line-height: 1.45; /* 紐낇뭹 ?쒖? 以꾧컙寃?1.45 ?μ갑 */
+    }
+
+    body .container .glass-card .card-num {
+        margin-bottom: 8px;
+    }
+    body .container .glass-card .card-title {
+        margin-bottom: 8px;
+        font-size: 18px;
+    }
+    body .container .glass-card .card-desc {
+        font-size: 13px; /* ?ъ옣??吏移??꾩닔: 湲?⑤? 醫 ???묎쾶 ?ㅼ씠?댄듃 */
+        line-height: 1.45;
+    }
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.card-desc {
+    font-size: 14px;
+    font-weight: 300;
+    color: #555555;
+    line-height: 1.7;
+    letter-spacing: -0.3px;
+}
+
+
+/* --- Inlined: css/03_Lab_C3_Fabric.css --- */
+/* ==========================================================================
+   css/03_Lab_C3_Fabric.css (Fabric Macro Card - 3:4 Aspect-Ratio & 2px Border)
+   ?룼 ?먮떒 留ㅽ겕濡?移대뱶 ?꾩슜 3:4 紐낇뭹 ?몃줈 ?꾨젅??諛?2px ?뚮몢由?寃⑹떎
+   ========================================================================== */
+
+.section-process .img-wrap {
+    aspect-ratio: 3 / 4; /* [?ъ옣???덈? ?뚮쾿] 3:4 ?몃줈 ?꾨젅??100% ?꾩쟾 蹂댁〈 */
+    overflow: hidden;
+    position: relative;
+    border: none;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+}
+
+.section-process .img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+
+
+/* --- Inlined: css/03_Lab_C3_Factory.css --- */
+/* ==========================================================================
+   css/03_Lab_C3_Factory.css (Factory Process Card - 1.42x Zoom & 2px Border)
+   ?룼 怨듭옣 ?꾧꼍 移대뱶 ?꾩슜 1.42諛?媛뺣젰 以뚯씤 諛?2px ?뚮몢由?寃⑹떎
+   ========================================================================== */
+
+/* ?꾨줈?몄뒪 怨듭젙 ?대?吏 移대뱶 ?ㅻ쾭?덉씠 (.info-overlay-12) */
+body .container #factory-img-wrap .info-overlay-12 {
+    position: absolute;
+    top: 25%; /* [醫뚯륫 ????꾩튂] ?ъ꽦 ?μ씤???쇨뎬???덈뒗 ?곗륫???꾩쟾???대갑?쒗궎怨? 湲곌퀎 ?μ튂 諛곌꼍??醫뚯륫 ?곸뿭???곗븘?섍쾶 遺??*/
+    transform: translateY(-50%); /* 以묒븰 ?쇳꽣留?*/
+    left: 32px; /* [醫뚯륫 ????꾩튂] 醫뚯륫 踰쎌쑝濡??덉쟾?섍쾶 ?대룞 */
+    right: auto; /* ?곗륫 諛곗튂 ?댁젣 */
+    width: 250px; /* 醫뚯륫 ?쒖젙 ?덉씠?꾩썐 */
+    padding: 0;
+    text-align: left; /* 醫뚯륫 ??쇱뿉 留욎텣 ?뺢컝??醫뚯륫 ?뺣젹 ?꾪솚 */
+    color: #ffffff;
+    z-index: 10; /* [遺???좉툑] 洹몃┝???λ쭑(z-index: 2)蹂대떎 ?뺣룄?곸씤 10?깃툒?쇰줈 寃⑹긽?섏뿬 ?곴뎄 媛?낆꽦 ?뺣낫 */
+}
+
+/* [媛?낆꽦 ?꾩튂] ?대몢??洹몃뒛留??곸냽??100% 李몄궡?섍퀬 ?덈? 諛깆깋愿?媛뺤젣 ?댁떇 */
+body .container #factory-img-wrap .info-overlay-12 .card-title {
+    color: #ffffff; /* ?덈? 諛깆깋 蹂댁옣 */
+    opacity: 1;     /* 移숈튃??遺덊닾紐낅룄 ?먯쿇 臾댄슚??*/
+    text-align: left; /* 醫뚯륫 ?뺣젹 ?듭씪 */
+}
+
+body .container #factory-img-wrap .info-overlay-12 .card-desc {
+    color: #ffffff;
+    opacity: 1;
+    max-width: 180px; /* [湲???щ젮 ?꾩튂] 媛濡???쓣 ?낆옣?섍쾶 ?볧? '理쒖쥌 寃??媛 ?????먯쓽 ?섎윭?대┝ ?놁씠 ?섎?????以??뺣젹?섎룄濡??꾩튂! */
+    margin-right: auto; /* 醫뚯륫 ?뺣젹 諛李??섑샇 */
+    margin-left: 0; /* 湲곗〈 ?곗륫 諛李??댁젣 */
+    text-align: left; /* 醫뚯륫 ?뺣젹 ?듭씪 */
+}
+
+/* ?쇱씠??踰꾩쟾 誘몃땲硫 ?띿뒪泥?*/
+.card-num-light {
+    font-family: var(--brand-font-main);
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #c5a880; /* ?쒓렇?덉쿂 ?ㅽ떚??怨⑤뱶 ?듯빀 */
+    font-weight: 700;
+    display: block;
+    margin-bottom: 12px;
+}
+
+/* [?ъ옣???밸챸 ?꾩튂] 諛곌꼍怨?湲?④? ?섎떎 諛앹븘 媛?낆꽦??二쎈뒗 ?꾩긽??200% ?곴뎄 ?꾩튂?섎뒗 醫?>???섑룊 ?쒕꽕留덊떛 洹몃씪?곗씠???λ쭑 */
+body .container #factory-img-wrap::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0; /* 醫뚯륫 諛李?*/
+    width: 65%; /* ?띿뒪?멸? ?덈뒗 醫뚯륫 65% ?곸뿭留?洹몃┝???ъ빱?깊븯??湲곌퀎 諛섏궗愿묒쓣 李⑤텇?섍쾶 媛?쇱븠??*/
+    height: 100%;
+    background: linear-gradient(to right,
+            rgba(0, 0, 0, 0.85) 0%, /* 醫뚯륫 踰쎈㈃ 湲???곸뿭? 源딆? 移좏쓳 ?먮룄??*/
+            rgba(0, 0, 0, 0.4) 60%,
+            rgba(0, 0, 0, 0) 100% /* ?ㅻⅨ履?紐⑤뜽 ?쇨뎬怨????곸뿭?쇰줈 ?ъ닔濡??꾨꼍??諛깆깋愿??뚮㈇ */
+        );
+    z-index: 2; /* ?대?吏 ?? 湲??z-index: 3) ?꾨옒 諛곗튂 */
+    pointer-events: none;
+}
+
+/* [?ъ옣???밸챸 ?꾩튂] 2諛??ш쾶 ?ㅼ??쇱뾽???뚮Ц??byelse ?щ챸 ?꾪겕由???(醫뚯륫 ?섎떒 ?낆옣 遺?? */
+.premium-badge {
+    position: absolute;
+    bottom: 30px; /* 3:4 ?꾨젅???섎떒 諛곗튂 */
+    left: 32px; /* 醫뚯륫 ?뺣젹 ?쇱씤怨??꾨꼍???섏쭅 ?쇱껜??*/
+    background: rgba(255, 255, 255, 0.12); /* 怨좉툒?ㅻ윭??洹몃젅???щ챸 ?꾪겕由?吏덇컧 */
+    backdrop-filter: blur(10px); /* 留묎쾶 ?ш낵?섎뒗 ?좊━ ?룸같寃??먮┝ */
+    -webkit-backdrop-filter: blur(10px);
+    color: #ffffff;
+    font-size: 14px; /* [2諛??ш쾶 ?꾩튂] 11px?먯꽌 14px濡?????쎌갹?섏뿬 釉뚮옖???꾩씠?댄떚???섑샇 */
+    letter-spacing: 1px;
+    padding: 12px 28px; /* [2諛??ш쾶 ?꾩튂] 8px 18px?먯꽌 12px 28px濡??낆옣?섍쾶 ?뺣? */
+    font-weight: 600;
+    border-radius: 30px; /* ?쇱슫??罹≪뒓 蹂댁〈 */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* ?????щ챸 ?≪옄 ??媛뺥솕 */
+    text-transform: none; /* ?臾몄옄 ?ㅼ뿼 ?꾨㈃ 諛뺣㈇ 諛??뚮Ц??byelse ?꾨꼍 ?섎났 */
+    z-index: 3;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35); /* 源딆뼱吏???꾪겕由?洹몃┝??*/
+}
+
+#factory-img-wrap {
+    aspect-ratio: 3 / 4; /* [?ъ옣???덈? ?뚮쾿] 3:4 ?몃줈 ?꾨젅??100% ?꾩쟾 蹂댁〈 */
+    overflow: hidden;
+    position: relative;
+    border: none;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+}
+
+#factory-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    
+    /* [?⑤룆 寃⑹떎 ?寃? ?ㅼ쭅 怨듭옣 ?꾧꼍 ?대?吏?먮쭔 1.42諛?媛뺣젰 以뚯씤 諛?2李?異⑸룎 諛⑹? ?듦? ?쇳똿 */
+    transform: scale(1.42); /* [?쒕갑 ?꾩튂] 1.42諛?媛뺣젰 以뚯씤?쇰줈 ?꾩껜 ?쎌갹 */
+    transform-origin: center center; /* [?щ갚 李몄궡 ?듭떖] 湲곗??먯쓣 以묒븰?쇰줈 ?먯뼱 醫뚯슦濡?洹좊벑 ?쎌갹?쒖폒 ?ъ쑀 硫댁쟻 ?뺣낫 */
+    object-position: -16% center; /* [?쒕갑 ?꾩튂] 以묒븰 ?쎌갹 ?곹깭?먯꽌 -16% ?듦???媛?? ?쇱そ 怨듬갚 ?꾩텧? 0% ?듭젣?섎ŉ ?곗륫 ?몃Ъ? ?꾨꼍 ?댁옣?쒗궎怨??붾쭔 ?몄텧 ?꾩꽦 */
+}
+
+/* ==========================================================================
+   [紐⑤컮????댄룷洹몃옒???뺥솕 援ъ뿭] Base_A?먯꽌 ?댁떇???고듃 ?ш린 媛뺤젣 ?쒖뼱 (?ㅼ뿼 0.00%)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    /* 1. ?꾨━誘몄뾼 諛곗? ?ㅼ씠?댄듃 (???묎퀬 ?ъ꽭?섍쾶) */
+    body .container .premium-badge {
+        font-size: 10px; /* 11.5px -> 10px濡???異뺤냼?섏뿬 怨좉툒?ㅻ윭? 媛뺤“ */
+        padding: 6px 14px; /* ?⑤뵫??鍮꾨??섍쾶 異뺤냼 */
+        bottom: 16px; /* 紐⑤컮???щ갚??留욊쾶 ?댁쭩 ?대┝ */
+        left: 20px; /* 24px -> 20px 醫뚯륫 ?щ갚 ?ㅼ씠?댄듃 */
+    }
+
+    /* 2. 洹몃씪?곗씠??而ㅻ쾭 踰붿쐞 ?뺤옣 (湲?④? 諛앹? 怨녹쑝濡??덉텧?섏? ?딅룄濡?諛⑹뼱) */
+    body .container #factory-img-wrap::after {
+        width: 85%; /* 65% -> 85% 濡??ㅽ겕 ?곸뿭 ?뺤옣 */
+        background: linear-gradient(to right,
+            rgba(0, 0, 0, 0.85) 0%,
+            rgba(0, 0, 0, 0.5) 60%,
+            rgba(0, 0, 0, 0) 100%
+        );
+    }
+
+    /* 3. ?ㅻ쾭?덉씠 ?띿뒪???ㅼ씠?댄듃 (?고듃 ?ш린? 硫댁쟻??以꾩뿬 ?щ갚誘??뺣낫) */
+    body .container #factory-img-wrap .info-overlay-12 {
+        left: 20px; /* 諛곗?? ?쇱そ ?섏쭅 ?뺣젹 ?꾨꼍 留욎땄 (20px) */
+        width: 200px; /* 220px -> 200px ??異뺤냼 */
+    }
+    
+    body .container #factory-img-wrap .info-overlay-12 .card-num-light {
+        font-size: 9.5px; /* 紐⑤컮???꾩슜?쇰줈 ?뚰삎??*/
+        letter-spacing: 2px;
+        margin-bottom: 6px;
+    }
+    
+    body .container #factory-img-wrap .info-overlay-12 .card-title {
+        font-size: 15px; /* 17px -> 15px ???異뺤냼 */
+        margin-bottom: 6px;
+    }
+
+    body .container #factory-img-wrap .info-overlay-12 .card-desc {
+        text-align: left;
+        word-break: keep-all;
+        margin: 0;
+        font-size: 12px; /* 13.5px -> 12px ?ъ꽭???띿뒪?몃줈 異뺤냼 */
+        font-weight: 300; 
+        letter-spacing: -0.3px;
+        line-height: 1.45; 
+        max-width: 155px; /* 170px -> 155px 媛뺤젣 ?섏텞?섏뿬 以꾨컮轅??덉걯寃??좊룄 */
+    }
+}
+
+
+/* --- Inlined: css/04_Trust_C4.css --- */
+/* ==========================================================================
+   css/04_Trust_C4.css (Artistic Partner Board)
+   ?룼 諛붿씠?섏뒪 留덉뒪???ㅽ깲?ㅻ뱶 C4-?덉씠?? ?뚰듃?덉떗 濡쒓퀬 諛?HSL ?꾪겕由댄솕
+   - ?щ컯??釉붾줉 蹂대뜑瑜???젣?섍퀬 紐낇뭹 ?섏씠?쇱씤 Glassmorphism?쇰줈 由щえ?몃쭅?⑸땲??
+   ========================================================================== */
+
+/* ==========================================================================
+   css/04_Trust_C4.css (Artistic Partner Board)
+   ?룼 諛붿씠?섏뒪 留덉뒪???ㅽ깲?ㅻ뱶 C4-?덉씠?? ?뚰듃?덉떗 濡쒓퀬 諛?HSL ?꾪겕由댄솕
+   - ?щ컯??釉붾줉 蹂대뜑瑜???젣?섍퀬 紐낇뭹 ?섏씠?쇱씤 Glassmorphism?쇰줈 由щえ?몃쭅?⑸땲??
+   /* ========================================================================== */
+
+/* 1. 湲濡쒕쾶 ?뚰듃?덉돺 ??뀛由??대?吏 ??*/
+.cert-container {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+    padding: 0 10px; /* ?묒륫 誘몄꽭 ?⑦넻 */
+    box-sizing: border-box;
+}
+
+/* ?ㅻЪ 蹂댁쬆 ?≪옄 ?대?吏??怨좉툒 ?꾪겕由?20px ?쇱슫??諛?臾닿굅???낆껜 怨⑤뱶 洹몃┝??二쇱엯 */
+.cert-hero-img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    display: block;
+    border: 1px solid rgba(197, 168, 128, 0.25); /* ?ㅽ떚??怨⑤뱶 誘몄꽭 ?щ┸ */
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.18); /* 諛붾떏??源딄쾶 ?덉갑?섎뒗 紐낇뭹 洹몃┝??*/
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cert-hero-img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 45px 95px rgba(197, 168, 128, 0.15); /* 留덉슦???몃쾭 ??????怨⑤뱶鍮?遺??*/
+}
+
+/* [?ъ옣???밸챸 ?꾧났] ?꾪겕由?移대뱶 ?곗륫 ?곷떒 ?뺣? 3D Pure CSS 硫뷀깉 蹂댁꽍 諛곗? 踰≫꽣 ?꾪듃 */
+body .container .glass-card {
+    position: relative;
+}
+
+body .container .glass-card .crystal-badge {
+    position: absolute;
+    right: 28px;
+    top: 26px;
+    width: 46px;
+    height: 46px;
+    background: linear-gradient(135deg, #dfc094 0%, #a48256 50%, #87653b 100%); /* 紐낇뭹 ?ㅽ겕 怨⑤뱶 硫뷀깉由?洹몃씪?곗씠??*/
+    box-shadow: 
+        inset 0 2px 4px rgba(255,255,255,0.4), 
+        0 8px 18px rgba(164, 130, 86, 0.25); /* 諛붾떏???덉갑?섎뒗 硫뷀깉 3D ?낆껜 愿묒콈 */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body .container .glass-card .crystal-badge:hover {
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 
+        inset 0 2px 4px rgba(255,255,255,0.5), 
+        0 12px 24px rgba(197, 168, 128, 0.4); /* 留덉슦???몃쾭 ???덈???怨⑤뱶 遺??愿묒콈 */
+}
+
+/* 1. 肄붿툩(COATS) - 紐낇뭹 ?ш컖 怨⑤뱶 ?몄옣 ?좊툝??*/
+body .container .glass-card .coats-badge {
+    border-radius: 6px;
+    border: 1.5px double rgba(255, 255, 255, 0.4); /* ?붾툝 怨⑤뱶 ?쇳똿 ?뚮몢由??몄옣 ?④낵 */
+}
+body .container .glass-card .coats-badge::after {
+    content: 'COATS';
+    font-family: 'Outfit', 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+}
+
+/* 2. ?쇱씠?щ씪(LYCRA) - ?곷”??3D 怨⑤뱶 ?먰삎 ?щ낵 諛곗? */
+body .container .glass-card .lycra-badge {
+    border-radius: 50%; /* ?쇱씠?щ씪???꾨꼍??3D ?먰삎 ??Dome) ?쇳똿 */
+    background: radial-gradient(circle at 35% 35%, #f2d9b6 0%, #b89366 60%, #7d5b32 100%); /* 蹂쇰줉???먰삎 3D 洹몃씪?곗씠??*/
+}
+body .container .glass-card .lycra-badge::after {
+    content: 'LYCRA짰';
+    font-family: 'Outfit', 'Inter', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.2px;
+}
+
+/* 3. YKK - ??뀛由??щ씪?대뜑 硫뷀깉 ?뚮젅?댄듃 諛곗? */
+body .container .glass-card .ykk-badge {
+    width: 52px;
+    height: 34px;
+    top: 32px;
+    border-radius: 4px;
+    background: linear-gradient(180deg, #dfc094 0%, #b89366 100%);
+}
+body .container .glass-card .ykk-badge::after {
+    content: 'YKK';
+    font-family: 'Outfit', 'Inter', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+/* 4. ANTIBACTERIAL (??퇏 SA ?대뱶) - 3D ??뀛由??鍮?諛⑺뙣 諛곗? */
+body .container .glass-card .shield-badge {
+    width: 44px;
+    height: 50px;
+    top: 24px;
+    background: linear-gradient(135deg, #ffffff 0%, #d1d5db 50%, #9ca3af 100%); /* ?낆옣???щ＼ ?ㅻ쾭 洹몃씪?곗씠??*/
+    box-shadow: 
+        inset 0 2px 4px rgba(255,255,255,0.6), 
+        0 8px 18px rgba(0, 0, 0, 0.15);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /* [?뺣? ?대┰?⑥뒪] ?꾨꼍??3D 諛⑺뙣 ?뺤긽 ?덇컻 */
+    border-radius: 0;
+    border: none;
+}
+body .container .glass-card .shield-badge::after {
+    content: 'SA';
+    font-family: 'Outfit', 'Inter', sans-serif;
+    font-size: 15px;
+    color: #111111;
+    text-shadow: none;
+    font-weight: 900;
+}
+
+/* [?ъ옣???밸챸 ?꾧났] 3:4 ??듯빀 ?ㅽ떚??怨⑤뱶 ?щ┸ ?≪옄 ?꾨젅??*/
+body .container .partnership-frame {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.015);
+    border: 1px solid rgba(197, 168, 128, 0.12); /* ?ъ옣???쒖꽑 ?뚮몢由? ?????ㅽ떚??怨⑤뱶 ?щ┸ */
+    border-radius: 20px;
+    box-shadow: 
+        inset 0 1px 3px rgba(255, 255, 255, 0.05),
+        0 20px 50px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* [?ъ옣???쒖꽑 ?뺣? 吏?? 4? ?좊툝???⑷툑 ?섑룊 ???곸뿭 媛濡???대뱶 諛곕꼫 */
+body .container .partnership-frame .partnership-core-banner {
+    width: 100%;
+    aspect-ratio: 1800 / 750; /* [?ъ옣???밸챸 ?꾧났] ?ы넗?듭쑝濡??뺣??섍쾶 ?섎씪???먮낯 ?대?吏???⑷툑 鍮꾩쑉???붾㈃ ?ш린??愿怨꾩뾾???곴뎄 怨좎젙! */
+    height: auto; /* 怨좎젙 ?믪씠 260px ??젣, ?붾㈃ ??뿉 留욎떠 ?꾨꼍??鍮꾩쑉濡??먮룞 諛섏쓳 */
+    border-radius: 12px;
+    border: 1px solid rgba(197, 168, 128, 0.15);
+    overflow: hidden;
+    box-shadow: 
+        inset 0 2px 8px rgba(0, 0, 0, 0.4),
+        0 10px 25px rgba(0, 0, 0, 0.2);
+    position: relative;
+    background: #0b0b0b;
+}
+
+body .container .partnership-frame .partnership-core-banner .core-banner-image {
+    width: 100%;
+    height: 100%;
+    background-image: url('https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/brand_certification.jpg?v=20260614_014437');
+    background-repeat: no-repeat;
+    background-size: 100% 100%; /* [?ㅼ뿼臾쇱쭏 ?꾨꼍 ?뚭컖] 135% ?듭? 以뚯씤 ?먭린! ?ъ옣?섍퍡???꾨꼍?섍쾶 ?섎씪二쇱뀲?쇰?濡?? ?덉뿉 100% 苑?梨꾩?! */
+    background-position: center center; /* [?ㅼ뿼臾쇱쭏 ?꾨꼍 ?뚭컖] 63.5% ?듭? ?뚯쫰 ?대룞 ?먭린! ?뺤쨷??怨좎젙! */
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 留덉슦???몃쾭 ???좊툝?쇰뱾??吏洹몄떆 源딆씠媛??덇쾶 ?ㅺ??ㅻ뒗 3D 紐낇뭹 移대찓??臾대튃 ?④낵 */
+body .container .partnership-frame .partnership-core-banner:hover .core-banner-image {
+    transform: scale(1.02);
+}
+
+/* [?ъ옣???뱀씤 ?쒕굹由ъ삤 B] 援ш?/?ㅼ씠踰?寃??濡쒕큸 ?꾩슜 ?쒖? ?④? ?섏떇 (???묎렐???꾨꼍 異⑹”) */
+body .container .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ==========================================================================
+   [紐⑤컮????댄룷洹몃옒???뺥솕 援ъ뿭] Base_A?먯꽌 ?댁떇???고듃 ?ш린 媛뺤젣 ?쒖뼱 (?ㅼ뿼 0.00%)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    /* [?ъ옣???밸챸 ?꾧났] 3?깃툒: ?꾪겕由?移대뱶/蹂몃Ц 源⑥븣 湲???듯빀 ??뺥솕 ?섏닠 */
+    body .container .glass-card .card-title {
+        font-size: 14.5px; /* ?ъ옣??吏移??꾩닔: 4媛??쒕ぉ 紐⑤몢 臾댁“嫄?1以꾨줈 ?⑥뼱吏?꾨줉 ???異뺤냼 */
+        letter-spacing: -0.5px; /* 洹뱁븳???먭컙 ?뺤텞?쇰줈 媛濡쒗룺 諛⑹뼱 */
+        padding-right: 70px; /* 諛곗? ?덉쟾嫄곕━ 理쒖냼?뷀븯???띿뒪???곸뿭 理쒕????뺣낫 */
+        word-break: keep-all;
+        /* 紐⑤컮??諛섏쓳???섑샇: white-space: nowrap ??젣?섏뿬 以꾨컮轅??덉슜 */
+    }
+
+    body .container .glass-card .card-desc {
+        text-align: left;
+        /* ?ъ옣??吏移? ?⑥뼱 ?⑥쐞濡??딆뼱???ㅼ춬?좎춬?댁????꾩긽??留됯퀬, 
+           ?앷퉴吏 ?띿뒪?멸? 苑?梨꾩썙吏硫?吏곸궗媛곹삎 ?뺥깭濡??덉걯寃??⑥뼱吏?꾨줉 媛뺤젣 */
+        word-break: break-all; 
+        overflow-wrap: break-word;
+        font-size: 13px; /* 湲???ш린 14px -> 13px ??뀛由?異뺤냼 (mb 2? ?듭씪) */
+        font-weight: 300; /* 450 -> 300 ?먭퍡 ?ㅼ씠?댄듃 */
+        letter-spacing: -0.3px;
+        line-height: 1.45;
+        opacity: 0.95;
+    }
+
+    /* [?ъ옣??吏移??꾩닔] ?꾨젅??醫뚯슦 ?먯졇?섍컧 諛⑹? 諛??щ갚 ?뺣낫 */
+    body .container .partnership-frame {
+        width: auto;
+        margin: 0 15px; /* 醫뚯슦 15px ?щ갚??二쇱뼱 ?붾㈃ ?앹뿉???덉걯寃??⑥뼱吏?꾨줉 ??*/
+        padding: 25px 15px; /* 紐⑤컮??留욎땄 ?대? ?щ갚 理쒖쟻??*/
+        box-sizing: border-box;
+    }
+
+    /* [?꾩쟾???뺥솕] ?뚰듃?덉떗 諛곕꼫??紐⑤뱺 紐⑤컮??媛뺤젣 李뚭렇?ъ쭚(?믪씠 90px 媛뺤젣 ?? 李뚭볼湲?肄붾뱶 ?꾩쟾 ?뚭컖! 
+       ?곷떒??aspect-ratio: 2048 / 750 踰뺤튃??紐⑤컮?쇱뿉?쒕룄 ?꾨꼍?섍쾶 ?먮룞 ??묓븯誘濡??먮뙂 ?꾩슂媛 ?놁뒿?덈떎. */
+}
+
+
+
+/* --- Inlined: css/05_Safety_C5.css --- */
+/* ==========================================================================
+   css/05_Safety_C5.css (Artistic Safety Evidence)
+   ?룼 諛붿씠?섏뒪 留덉뒪???ㅽ깲?ㅻ뱶 C5-?덉씠?? ?덉쟾??利앸챸 ?깆쟻??諛??쇱씠???꾪겕由?   - ?쒗뿕?깆쟻???대?吏瑜???뀛由??꾪겕由??꾨젅?꾩쑝濡??섑븨?섏뿬 ?뺥빀?깆쓣 ?꾩꽦?⑸땲??
+   ========================================================================== */
+
+/* 1. ?쒗뿕?깆쟻???대?吏 ?꾪겕由??섑띁 */
+.glass-card .full-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px; /* 787踰?紐낇뭹 ?쇱슫??怨〓쪧 ?뺥빀 */
+    display: block;
+    margin-bottom: 14px; /* ?ъ옣??吏移? ?⑹떎 鍮꾨뵒??罹≪뀡 媛꾧꺽(14px)怨??묎컳??留욎떠 ?꾨꼍?????명듃 猷?援ъ꽦 */
+    border: 1px solid rgba(212, 175, 55, 0.15); /* ?ㅽ떚??怨⑤뱶 ?≪옄 ?꾨젅?꾪솕 */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04); /* 洹몄쑞?섍퀬 遺?쒕윭???뚰봽????꾩슦 */
+}
+
+/* 2. 移대뱶 ?섎떒 ?뺤쨷???뺣젹 罹≪뀡 (鍮꾨뵒??& ?깆쟻??怨듯넻 媛ㅻ윭由?罹≪뀡) */
+.card-desc-center {
+    font-size: 12.5px; /* 紐⑤컮?? 紐낇뭹 ?먮뵒?좊━??罹≪뀡 鍮꾩쑉 */
+    font-weight: 400; /* 湲곗〈 700???щ컯?⑥쓣 鍮쇨퀬 ?뉕퀬 ?몃젴?섍쾶 ?ㅼ씠?댄듃 */
+    color: #666666; /* 吏숈? 李⑥퐳 洹몃젅?대줈 ?곗븘??利앺룺 */
+    text-align: center;
+    letter-spacing: 0.3px; /* ?먭컙???댁쭩 ?꾩썙 誘몄닠愿 罹≪뀡 媛숈? ?명씉 遺??*/
+    margin: 0;
+}
+
+@media screen and (min-width: 769px) {
+    /* PC ?섍꼍?먯꽌??誘몄닠愿 罹≪뀡???곗븘?⑥씠 ?좎??섎룄濡??ш린 鍮꾨? ?뺤옣 */
+    .card-desc-center {
+        font-size: 14.5px; 
+        letter-spacing: 0.5px;
+    }
+}
+
+/* 3. 紐낇뭹 蹂댁쬆???꾪겕由??쇱씠??移대뱶 (.glass-card-light) */
+.glass-card-light {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.65); /* 留묒? ?쇱씠???щ━?ㅽ깉 ?꾪겕由?洹밸???*/
+    backdrop-filter: blur(25px); /* 787踰??쒖? 媛??*/
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(212, 175, 55, 0.15); /* 誘몄꽭 怨⑤뱶 ?щ┸ ?뚮몢由??뺥빀 */
+    border-radius: 16px; /* ?κ렐 ?꾩슦???쇱껜??*/
+    padding: 28px 30px; /* ?몃줈 ?щ갚 議곗쑉 */
+    margin-top: 30px;
+    text-align: center;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.03);
+}
+
+body .container .glass-card-light .review-text {
+    font-size: 14px;
+    font-weight: 300;
+    color: #222222;
+    line-height: 1.8; /* 1.7?먯꽌 ?щ갚 ?명씉 媛쒖꽑 */
+    letter-spacing: -0.5px;
+    margin: 0;
+    font-style: italic; /* ?덇꺽 ?덈뒗 ?댄깉由?媛뺤꽭 */
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    body .container .glass-card-light .review-text {
+        line-height: 1.45;
+        font-size: 14.5px;
+        /* ?ъ옣???덈? ?뚮쾿 ?섑샇: ?????녿뒗 em ?⑥쐞??遺?묒슜(醫뚯륫 ?좊┝ 諛?以꾨컮轅??뚭눼)???꾨㈃ 諛깆??뷀븯怨? 媛??吏곴??곸씠怨??뺤떎???쎌? ?⑥쐞??230px濡?濡ㅻ갚?⑸땲?? */
+        max-width: 230px; /* ?명듃 20泥섎읆 ?볦? ?붾㈃?먯꽌??'?좊ː?꾨?' ?⑥뼱媛 臾댁“嫄?3踰덉㎏ 以꾨줈 ?⑥뼱吏寃??섏뿬 ?꾨꼍??????뵾?쇰??? ?뺥깭 遺?? */
+        word-break: keep-all; 
+        margin: 0 auto;
+    }
+}
+
+
+/* --- Inlined: css/06_Lab_C6.css --- */
+/* ==========================================================================
+   css/06_Lab_C6.css (Artistic Lab Video Frame)
+   ?룼 諛붿씠?섏뒪 留덉뒪???ㅽ깲?ㅻ뱶 C6-?덉씠?? 鍮꾩＜??鍮꾨뵒???섑띁 諛?釉붾옓 ?꾪겕由?   - ?⑹떎 鍮꾨뵒?ㅼ쓽 怨≪꽑 留덇컧怨????꾪겕由?移대뱶瑜??대떦?⑸땲??
+   ========================================================================== */
+
+/* 1. 鍮꾨뵒???섑띁 ?쇱슫???꾨젅??(遺紐?3:4 ?꾨젅?꾩뿉 100% 留ㅼ묶 ?쇳똿) */
+.glass-grid .img-wrap video {
+    width: 100%;
+    height: 100%; /* 遺紐?3:4 醫낇슒鍮?100% ?곸냽 */
+    display: block;
+    object-fit: cover; /* 鍮꾨뵒???쒓끝 諛뺣㈇ 諛??몃줈??3:4 ?쒕꽕留덊떛 ?щ∼ */
+    border-radius: 20px; /* 硫붿씤 ?덉뼱濡?怨〓쪧怨?議고솕瑜??대（??20px ?쇱슫???좎? */
+    border: 1px solid rgba(197, 168, 128, 0.2); /* ?ㅽ떚??怨⑤뱶 ?щ챸 ?뚮몢由??≪옄 ?쇱씤 */
+    box-shadow: 0 30px 65px rgba(0, 0, 0, 0.08); /* 怨듭쨷?????덈뒗 ??븳 怨좉툒 ??꾩슦 ?꾩슦??*/
+}
+
+/* 1-1. 鍮꾨뵒??罹≪뀡 ??듯빀 ?섑띁: overflow:hidden??img-wrap 諛뽰쑝濡??띿뒪?몃? ?덉텧?쒗궎???듭떖 寃⑸꼍 */
+.lab-video-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* ?ъ옣??吏移??꾩닔: ?덉쟾???깆쟻??移대뱶? ?숈씪???섏????꾪겕由?諛곌꼍 ?명듃 ?μ갑! */
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border-radius: 20px;
+    padding: 20px 18px 16px 18px; /* 紐⑤컮??glass-card ?⑤뵫 ?댁떇 */
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.03);
+    box-sizing: border-box;
+    gap: 14px; /* ?곸긽怨?罹≪뀡 ?띿뒪???ъ씠 ?щ갚 */
+}
+
+@media screen and (min-width: 769px) {
+    .lab-video-unit {
+        padding: 30px 24px 24px 24px; /* PC ?⑤뵫 ?댁떇 */
+    }
+}
+
+.lab-video-unit .img-wrap {
+    margin-bottom: 0; /* 湲곗〈 img-wrap ?섎떒 ?щ갚 ?쒓굅, gap?쇰줈 ?泥?*/
+}
+
+.lab-video-unit .card-desc-center {
+    padding: 0 10px;
+}
+
+/* 2. ??釉붾옓 ?꾪겕由??뚮젅?댄듃 移대뱶 (.glass-card-dark) */
+.glass-card-dark {
+    width: 100%;
+    background: rgba(17, 17, 17, 0.85); /* 787踰??쒖?: 留묎퀬 臾듭쭅???ㅽ겕 ?꾪겕由댄솕 */
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(212, 175, 55, 0.12); /* 誘몄꽭 怨⑤뱶 ?щ┸ ?뚮몢由??뺥빀 */
+    border-radius: 16px;
+    padding: 35px 30px;
+    margin-top: 30px;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35); /* ?꾪겕由?臾듭쭅???낆껜 ??꾩슦 */
+}
+
+.glass-card-dark .card-num-light {
+    font-family: var(--brand-font-main);
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #c5a880; /* ??鍮④컯 ???787踰덉쓽 留묒? ?ㅽ떚??怨⑤뱶 蹂??*/
+    font-weight: 700;
+    display: block;
+    margin-bottom: 12px;
+}
+
+body .container .glass-card-dark .review-text {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.8;
+    letter-spacing: -0.5px;
+    margin: 0;
+    text-align: center;
+    color: #eeeeee;
+}
+
+@media screen and (max-width: 768px) {
+    /* 2以??쇰씪誘몃뱶瑜?留뚮뱾湲??꾪빐 移대뱶??醫뚯슦 ?щ갚?????以꾩뿬 媛濡???쓣 理쒕?濡??뺣낫?⑸땲??*/
+    body .container .glass-card-dark {
+        padding: 28px 14px; 
+    }
+
+    body .container .glass-card-dark .review-text {
+        line-height: 1.45;
+        font-size: 13px; /* 3以꾨줈 源⑥?吏 ?딄퀬 臾댁“嫄?2以꾩뿉 ?닿린?꾨줉 ?뺣? 異뺤냼 */
+        letter-spacing: -0.5px; /* 洹뱁븳???먭컙 ?뺤텞 */
+        /* ?ъ옣??吏移? ?곷떒???쒓렇? ?댁슱由щ뒗 2以??쇰씪誘몃뱶 媛뺤젣
+           1. ????녿뒗 ?덉쭏 愿由щ? ?듯빐 
+           2. 'byelse'留뚯쓽 ?낅낫?곸씤 ?꾩꽦?꾨? 援ы쁽?⑸땲?? */
+        max-width: 100%; /* ?덈퉬 ?쒗븳 ?꾩쟾 ?댁젣 */
+        margin: 0 auto;
+        word-break: keep-all;
+    }
+}
+
+
+/* --- Inlined: css/07_Review_C7.css --- */
+/* ==========================================================================
+   css/07_Review_C7.css (High-End Review Board & Gold Stars)
+   ?룼 諛붿씠?섏뒪 留덉뒪???ㅽ깲?ㅻ뱶 C7-?덉씠?? ?꾨━誘몄뾼 由щ럭 移대뱶 諛??ㅽ떚??怨⑤뱶 蹂꾩젏
+   - 由щ럭 移대뱶瑜?????誘몄꽭 怨⑤뱶 ?щ┸怨?源딆? 怨⑤뱶 ?쒖껜濡?珥덇퀬?꾪솕?⑸땲??
+   ========================================================================== */
+
+/* 1. 由щ럭 ?뱀뀡 ?꾩뿭 ?꾨젅??*/
+.review-section {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.review-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+}
+
+/* 2. ?꾨━誘몄뾼 ?꾪겕由?由щ럭 移대뱶 (醫뚯륫 ?몃줈 怨⑤뱶 ???묒옱 紐낇뭹 ?뚮젅?댄듃) */
+.review-card {
+    background: rgba(255, 255, 255, 0.65); /* ?붿슧 ?щ챸?섍퀬 留묒? ?꾪겕由대줈 ?쒕떇 */
+    backdrop-filter: blur(25px); /* 787踰??쒖? 媛??*/
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(212, 175, 55, 0.12); /* 誘몄꽭 怨⑤뱶 ?щ┸ 蹂대뜑 */
+    border-left: 4px solid #c5a880; /* ?ъ옣?섏씠 洹뱀갔?섏떊 怨쇨굅 理쒓퀬???쒓컖 DNA: 醫뚯륫 怨⑤뱶 ?몃줈 ???섏뿬 */
+    border-radius: 16px;
+    padding: 30px 35px;
+    text-align: left;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.03); /* 源딄퀬 遺?쒕윭???щ챸 ??꾩슦 */
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.review-card:hover {
+    transform: translateY(-4px); /* 遺?쒕윭???낆껜 遺??*/
+    border-color: rgba(212, 175, 55, 0.45); /* 787踰??쒖?: 遺됱???????곷”???ㅽ떚??怨⑤뱶 ?몃쾭 */
+    box-shadow: 0 30px 60px rgba(212, 175, 55, 0.08); /* ?곕쑜??怨⑤뱶 遺???꾩슦??*/
+}
+
+/* 3. 紐낇뭹 ?⑷툑鍮?蹂꾩젏 ?앹꽦 (??5媛?- ??뀛由??ㅽ떚??怨⑤뱶 ?쒕떇) */
+.rating-stars {
+    margin-bottom: 15px;
+    display: block;
+}
+
+.rating-stars::before {
+    content: "?끸쁾?끸쁾??;
+    font-size: 15px;
+    letter-spacing: 3px;
+    color: #e6c280; /* ??源딄퀬 洹몄쑞???꾨━誘몄뾼 ?ㅽ떚??怨⑤뱶 ??*/
+    text-shadow: 0 1px 6px rgba(230, 194, 128, 0.45); /* 787踰??쒖?: ?⑷툑鍮쏆씠 留묎쾶 ??ㅻⅤ????꾩슦 */
+}
+
+/* 4. 由щ럭 ??댄룷 ?띿뒪泥?珥덇퀬?꾪솕 */
+.review-card .review-text {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.8; /* 媛?낆꽦 ?뺣낫瑜??꾪븳 以꾧컙寃??뺣? */
+    color: #222222;
+    letter-spacing: -0.5px; /* 誘명븰???띿뒪泥??먭컙 */
+    margin: 0 0 12px 0;
+}
+
+.review-author {
+    font-family: var(--brand-font-main);
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #888888;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   [紐⑤컮????댄룷洹몃옒???뺥솕 援ъ뿭] Base_A?먯꽌 ?댁떇???고듃 ?ш린 媛뺤젣 ?쒖뼱 (?ㅼ뿼 0.00%)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    /* [?ъ옣???밸챸 ?꾧났] 3?깃툒: 由ъ뼹 怨좉컼 由щ럭 蹂몃Ц 源⑥븣 湲???듯빀 ??뺥솕 ?섏닠 */
+    body .container .review-text {
+        text-align: left;
+        word-break: keep-all; /* ?ъ옣???뱀씤: 吏꾩쭨 怨좉컼 由щ럭???앹깮?⑥쓣 ?대━湲??꾪빐 ?⑥뼱 ?⑥쐞 ?먯뿰?ㅻ윭??以꾨컮轅??ㅼ춬?좎춬) ?좎? */
+        overflow-wrap: break-word;
+        font-size: 14px; /* 湲곗〈 15.5px -> 14px濡?紐낇뭹 ?ㅼ씠?댄듃 */
+        font-weight: 300; /* 湲곗〈 450 -> 300 ?뉕퀬 ?곗븘?섍쾶 */
+        letter-spacing: -0.3px;
+        line-height: 1.5; /* 湲?④? ?묒븘吏?留뚰겮 以꾧컙寃⑹쓣 ?댁쭩 ?볧? ?명씉 ?뺣낫 */
+        opacity: 0.95;
+    }
+}
+
+
+/* --- Inlined: css/08_Care_C8.css --- */
+/* ==========================================================================
+   css/08_Care_C8.css (Artistic Care Guide)
+   ?룼 諛붿씠?섏뒪 留덉뒪???ㅽ깲?ㅻ뱶 C8-?덉씠?? ?명긽 媛?대뱶 諛??꾪겕由?耳??移대뱶
+   - 耳??媛?대뱶 4媛???ぉ??吏덉꽌?뺤뿰???꾪겕由?洹몃━???뚮젅?댄듃濡???섏닠?⑸땲??
+   ========================================================================== */
+
+/* 1. 耳??洹몃━???덉씠?꾩썐 (2x2 援ъ“?? */
+.care-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 媛濡?2???뺣젹 */
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 600px) {
+    .care-grid {
+        grid-template-columns: 1fr; /* 紐⑤컮?쇱? 1???뺣젹 */
+        gap: 15px; /* 紐⑤컮??媛꾧꺽 異뺤냼 */
+    }
+    body .container .care-grid .care-item {
+        padding: 24px 20px; /* 紐⑤컮?쇱슜 ?щ┝ ?⑤뵫 */
+    }
+    body .container .care-grid .care-item .care-desc {
+        line-height: 1.45; /* 紐⑤컮??蹂몃Ц 以꾧컙寃??뺤텞 */
+    }
+}
+
+/* 2. 媛쒕퀎 耳???꾪겕由??뚮젅?댄듃 (臾닿킅 釉붾옓 ?ㅽ겕 李⑥퐳 ?꾪겕由대줈 ?꾧꺽 ?섏닠) */
+body .container .care-grid .care-item {
+    background: rgba(45, 45, 45, 0.9); /* [釉붾옓 ?꾩튂] 臾닿킅 ??釉붾옓 李⑥퐳 ?꾪겕由?*/
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.08); /* ?щ챸 ?ㅻ젅???쇱씤 */
+    border-radius: 24px; /* 紐낇뭹 ?쇱슫??怨〓쪧 ?뺥빀 */
+    padding: 35px 30px;
+    text-align: left;
+    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.25); /* 源딆? ?꾪겕由??낆껜 ?뚯쁺 */
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    box-sizing: border-box;
+}
+
+body .container .care-grid .care-item:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255, 255, 255, 0.2); /* 留덉슦???몃쾭 ???붿씠???ㅻ젅???쒖꽦??*/
+    box-shadow: 0 35px 75px rgba(0, 0, 0, 0.35);
+}
+
+/* ??뀛由??쇱씤 ?꾩씠肄????곗퐫?덉씠??*/
+.care-icon-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.care-icon-wrap svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* [?ъ옣??罹≪퀜蹂??꾨꼍 ?숆린?? 媛??꾩씠肄섎퀎 ?낅낫?곸씤 ?ㅼ삩 洹몃씪?곗씠??愿묒콈 肄뷀똿 */
+body .container .care-grid .care-item .care-icon-wrap.icon-blue {
+    background: rgba(79, 195, 247, 0.12);
+    color: #4fc3f7;
+    border: 1px solid rgba(79, 195, 247, 0.25);
+}
+body .container .care-grid .care-item .care-icon-wrap.icon-red {
+    background: rgba(255, 82, 82, 0.12);
+    color: #ff5252;
+    border: 1px solid rgba(255, 82, 82, 0.25);
+}
+body .container .care-grid .care-item .care-icon-wrap.icon-pink {
+    background: rgba(244, 143, 177, 0.12);
+    color: #f48fb1;
+    border: 1px solid rgba(244, 143, 177, 0.25);
+}
+body .container .care-grid .care-item .care-icon-wrap.icon-green {
+    background: rgba(77, 182, 172, 0.12);
+    color: #4db6ac;
+    border: 1px solid rgba(77, 182, 172, 0.25);
+}
+
+/* 3. ??댄룷洹몃옒???ㅽ겕 ?鍮?理쒖쟻??*/
+body .container .care-grid .care-item .care-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #ffffff; /* [湲???곗깋 ??섏닠] */
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+    display: block; /* 湲곗〈 ???꾪듃 ?곗퐫?덉씠???먮룞 ?곸뇙 */
+}
+
+/* 湲곗〈 諛뗫컠?덈뜕 怨⑤뱶 ???꾪듃 ?뚮㈇ 泥섎━ */
+body .container .care-grid .care-item .care-title::before {
+    display: none;
+}
+
+body .container .care-grid .care-item .care-desc {
+    font-size: 13.5px;
+    font-weight: 300;
+    color: #b0b0b0; /* [蹂몃Ц ?뚰봽??洹몃젅????섏닠] */
+    line-height: 1.6;
+    letter-spacing: -0.3px;
+    margin: 0;
+}
+
+
+/* --- Inlined: css/09_Info_C9.css --- */
+/* ==========================================================================
+   css/09_Info_C9.css (High-End Size & Gold Slit Table)
+   ?룼 諛붿씠?섏뒪 留덉뒪???ㅽ깲?ㅻ뱶 C9-?덉씠?? ?꾨━誘몄뾼 ?ъ씠利???諛?怨⑤뱶 ?ㅼ뼱?쇱씤
+   - 22px ?몃줈 ?щ갚怨?????怨⑤뱶 釉뚮씪???ㅼ씤???ㅻ뜑濡??뚯씠釉?誘명븰??洹밸??뷀빀?덈떎.
+   ========================================================================== */
+
+/* 1. ?꾨━誘몄뾼 ?ъ씠利??뚯씠釉??꾨젅??(.size-guide) */
+.size-guide {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid rgba(212, 175, 55, 0.12); /* 誘몄꽭 怨⑤뱶 蹂대뜑 */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.02);
+    margin-bottom: 40px;
+    overflow-x: auto;
+}
+
+.size-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+/* ?몃줈 寃쎄퀎???곴뎄 李⑤떒 諛?22px ?몃줈 ?⑤뵫 ?꾧났 */
+body .container .size-guide .size-table td {
+    border-left: none;
+    border-right: none;
+}
+
+/* 2. 怨⑤뱶 釉뚮씪??洹몃씪?곗씠???ㅻ뜑 & 愿묓솢??22px ?몃줈 ?⑤뵫 */
+body .container .size-guide .size-table thead td {
+    font-weight: 700;
+    color: #111111;
+    font-size: 13px;
+    /* ??????뀛由?怨⑤뱶 釉뚮씪??洹몃씪?곗씠???댁떇 */
+    background: linear-gradient(to bottom, rgba(197, 168, 128, 0.08), rgba(255, 255, 255, 0));
+    border-bottom: 2px solid rgba(197, 168, 128, 0.4);
+    padding: 22px 10px; /* 以?꾪븳 22px ?몃줈 ?⑤뵫 蹂댁〈 */
+    letter-spacing: 1px;
+}
+
+.size-table tbody td {
+    font-size: 13px;
+    font-weight: 300;
+    color: #444444;
+    border-bottom: 1px solid rgba(197, 168, 128, 0.1); /* ????怨⑤뱶 ?ㅼ뼱?쇱씤 */
+    padding: 22px 10px; /* 以?꾪븳 22px ?몃줈 ?⑤뵫 蹂댁〈 */
+}
+
+.size-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.card-desc-pad {
+    font-size: 12px;
+    font-weight: 300;
+    color: #888888;
+    line-height: 1.7;
+    letter-spacing: -0.3px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* [?ъ옣???밸챸 ?꾧났] ?ъ씠利??덈궡臾멸뎄 ?댁뼱?곌린(Hanging Indent)濡?移쇨컳? 醫뚯륫 ?뺣젹 */
+.card-desc-pad p {
+    margin: 0 0 6px 0; /* ??臾몄옣 ?ъ씠 ?⑦넻 ?몄씠湲?*/
+    padding-left: 11px; /* ?꾩껜 以꾩쓣 ?ㅻ줈 諛?대궡怨?*/
+    text-indent: -11px; /* 泥?以꾩쓽 蹂꾪몴(*)留??욎쑝濡??밴꺼????踰덉㎏ 以꾨???移쇨컖 ?띿뒪???뺣젹 ?꾩꽦 */
+}
+
+/* 3. ?섎떒 ?덉쭏 蹂댁쬆 怨좎떆 ?뚯씠釉?(.info-table-footer) */
+.info-table-footer {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 50px;
+    border-top: 2px solid #111111;
+    border-bottom: 1px solid #111111;
+}
+
+.info-table-footer td {
+    padding: 18px 15px;
+    font-size: 12px;
+    letter-spacing: -0.3px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.info-table-footer td:first-child {
+    font-weight: 700;
+    color: #444444;
+    width: 30%;
+    background-color: rgba(212, 175, 55, 0.02); /* 怨⑤뱶 ?꾩슦??誘몄꽭 ??*/
+}
+
+.info-table-footer td:last-child {
+    font-weight: 300;
+    color: #111111;
+    text-align: left;
+    width: 70%;
+}
+
+/* 4. 援щℓ ???꾨룆 ?덈궡?ы빆 (.guide-box) (泥쒖긽怨??ㅽ겕 李⑥퐳 臾닿킅 釉붾옓 ?꾪겕由?蹂?? */
+body .container .guide-box {
+    width: 100%;
+    background: rgba(45, 45, 45, 0.9); /* [釉붾옓 ?꾪겕由??꾧꺽 援먯껜] */
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.08); /* ?щ챸 蹂대뜑 ?쇱씤 */
+    border-radius: 20px; /* 紐낇뭹 ?쇱슫??怨〓쪧 ?뺥빀 */
+    padding: 35px 30px;
+    margin-top: 50px;
+    text-align: left;
+    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.25); /* 臾듭쭅???낆껜 ??꾩슦 */
+    box-sizing: border-box;
+}
+
+body .container .guide-box .guide-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff; /* [湲???곗깋 ??섏닠] */
+    letter-spacing: -0.3px;
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* ?????뺣젹濡???댄?怨?誘몃땲 怨⑤뱶 濡쒓퀬 諛곗튂 */
+}
+
+/* [?ъ옣??罹≪퀜蹂?移쇱젙?? 醫뚯륫???곗븘???ㅽ떚??怨⑤뱶 ?섏쭅 ?쇱씤 諛??곗퐫?덉씠???쎌엯 */
+.guide-title-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.guide-title-left::before {
+    content: "";
+    display: inline-block;
+    width: 3.5px;
+    height: 18px;
+    background-color: #c5a880; /* ?쒓렇?덉쿂 ?ㅽ떚??怨⑤뱶 */
+    border-radius: 2px;
+}
+
+body .container .guide-box .guide-list {
+    margin: 0;
+    padding-left: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style-type: none; /* 諛뗫컠???κ렐 湲곕낯 遺덈┸ 留덊겕 ?뚮㈇ */
+}
+
+body .container .guide-box .guide-list li {
+    font-size: 13px;
+    font-weight: 300;
+    color: #b0b0b0; /* [媛?낆꽦 100% ?뚰봽??洹몃젅??蹂몃Ц ??섏닠] */
+    line-height: 1.7;
+    letter-spacing: -0.3px;
+    position: relative;
+    padding-left: 14px;
+}
+
+/* ?곗븘?섍퀬 洹쒖튃?곸씤 怨⑤뱶 ?꾪듃 遺덈┸ 留덊겕 ?쇳똿 */
+body .container .guide-box .guide-list li::before {
+    content: "??;
+    color: #c5a880;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   [紐⑤컮????댄룷洹몃옒???뺥솕 援ъ뿭] Base_A?먯꽌 ?댁떇???고듃 ?ш린 媛뺤젣 ?쒖뼱 (?ㅼ뿼 0.00%)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    /* [?щ갚 諛섏쓽 諛섑넗留? ?ъ씠利덊몴 移대뱶 ?곷떒 ?щ갚???덈컲?쇰줈 ??以꾩씠湲? */
+    body .container .size-guide {
+        /* ?ъ옣??吏移??꾩닔: "?꾩쓽 ?щ갚??諛섏쑝濡?以꾩씠?? -> 湲곗〈 25px?대뜕 ?곷떒 ?⑤뵫??12px濡?諛섑넗留??낅땲?? */
+        padding: 12px 12px 25px 12px; /* ??12px, 醫뚯슦 12px, ?꾨옒 25px */
+    }
+    body .container .size-guide .size-table thead td,
+    body .container .size-table tbody td {
+        padding: 15px 4px;
+        font-size: 11.5px;
+        word-break: keep-all;
+    }
+
+    /* [?ъ옣???밸챸 ?꾧났] 4?깃툒: ?ㅽ럺 ?뚯씠釉??쒕ぉ 諛??댁슜 媛?源⑥븣 湲??鍮꾩쑉 ?뺥빀 寃⑹긽 */
+    body .container .spec-table tr td.spec-label {
+        text-align: center;
+        word-break: keep-all;
+        overflow-wrap: break-word;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: -0.3px;
+    }
+
+    body .container .spec-table tr td.spec-value {
+        text-align: left;
+        padding-left: 15px; /* ?ъ옣??吏移? ?щ갚 ?ㅼ씠?댄듃?댁꽌 媛濡?怨듦컙 ?뺣낫 */
+        word-break: keep-all;
+        overflow-wrap: break-word;
+        font-size: 13px; /* ?ъ옣??吏移??꾩닔: 諛묒뿉 湲??13px)???묎컳? ?ш린濡????異뺤냼! */
+        font-weight: 300; /* ???뉕퀬 ?몃젴?섍쾶 ?ㅼ씠?댄듃 */
+        letter-spacing: -0.3px;
+        line-height: 1.45; /* 紐낇뭹 ?쒖? 以꾧컙寃??μ갑 */
+    }
+
+    body .container .card-desc-pad {
+        line-height: 1.45;
+    }
+
+    body .container .guide-box .guide-list li {
+        line-height: 1.45;
+    }
+}
+
+
+/* --- Inlined: css/10_Footer_C10.css --- */
+/* ==========================================================================
+   css/10_Footer_C10.css (Artistic Footer Finish)
+   ?룼 諛붿씠?섏뒪 留덉뒪???ㅽ깲?ㅻ뱶 C10-?덉씠?? 理쒖쥌 ?명꽣 諛?4px ?먭컙 留덇컧
+   - ?명꽣瑜?怨좎슂?섍퀬 李⑤텇???대몺?쇰줈 ?섑븨?섍퀬, 紐낇뭹 ?쒖껜 ?먭컙?쇰줈 理쒖쥌 留덇컧?⑸땲??
+   ========================================================================== */
+
+/* 1. ?명꽣 硫붿씤 ?꾨젅??(.section-footer) */
+.section-footer {
+    padding: 80px 40px;
+    background-color: #111111; /* 諛붿씠?섏뒪 ?쒓렇?덉쿂 ???ㅽ겕 */
+    text-align: center;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 2. ?명꽣 釉뚮옖???꾩씠?댄떚??(787踰??ㅽ떚??怨⑤뱶 ?쇰궇??- ?뚮Ц??byelse 蹂댁쬆) */
+.hero-brand-dark {
+    font-family: var(--brand-font-main);
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 12px; /* 紐낃꺽???먭컙 12px濡???痢???湲고뭹 ?덇쾶 ?뺤옣 */
+    color: #c5a880; /* 理쒖쥌 釉뚮옖???명꽣???ㅽ떚??怨⑤뱶濡??꾨쫫?듦쾶 留덈Т由?*/
+    text-transform: lowercase; /* ?ъ옣??理쒖쥌 吏移? ?꾩뿭 ?뚮Ц??byelse 媛뺤젣??*/
+    margin-bottom: 25px;
+    text-indent: 12px; /* ?뺣젹 蹂댁젙 */
+    text-shadow: 0 1px 4px rgba(197, 168, 128, 0.25);
+}
+
+/* 3. ?명꽣 ?ㅻ챸臾?諛???묎텒 ?뺣낫 */
+.footer-desc {
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 1.9; /* 以꾧컙寃??명씉 媛쒖꽑 */
+    color: #777777; /* ?쒖껜 留묎린 ?쒕떇 */
+    letter-spacing: 0.5px;
+    margin-bottom: 30px;
+}
+
+/* 4. ?명꽣 硫붾━??諛??듭빱 ?쒓렇 */
+.footer-links {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.footer-links a {
+    color: #555555;
+    font-size: 11px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #c5a880; /* ?몃쾭 ???ㅽ떚??怨⑤뱶濡?援먭컧 */
+}
+
+/* 5. 理쒖쥌 移댄뵾?쇱씠??*/
+.footer-copyright {
+    font-size: 9px;
+    letter-spacing: 4px; /* 理쒖쥌 4px ?먭컙 留덇컧 */
+    color: #444444;
+    text-transform: uppercase;
+    text-indent: 4px;
+}
+
+
+/* --- Inlined: css/10_Footer_C10_StyleB.css --- */
+/* ==========================================================
+   10_Footer_C10_StyleB.css (Style B Unique Footer & CTA)
+   ========================================================== */
+
+/* ?쇰궇???대?吏 */
+body.theme-style-b .main-img-box img { 
+    width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+/* 濡쒓퀬 留덉쭊 議곗젅 諛??대?吏 蹂듦뎄 */
+body.theme-style-b .logo-media-box {
+    margin: 20px 0 50px 0; 
+    border: none;
+    background: transparent;
+    height: auto;
+    text-align: center;
+}
+
+body.theme-style-b .footer-logo {
+    width: 250px;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+    mix-blend-mode: normal; /* ?먮낯 ?뚯씪???щ챸 PNG?쇨퀬 媛??*/
+}
+
+/* ?명꽣 ?띿뒪??*/
+body.theme-style-b .story-footer { 
+    padding: 25px 20px 10px 20px; /* ?꾩そ ?щ갚??80px?먯꽌 25px濡????以꾩뿬???꾨줈 ?щ┝ */
+    text-align: center; 
+    background: transparent; /* ?ъ옣??吏移? 媛??諛묒뿉 ?섏???諛곌꼍 ?놁빊 */
+    margin: 0; /* 遺덊븘?뷀븳 留덉쭊 ?꾩쟾 ??젣 */
+}
+body.theme-style-b .story-footer .sub-txt { 
+    display: block; 
+    font-size: 14px; 
+    color: #666666; 
+    margin-bottom: 12px; 
+    font-weight: 500; 
+    letter-spacing: 1px; 
+}
+body.theme-style-b .story-footer .main-txt { 
+    display: block; 
+    font-size: 20px; 
+    font-weight: 700; 
+    color: #111111; 
+    line-height: 1.5; 
+    word-break: keep-all; 
+}
+
+/* Sticky CTA (紐⑤뵒?뚯씠?대줈 媛由ш퀬 ?닿린) */
+body.theme-style-b .sticky-cta { 
+    display: none; /* 湲곕낯?곸쑝濡??④? (?몄젣????젣 媛?? */
+}
+
+body.theme-style-b.use-sticky-cta {
+    padding-bottom: 85px; /* CTA媛 ?섑????뚮쭔 ?섎떒 ?덉쟾 怨듦컙 ?뺣낫 */
+}
+
+body.theme-style-b.use-sticky-cta .sticky-cta { 
+    display: flex; /* ?ㅼ쐞移섍? 耳쒖?硫??섑???*/
+    position: fixed; 
+    bottom: 0; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 100%; 
+    max-width: 760px; 
+    background-color: #ffffff; 
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.08); 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 15px 30px; 
+    z-index: 9999; 
+    border-top: 1px solid #eee;
+}
+
+body.theme-style-b .price-box {
+    display: flex;
+    flex-direction: column;
+}
+body.theme-style-b .price-box .label {
+    font-size: 12px;
+    color: #ff3b30;
+    font-weight: 700;
+}
+body.theme-style-b .price-box .amount {
+    font-size: 22px;
+    font-weight: 800;
+    color: #111;
+}
+body.theme-style-b .buy-btn {
+    background-color: #111;
+    color: #fff;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    body.theme-style-b.use-sticky-cta .sticky-cta { 
+        padding: 12px 20px; 
+    }
+    body.theme-style-b .price-box .amount { font-size: 18px; }
+    body.theme-style-b .buy-btn { font-size: 14px; padding: 12px 20px; }
+}
+
+
+/* 3. ?꾩뿭 ?덉씠?꾩썐 由ъ뀑 (W3C ?ㅽ럺 以?섎? ?꾪빐 ?섎떒 諛곗튂) */
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 3. 전역 레이아웃 리셋 (W3C 스펙 준수를 위해 하단 배치) */
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+</style>
+    <!-- Language Modifiers for Global Expansion -->
+    <link rel="stylesheet" href="css/99_Language_Modifiers.css?v=1.0">
+    <title>byelse | v09-1 The Pure Masterpiece</title>
+</head>
+
+<body class="lang-ko">
+
+    <div class="container">
+
+        <!-- 0. HERO (Master Square & Mystic Gradient) -->
+        <section class="hero active">
+            <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10123_CK-365_bootcut_leggings/A_01_hero.jpg?v=20260614_015759" alt="Hero" class="hero-img">
+            <div class="hero-overlay-12"></div>
+            <div class="hero-content reveal active">
+                <div class="hero-brand">byelse</div>
+                <h1 class="hero-title">가장 완벽한 핏을 위한 감각의 미학, <strong>CK-365</strong></h1>
+            </div>
+        </section>
+
+        <!-- 1. HOOK (Visual Impact) -->
+        <section class="section reveal active">
+            <span class="section-tag">새로운 시작</span>
+            <div class="section-title">
+                <span class="t-top">불편함은 당연하지 않습니다</span>
+                <span class="t-bot">안목이 선택한 <strong>압도적 실루엣</strong></span>
+            </div>
+            <div class="img-wrap">
+                <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10123_CK-365_bootcut_leggings/A_02_seamless.jpg?v=20260614_015759" alt="Perfect Seamless Y-Zone">
+            </div>
+            <div class="subtle-hook reveal active">
+                <span class="t-top-small">타협하지 않는 품질 철학으로 탄생한</span>
+                <span class="t-bot-small">byelse의 시그니처, <strong>CK-365 leggings</strong></span>
+            </div>
+        </section>
+
+        <!-- 2. DATA (Benchmark Spec Table) -->
+        <section class="section reveal active">
+            <span class="section-tag">기술적 데이터</span>
+            <div class="section-title">
+                <span class="t-top">수치가 증명하는</span>
+                <span class="t-bot">압도적인 <strong>기술의 밸런스</strong></span>
+            </div>
+
+            <div class="spec-container">
+                <table class="spec-table">
+                    <tbody>
+                        <tr>
+                            <td class="spec-label">원단 혼용</td>
+                            <td class="spec-value">고밀도 나일론 75% / 프리미엄 스판덱스 25%</td>
+                        </tr>
+                        <tr>
+                            <td class="spec-label">원단 중량</td>
+                            <td class="spec-value">300gsm 고밀도 구조 (일반 원단 대비 무게 12% 감소)</td>
+                        </tr>
+                        <tr>
+                            <td class="spec-label">탄성 지수</td>
+                            <td class="spec-value">최대 180% 초고탄성 (기존 대비 복원력 1.5배 상승)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="glass-grid">
+                <div class="glass-card">
+                    <span class="card-num">01</span>
+                    <span class="card-title"><strong>속옷 없는 자유</strong> (노라인 설계)</span>
+                    <p class="card-desc">99.9% 항균 원단과 특수 Inner Pad 적용으로 속옷 없이도 쾌적한 착용</p>
+                </div>
+                <div class="glass-card">
+                    <span class="card-num">02</span>
+                    <span class="card-title">영국 코츠사 <strong>프리미엄 봉제사</strong></span>
+                    <p class="card-desc">영국 코츠사의 하이엔드 봉제사 사용으로 극한의 움직임에도 견고한 마감</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3-1. PROCESS - Fabric Macro (Artistic Direction) -->
+        <section class="section section-process reveal active">
+            <div class="section-title">
+                <span class="t-top">단 1MM의 뒤틀림도 없이</span>
+                <span class="t-bot">정교한 공정이 만드는 <strong>명품의 가치</strong></span>
+            </div>
+            <div class="img-wrap">
+                <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/premium_black_fabric_macro.jpg?v=20260614_015759" alt="Premium Fabric">
+            </div>
+        </section>
+
+        <!-- 3-2. PROCESS - Factory Process (Artistic Direction) -->
+        <section class="section section-process reveal active">
+            <div class="section-title">
+                <span class="t-top">완벽을 향한 끝없는 집념,</span>
+                <span class="t-bot">압도적인 <strong>디테일의 차이</strong>를 만듭니다.</span>
+            </div>
+            <div id="factory-img-wrap" class="img-wrap">
+                <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/factory_asian.jpg?v=20260614_015759" alt="Factory Process">
+                <div class="info-overlay-12">
+                    <span class="card-num-light">정밀 공정 05</span>
+                    <div class="card-title">컴퓨터 <strong>정밀 패턴 커팅</strong></div>
+                    <p class="card-desc">규격 오차 0.01% 미만 숙련된 장인의 <strong>최종 검수</strong></p>
+                </div>
+                <div class="premium-badge">byelse 품질 보증</div>
+            </div>
+        </section>
+
+        <!-- 4. SAFETY EVIDENCE (Staggered Gallery) -->
+        <section class="section reveal active">
+            <span class="section-tag">안전성 증명</span>
+            <div class="section-title">
+                <span class="t-top">국가 공인 기관이 입증한</span>
+                <span class="t-bot">객관적인 <strong>공식 안전성</strong></span>
+            </div>
+            <div class="glass-grid">
+                <div class="glass-card">
+                    <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/test_report_safety.jpg?v=20260614_015759" alt="안전성 인증"
+                        class="full-img">
+                    <p class="card-desc-center">국가 공인 기관 안전성 검증 완료</p>
+                </div>
+                <div class="glass-card">
+                    <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/test_report_hazardous.jpg?v=20260614_015759" alt="Test Report"
+                        class="full-img">
+                    <p class="card-desc-center">유해물질 불검출 판정</p>
+                </div>
+            </div>
+            <div class="glass-card-light">
+                <p class="review-text">"가장 엄격한 테스트를 통과하여 민감한 피부에도 자극 걱정 없는 <strong>압도적인 신뢰도</strong>를 약속합니다."</p>
+            </div>
+        </section>
+
+        <!-- 5. PARTNER BOARD (Celestial Brand Certification - Scenario B Approved) -->
+        <section class="section reveal active">
+            <span class="section-tag">글로벌 파트너쉽</span>
+            <div class="section-title">
+                <span class="t-top">세계가 인정하는 하이엔드 기술력,</span>
+                <span class="t-bot">byelse의 <strong>글로벌 인증 파트너</strong></span>
+            </div>
+            <!-- [사장님 절대 헌법 집도] 위 아래 하나로 묶은 거대 3:4 대통합 앤티크 골드 슬릿 아크릴 액자 프레임 -->
+            <div class="partnership-frame">
+
+                <div class="glass-grid">
+                    <!-- 카드 1: COATS 프리미엄 봉제사 -->
+                    <div class="glass-card">
+                        <span class="card-num">COATS</span>
+                        <div class="crystal-badge coats-badge"></div>
+                        <h3 class="card-title">영국 프리미엄 봉제사</h3>
+                        <p class="card-desc">1755년부터 이어온 세계적 인장 강도와 명성, 최고급 코츠(Coats)사 봉제로 단 1mm의 실밥 터짐도 원천 방어합니다.</p>
+                    </div>
+                    <!-- 카드 2: LYCRA 오리지널 엘라스틴 -->
+                    <div class="glass-card">
+                        <span class="card-num">LYCRA®</span>
+                        <div class="crystal-badge lycra-badge"></div>
+                        <h3 class="card-title">오리지널 라이크라</h3>
+                        <p class="card-desc">탁월한 탄성과 강력한 원상 회복력의 대명사. 격렬한 신체 활동에도 한 치의 무너짐 없이 명품 실루엣을 수호합니다.</p>
+                    </div>
+                    <!-- 카드 3: YKK 명품 지퍼 -->
+                    <div class="glass-card">
+                        <span class="card-num">YKK</span>
+                        <div class="crystal-badge ykk-badge"></div>
+                        <h3 class="card-title">명품 지퍼 시스템</h3>
+                        <p class="card-desc">세계 표준을 제시하는 최고급 지퍼 시스템 YKK 슬라이더를 장착하여, 부드러운 조작감과 결점 없는 디테일을 선사합니다.</p>
+                    </div>
+                    <!-- 카드 4: 99.9% 항균 SA 실드 -->
+                    <div class="glass-card">
+                        <span class="card-num">ANTIBACTERIAL</span>
+                        <div class="crystal-badge shield-badge"></div>
+                        <h3 class="card-title">99.9% SA 항균 보호막</h3>
+                        <p class="card-desc">유해물질 강력 차단 성적서가 검증하는 99.9% SA 차폐 기술을 수여하여, 온종일 보송하고 맑은 고결한 위생을 지켜줍니다.</p>
+                    </div>
+                </div>
+
+                <!-- 하단 가로 띠 4대 엠블럼 코어 배너 -->
+                <div class="partnership-core-banner">
+                    <div class="core-banner-image">
+                        <span class="sr-only">byelse 글로벌 파트너 인증</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 6. PRECISION LAB (Visual Proof GIFs) -->
+        <section class="section reveal active">
+            <span class="section-tag">정밀 공학</span>
+            <div class="section-title">
+                <span class="t-top">단 1MM의 오차도 없는</span>
+                <span class="t-bot">byelse Precision Lab의 <strong>정밀 공정</strong></span>
+            </div>
+
+            <div class="glass-grid">
+                <div class="lab-video-unit">
+                    <div class="img-wrap">
+                        <video autoplay loop muted playsinline>
+                            <source src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/process_fabric.mp4?v=20260614_015759" type="video/mp4">
+                        </video>
+                    </div>
+                    <p class="card-desc-center">고밀도 편직 공정</p>
+                </div>
+                <div class="lab-video-unit">
+                    <div class="img-wrap">
+                        <video autoplay loop muted playsinline>
+                            <source src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/process_sewing.mp4?v=20260614_015759" type="video/mp4">
+                        </video>
+                    </div>
+                    <p class="card-desc-center">무봉제 마감 처리</p>
+                </div>
+            </div>
+
+            <div class="glass-card-dark">
+                <span class="card-num-light">byelse 제조 철학</span>
+                <p class="review-text">
+                    타협 없는 품질 관리를 통해<br>
+                    'byelse'만의 <strong>독보적인 완성도</strong>를 구현합니다.
+                </p>
+            </div>
+        </section>
+
+        <!-- 7. REAL REVIEWS (Premium Review Board) -->
+        <section class="review-section section reveal active">
+            <span class="section-tag">REAL REVIEWS</span>
+            <div class="section-title">
+                <span class="t-top">진심이 담긴 생생한 기록</span>
+                <span class="t-bot">숫자보다 강력한 <strong>고객의 증언</strong></span>
+            </div>
+
+            <div class="review-list">
+                <div class="review-card">
+                    <div class="rating-stars"></div>
+                    <p class="review-text">"수십 벌의 고가 레깅스를 입어봤지만, 말려 내려가지 않는 <strong>지지력은 단연 최고</strong>입니다."</p>
+                    <div class="review-author">필라테스 강사 A님 (31세)</div>
+                </div>
+                <div class="review-card">
+                    <div class="rating-stars"></div>
+                    <p class="review-text">"비침이 전혀 없고 세탁을 여러 번 해도 처음 그 느낌 그대로 유지되는 <strong>복원력에 감탄</strong>했습니다."</p>
+                    <div class="review-author">스마트스토어 구매 고객 B님</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. SIZE GUIDE (Comprehensive Integration) -->
+        <section class="section reveal active">
+            <span class="section-tag">커스터마이징 핏</span>
+            <div class="section-title">
+                <span class="t-top">나에게 가장 완벽한</span>
+                <span class="t-bot"><strong>커스터마이징 핏</strong>을 찾아보세요</span>
+            </div>
+
+            <div class="size-guide">
+                <table class="size-table">
+                    <thead>
+                        <tr>
+                            <td>SIZE</td>
+                            <td>허리</td>
+                            <td>엉덩이</td>
+                            <td>총장</td>
+                            <td>권장체중</td>
+                            <td>권장신장</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>S</td>
+                            <td>24</td>
+                            <td>33</td>
+                            <td>82</td>
+                            <td>40-50kg</td>
+                            <td>155-160cm</td>
+                        </tr>
+                        <tr>
+                            <td>M</td>
+                            <td>26</td>
+                            <td>35</td>
+                            <td>84</td>
+                            <td>50-55kg</td>
+                            <td>160-165cm</td>
+                        </tr>
+                        <tr>
+                            <td>L</td>
+                            <td>28</td>
+                            <td>37</td>
+                            <td>86</td>
+                            <td>55-62kg</td>
+                            <td>165-170cm</td>
+                        </tr>
+                        <tr>
+                            <td>XL</td>
+                            <td>30</td>
+                            <td>39</td>
+                            <td>88</td>
+                            <td>62-70kg</td>
+                            <td>170-175cm</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="card-desc-pad">
+                    <p>* 위 수치는 단면 측정 기준(cm)이며, 측정 방법에 따라 1-3cm 오차가 발생할 수 있습니다.</p>
+                    <p>* 타이트한 보정 핏을 원하시면 정사이즈를, 편안한 착용감을 원하시면 한 사이즈 크게 추천합니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. CARE & INFO (Black Premium Board) -->
+        <section class="section reveal active">
+            <span class="section-tag">세탁 및 관리</span>
+            <div class="section-title">
+                <span class="t-top">오래도록 변함없는 컨디션을 위한</span>
+                <span class="t-bot">byelse <strong>프리미엄 케어 가이드</strong></span>
+            </div>
+
+            <div class="care-grid">
+                <!-- 1. 찬물 단독 세탁 (하늘색 라이트 블루 눈결정 SVG 장착) -->
+                <div class="care-item">
+                    <div class="care-icon-wrap icon-blue">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 3v18M3 12h18M12 3l3 3M12 3L9 6M12 21l3-3M12 21l-3-3M21 12l-3-3M21 12l-3 3M3 12l3-3M3 12l3 3" />
+                        </svg>
+                    </div>
+                    <div class="care-title">찬물 단독 세탁</div>
+                    <p class="care-desc">30도 이하의 찬물 또는 미지근한 물에서 중성세제로 단독 세탁을 권장합니다.</p>
+                </div>
+
+                <!-- 2. 건조기 사용 금지 (루비 핑크 원형 사선 금지 SVG 장착) -->
+                <div class="care-item">
+                    <div class="care-icon-wrap icon-red">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="9" />
+                            <path stroke-linecap="round" d="M18.36 5.64L5.64 18.36" />
+                        </svg>
+                    </div>
+                    <div class="care-title">건조기 사용 금지</div>
+                    <p class="care-desc">고온의 건조기 사용은 원단 수축 및 기능성 손상의 원인이 되므로 반드시 피해주세요.</p>
+                </div>
+
+                <!-- 3. 중성세제 사용 (핑크빛 온화한 물방울 맺힘 SVG 장착) -->
+                <div class="care-item">
+                    <div class="care-icon-wrap icon-pink">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z" />
+                        </svg>
+                    </div>
+                    <div class="care-title">중성세제 사용</div>
+                    <p class="care-desc">섬유유연제, 표백제, 강력 효소 세제는 기능성 원사를 손상시킬 수 있습니다.</p>
+                </div>
+
+                <!-- 4. 그늘 자연 건조 (청량한 민트 에메랄드 바람 결 SVG 장착) -->
+                <div class="care-item">
+                    <div class="care-icon-wrap icon-green">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8h15M3 12h18M3 16h12" />
+                        </svg>
+                    </div>
+                    <div class="care-title">그늘 자연 건조</div>
+                    <p class="care-desc">직사광선을 피해 통풍이 잘 되는 그늘에서 자연 건조 시 가장 오래 입으실 수 있습니다.</p>
+                </div>
+            </div>
+
+            <table class="info-table-footer">
+                <tr>
+                    <td>제품명</td>
+                    <td>byelse 하이엔드 시그니처 레깅스 (Pro)</td>
+                </tr>
+                <tr>
+                    <td>소재 혼용률</td>
+                    <td>프리미엄 나일론 74%, 라이크라 스판덱스 26%</td>
+                </tr>
+                <tr>
+                    <td>제조국</td>
+                    <td>byelse / 해외 제조</td>
+                </tr>
+                <tr>
+                    <td>품질보증기준</td>
+                    <td>구매일로부터 1년 (공정거래위원회 고시 준수)</td>
+                </tr>
+                <tr>
+                    <td>A/S 책임자</td>
+                    <td>byelse 고객행복센터 1660-xxxx</td>
+                </tr>
+            </table>
+
+            <div class="guide-box">
+                <div class="guide-title">
+                    <div class="guide-title-left">구매 전 필독 안내</div>
+                </div>
+                <ul class="guide-list">
+                    <li>운동 후 땀에 젖은 상태로 장시간 방치 시 땀의 염분에 의해 변색이 일어날 수 있으므로 즉시 세탁을 권장합니다.</li>
+                    <li>물에 오랫동안 담가두거나 담금 세탁은 제품의 수명을 단축시키고 이염의 원인이 됩니다.</li>
+                    <li>모니터 해상도 및 조명에 따라 실제 제품의 색상과 차이가 있을 수 있습니다.</li>
+                    <li>배송은 결제 완료 후 평균 1-3일(영업일 기준) 소요됩니다.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 10. FOOTER (Master Brand Identity) -->
+        <section class="section-footer reveal active">
+            <div class="hero-brand-dark">byelse</div>
+            <p class="footer-desc">당신의 일상이 <strong>빛나는 이유</strong></p>
+        </section>
+
+    </div>
+
+</body>
+
+</html>
