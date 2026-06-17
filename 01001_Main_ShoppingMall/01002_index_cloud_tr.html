@@ -606,6 +606,10 @@ footer .logo::after {
     .hero h1 { font-size: 32px; letter-spacing: 8px; }
     .utility-menu { gap: 10px; }
     .utility-menu > a { display: none; } /* Hide text links on mobile, keep language */
+
+    #layer-header { height: 55px; }
+    #back-btn { padding: 8px 16px; gap: 8px; font-size: 9px; letter-spacing: 2px; }
+    #back-btn svg { width: 14px; height: 14px; }
 }
 
 /* --- 🏮 GOOGLE TRANSLATE ENGINE DEFENSE (Merged from style.css) --- */
@@ -653,7 +657,7 @@ body {
         <div class="header-phrase notranslate">I buy What's different</div>
 
         <div class="utility-menu">
-            <div class="lang-dropdown">
+            <div class="lang-dropdown notranslate">
                 <span class="lang-label" id="current-lang-label">KR ▾</span>
                 <div class="lang-dropdown-content">
                     <a href="javascript:void(0)" onclick="triggerTranslation('ko')">KR (한국어)</a>
@@ -698,7 +702,7 @@ body {
                         class="product-card">
                         <div class="img-box">
                             <span class="badge notranslate">BEST</span>
-                            <img src="https://raw.githubusercontent.com/byelse-official/assets/main/01001_Main_ShoppingMall/10123_A_01_hero_small.jpg?v=20260617_181236"
+                            <img src="https://raw.githubusercontent.com/byelse-official/assets/main/01001_Main_ShoppingMall/10123_A_01_hero_small.jpg?v=20260617_183854"
                                 alt="Style A KR" loading="lazy">
                         </div>
                         <div class="product-info">
@@ -712,7 +716,7 @@ body {
                         class="product-card">
                         <div class="img-box">
                             <span class="badge new notranslate">NEW</span>
-                            <img src="https://raw.githubusercontent.com/byelse-official/assets/main/01001_Main_ShoppingMall/10123_B_01_hero_small.jpg?v=20260617_181236"
+                            <img src="https://raw.githubusercontent.com/byelse-official/assets/main/01001_Main_ShoppingMall/10123_B_01_hero_small.jpg?v=20260617_183854"
                                 alt="Style B KR" loading="lazy">
                         </div>
                         <div class="product-info">
@@ -759,6 +763,12 @@ window.triggerTranslation = function (targetLangCode) {
 
         const labelMap = { 'ko': 'KR ▾', 'en': 'EN ▾', 'zh-CN': 'CN ▾' };
         document.getElementById('current-lang-label').innerText = labelMap[targetLangCode];
+
+        const dropdownContent = document.querySelector('.lang-dropdown-content');
+        if (dropdownContent) {
+            dropdownContent.style.display = 'none';
+            setTimeout(() => { dropdownContent.style.display = ''; }, 50);
+        }
     }
 };
 
