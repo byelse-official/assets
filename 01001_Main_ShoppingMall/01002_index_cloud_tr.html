@@ -658,9 +658,9 @@ body {
         <div class="header-phrase notranslate">I buy What's different</div>
 
         <div class="utility-menu">
-            <div class="lang-dropdown notranslate">
+            <div class="lang-dropdown">
                 <span class="lang-label" id="current-lang-label">KR ▾</span>
-                <div class="lang-dropdown-content">
+                <div class="lang-dropdown-content notranslate">
                     <a href="javascript:void(0)" onclick="triggerTranslation('ko')">KR (한국어)</a>
                     <a href="javascript:void(0)" onclick="triggerTranslation('en')">EN (English)</a>
                     <a href="javascript:void(0)" onclick="triggerTranslation('zh-CN')">CN (中文)</a>
@@ -703,7 +703,7 @@ body {
                         class="product-card">
                         <div class="img-box">
                             <span class="badge notranslate">BEST</span>
-                            <img src="https://raw.githubusercontent.com/byelse-official/assets/main/01001_Main_ShoppingMall/10123_A_01_hero_small.jpg?v=20260617_190721"
+                            <img src="https://raw.githubusercontent.com/byelse-official/assets/main/01001_Main_ShoppingMall/10123_A_01_hero_small.jpg?v=20260617_192759"
                                 alt="Style A KR" loading="lazy">
                         </div>
                         <div class="product-info">
@@ -717,7 +717,7 @@ body {
                         class="product-card">
                         <div class="img-box">
                             <span class="badge new notranslate">NEW</span>
-                            <img src="https://raw.githubusercontent.com/byelse-official/assets/main/01001_Main_ShoppingMall/10123_B_01_hero_small.jpg?v=20260617_190721"
+                            <img src="https://raw.githubusercontent.com/byelse-official/assets/main/01001_Main_ShoppingMall/10123_B_01_hero_small.jpg?v=20260617_192759"
                                 alt="Style B KR" loading="lazy">
                         </div>
                         <div class="product-info">
@@ -765,10 +765,10 @@ window.triggerTranslation = function (targetLangCode) {
         const labelMap = { 'ko': 'KR ▾', 'en': 'EN ▾', 'zh-CN': 'CN ▾' };
         document.getElementById('current-lang-label').innerText = labelMap[targetLangCode];
 
-        const dropdownParent = document.querySelector('.lang-dropdown');
-        if (dropdownParent) {
-            dropdownParent.style.pointerEvents = 'none';
-            setTimeout(() => { dropdownParent.style.pointerEvents = ''; }, 100);
+        const dropdownContent = document.querySelector('.lang-dropdown-content');
+        if (dropdownContent) {
+            dropdownContent.style.visibility = 'hidden';
+            setTimeout(() => { dropdownContent.style.visibility = ''; }, 300);
         }
     }
 };
