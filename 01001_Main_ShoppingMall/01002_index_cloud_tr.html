@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>byelse | Official Storefront</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@800&family=Noto+Sans+KR:wght@300;700&display=swap"
+        rel="stylesheet">
+    <style id="byelse-master-design">
+/* 🏮 [01001] Main Storefront Layout CSS (Masterpiece UI/UX Edition) 🏮 */
+
+/* [5001번 규정]: 구글 번역기 엔진 UI 및 배너 완벽 박멸 (Shadow Lockdown) */
+#google_translate_element, 
+iframe.goog-te-banner-frame, 
+.goog-te-banner-frame, 
+.VIpgJd-ZVi9od-ORHb-OEVmcd,
+#goog-gt-tt, 
+.goog-te-balloon-frame, 
+.VIpgJd-yAWNEb-VIpgJd-fmcmS-sn54Q { 
+    display: none !important; 
+}
+body { top: 0px !important; position: static !important; }
+.goog-text-highlight { background-color: transparent !important; border: none !important; box-shadow: none !important; }
+
+:root {
+    --brand-red: #A1000E;
+    --matte-black: #0a0a0a;
+    --bg-gray: #f2f2f2;
+    --text-main: #1a1a1a;
+    --text-light: #888888;
+    --sidebar-width: 240px;
+    --ease-smooth: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-main);
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* --- ✨ HEADER & NAVIGATION --- */
+header {
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    z-index: 1000;
+    height: 65px;
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease;
+}
+
+header:hover {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+
+.logo {
+    justify-self: start;
+    font-family: 'Outfit', sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    text-transform: lowercase;
+    color: #000;
+    text-decoration: none;
+    position: relative;
+}
+
+.logo::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--brand-red);
+    transition: width 0.4s var(--ease-smooth);
+}
+
+.logo:hover::after {
+    width: 100%;
+}
+
+.header-phrase {
+    text-align: center;
+    white-space: nowrap;
+    font-family: 'Outfit', sans-serif;
+    font-size: 10px;
+    color: #bbb;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.utility-menu {
+    justify-content: flex-end;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.utility-menu > a {
+    font-size: 11px;
+    color: var(--text-light);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.utility-menu > a:hover {
+    color: var(--brand-red);
+}
+
+/* --- ✨ LANGUAGE DROPDOWN (재설계 버전) --- */
+.lang-dropdown {
+    position: relative;
+    display: inline-block;
+    padding: 10px 0;
+}
+
+.lang-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 11px;
+    color: #111;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.lang-dropdown-content {
+    display: none; /* 호버로 열리지 않음 */
+    position: absolute;
+    right: -10px;
+    top: 120%;
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    min-width: 140px;
+    box-shadow: 0px 15px 35px rgba(0,0,0,0.15);
+    z-index: 1001;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 8px;
+    padding: 8px 0;
+}
+
+/* 오직 자바스크립트가 .active를 붙였을 때만 보임 */
+.lang-dropdown.active .lang-dropdown-content {
+    display: block;
+    animation: menuFadeIn 0.2s ease-out;
+}
+
+@keyframes menuFadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.lang-dropdown-content a {
+    color: #555;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    border-left: 2px solid transparent;
+}
+
+.lang-dropdown-content a:hover {
+    background-color: #fcfcfc;
+    color: var(--brand-red);
+    border-left: 2px solid var(--brand-red);
+    padding-left: 25px;
+}
+
+/* --- ✨ MAIN LAYOUT --- */
+.main-container {
+    display: flex;
+    min-height: calc(100vh - 65px);
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.sidebar {
+    width: var(--sidebar-width);
+    padding: 50px 30px;
+    position: sticky;
+    top: 65px;
+    height: calc(100vh - 65px);
+    box-sizing: border-box;
+}
+
+.sidebar-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 11px;
+    color: #ccc;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    font-weight: 800;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    margin-bottom: 25px;
+}
+
+.sidebar-menu a {
+    text-decoration: none;
+    color: #444;
+    font-size: 13px;
+    font-weight: 700;
+    transition: all 0.3s var(--ease-smooth);
+    display: inline-block;
+    position: relative;
+}
+
+.sidebar-menu a::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%) scale(0);
+    width: 6px;
+    height: 6px;
+    background-color: var(--brand-red);
+    border-radius: 50%;
+    transition: transform 0.3s var(--ease-smooth);
+}
+
+.sidebar-menu a:hover {
+    color: #000;
+    transform: translateX(10px);
+}
+
+.sidebar-menu a:hover::before,
+.sidebar-menu a.active::before {
+    transform: translateY(-50%) scale(1);
+}
+
+.sidebar-menu a.active {
+    color: #000;
+    transform: translateX(10px);
+}
+
+.content {
+    flex: 1;
+    padding: 40px 4%;
+    animation: fadeUpIn 0.8s var(--ease-smooth) forwards;
+}
+
+/* --- ✨ HERO SECTION --- */
+.hero {
+    height: 35vh;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    border-radius: 16px;
+    margin-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 50%);
+    animation: rotateSlow 20s linear infinite;
+}
+
+.infra-tag {
+    font-family: 'Outfit', sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: var(--brand-red);
+    margin-bottom: 12px;
+    font-weight: 800;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 54px;
+    margin: 0;
+    letter-spacing: 12px;
+    text-transform: lowercase;
+    font-weight: 900;
+    z-index: 2;
+    text-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.hero .description {
+    font-size: 15px;
+    margin: 16px 0;
+    color: #aaa;
+    letter-spacing: 0.5px;
+    font-weight: 300;
+    z-index: 2;
+}
+
+.status-tag {
+    font-family: 'Outfit', sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: #4CAF50;
+    font-weight: 700;
+    padding: 6px 12px;
+    background: rgba(76, 175, 80, 0.1);
+    border-radius: 100px;
+    z-index: 2;
+    margin-top: 10px;
+}
+
+/* --- ✨ PRODUCT GRID --- */
+.section-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    letter-spacing: 2px;
+    color: #111;
+}
+
+.section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(0,0,0,0.1) 0%, transparent 100%);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.product-card {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    group: card;
+}
+
+.img-box {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background-color: var(--bg-gray);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    transition: transform 0.5s var(--ease-smooth), box-shadow 0.5s var(--ease-smooth);
+}
+
+.product-card:hover .img-box {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s var(--ease-smooth);
+}
+
+.product-card:hover .img-box img {
+    transform: scale(1.08);
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--brand-red);
+    color: #fff;
+    font-family: 'Outfit', sans-serif;
+    font-size: 9px;
+    padding: 6px 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(161, 0, 14, 0.3);
+}
+
+.badge.new {
+    background: #000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.product-info h3 {
+    font-size: 13px;
+    margin: 0 0 8px 0;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #333;
+    height: 39px;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+
+.product-card:hover .product-info h3 {
+    color: #000;
+}
+
+.price {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: #111;
+    display: inline-block;
+    position: relative;
+}
+
+.price::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--brand-red);
+    transition: width 0.4s var(--ease-smooth);
+}
+
+.product-card:hover .price::after {
+    width: 100%;
+}
+
+/* --- ✨ FOOTER --- */
+footer {
+    padding: 60px 20px;
+    background-color: #050505;
+    color: #555;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto;
+}
+
+footer .logo {
+    color: #c5a880; /* 골드 로고 적용 */
+    opacity: 1;
+    margin-bottom: 20px;
+    display: inline-block;
+    font-size: 32px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+footer .logo::after {
+    display: none;
+}
+
+.footer-copyright {
+    font-size: 12px;
+    color: #c5a880; /* 골드 로고와 톤을 맞춘 밝은 색상 */
+    opacity: 0.9;
+}
+
+/* --- ✨ PREMIUM SPA OVERLAY SYSTEM (Refined) --- */
+#product-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    
+    /* Animation base */
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(100vh);
+    transition: all 0.6s var(--ease-smooth);
+}
+
+#product-layer.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#layer-header {
+    width: 100%;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.layer-header-inner {
+    width: 100%;
+    max-width: 800px;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+}
+
+#back-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #000;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-family: 'Outfit', sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 9px 18px;
+    border-radius: 100px;
+    transition: all 0.3s var(--ease-smooth);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+#back-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    background: var(--brand-red);
+}
+
+#back-btn svg {
+    width: 14px;
+    height: 14px;
+    stroke-width: 2;
+}
+
+#product-frame-container {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    background-color: #fafafa;
+}
+
+#product-frame {
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    border: none;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.05);
+    background: #fff;
+}
+
+/* Animations */
+@keyframes fadeUpIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes rotateSlow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .product-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+    header { display: flex; justify-content: space-between; padding: 0 20px; }
+    .sidebar { display: none; }
+    .product-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+    .header-phrase { display: none; }
+    .logo { font-size: 20px; letter-spacing: 2px; }
+    .content { padding: 30px 20px; }
+    .hero h1 { font-size: 32px; letter-spacing: 8px; }
+    .utility-menu { gap: 10px; }
+    .utility-menu > a { display: none; } /* Hide text links on mobile, keep language */
+
+    #layer-header { height: 50px; }
+    #back-btn { padding: 6px 12px; gap: 6px; font-size: 8px; letter-spacing: 1px; }
+    #back-btn svg { width: 12px; height: 12px; }
+}
+
+/* --- 🏮 GOOGLE TRANSLATE ENGINE DEFENSE --- */
+#google_translate_element, 
+iframe.goog-te-banner-frame, 
+.goog-te-banner-frame, 
+.VIpgJd-ZVi9od-ORHb-OEVmcd, 
+.goog-tooltip, 
+#goog-gt-tt, 
+.goog-te-balloon-frame, 
+.VIpgJd-yAWNEb-VIpgJd-fmcmS-sn54Q,
+.VIpgJd-ZVi9od-aZ2wYd-L9SumO,
+.VIpgJd-ZVi9od-l4eHX-hSRGPd {
+    display: none !important;
+}
+
+body {
+    top: 0px !important;
+    position: static !important;
+}
+
+.goog-text-highlight { 
+    background-color: transparent !important; 
+    border: none !important; 
+    box-shadow: none !important; 
+}
+
+</style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo notranslate">byelse</a>
+        <div class="header-phrase notranslate">I buy What's different</div>
+
+        <div class="utility-menu">
+            <div class="lang-dropdown">
+                <span class="lang-label" id="current-lang-label">KR ▾</span>
+                <div class="lang-dropdown-content notranslate">
+                    <a href="javascript:void(0)" onclick="triggerTranslation('ko')">KR (한국어)</a>
+                    <a href="javascript:void(0)" onclick="triggerTranslation('en')">EN (English)</a>
+                    <a href="javascript:void(0)" onclick="triggerTranslation('zh-CN')">CN (中文)</a>
+                    <a href="javascript:void(0)" onclick="triggerTranslation('ja')">JP (日本語)</a>
+                    <a href="javascript:void(0)" onclick="triggerTranslation('es')">ES (Español)</a>
+                    <a href="javascript:void(0)" onclick="triggerTranslation('fr')">FR (Français)</a>
+                    <a href="javascript:void(0)" onclick="triggerTranslation('de')">DE (Deutsch)</a>
+                    <a href="javascript:void(0)" onclick="triggerTranslation('ar')">AR (العربية)</a>
+                </div>
+            </div>
+
+            <a href="#">로그인</a>
+            <a href="#">회원가입</a>
+            <a href="#">장바구니</a>
+            <a href="#">주문조회</a>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <div class="sidebar-title notranslate">CATEGORY</div>
+            <ul class="sidebar-menu">
+                <li><a href="#" class="active">베스트 100</a></li>
+                <li><a href="#">신상품</a></li>
+                <li><a href="#">시그니처 레깅스</a></li>
+                <li><a href="#">부츠컷 레깅스</a></li>
+                <li><a href="#">프로 퍼포먼스</a></li>
+                <li><a href="#">커뮤니티</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <div class="hero">
+                <div class="infra-tag notranslate">CLOUDBASE INFRA</div>
+                <h1 class="notranslate">byelse</h1>
+                <div class="description">비교할 수 없는 우아함, 클라우드로 만나는 걸작</div>
+                <div class="status-tag notranslate">GLOBAL ASSET DELIVERY SYSTEM ACTIVE</div>
+            </div>
+
+            <section class="product-section">
+                <h2 class="section-title notranslate">WEEKLY BEST</h2>
+                <div class="product-grid">
+                    <a href="javascript:void(0)"
+                        onclick="openProduct('https://byelse-official.github.io/assets/10123_CK-365_bootcut_leggings/10123_index_cloud_tr.html', '10123')"
+                        class="product-card">
+                        <div class="img-box">
+                            <span class="badge notranslate">BEST</span>
+                            <img src="https://raw.githubusercontent.com/byelse-official/assets/main/01001_Main_ShoppingMall/10123_A_01_hero_small.jpg?v=20260619_155007"
+                                alt="Style A KR" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>하이엔드 시그니처 레깅스</h3>
+                            <span class="price">19,000원</span>
+                        </div>
+                    </a>
+
+                    <a href="javascript:void(0)"
+                        onclick="openProduct('https://byelse-official.github.io/assets/10123_CK-365_bootcut_leggings/10123B_index_cloud_tr.html', '10123B')"
+                        class="product-card">
+                        <div class="img-box">
+                            <span class="badge new notranslate">NEW</span>
+                            <img src="https://raw.githubusercontent.com/byelse-official/assets/main/01001_Main_ShoppingMall/10123_B_01_hero_small.jpg?v=20260619_155007"
+                                alt="Style B KR" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>하이엔드 무봉제 레깅스</h3>
+                            <span class="price">24,000원</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <div class="logo notranslate">byelse</div>
+        <p class="footer-copyright">&copy; 2026 byelse. All Rights Reserved.</p>
+    </footer>
+
+    <div id="product-layer">
+        <div id="layer-header">
+            <div class="layer-header-inner">
+                <button id="back-btn" onclick="closeProduct()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M19 12H5M12 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span class="notranslate">BACK TO LIST</span>
+                </button>
+            </div>
+        </div>
+        <div id="product-frame-container">
+            <iframe id="product-frame" src=""></iframe>
+        </div>
+    </div>
+
+    <!-- 구글 번역 엔진 초기화 및 럭셔리 의역 탑재 (app.js가 먼저 실행되도록 맨 하단 배치) -->
+    <div id="google_translate_element"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'ko',
+                includedLanguages: 'ko,en,zh-CN,ja,es,fr,de,ar',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        // [Luxury Post-Processing] 대문 전용 다국어 의역 사전 탑재 (유니코드 보호)
+        const luxuryDictionary = [
+            // English (영어 의역)
+            { bad: "Incomparable elegance", good: "Unrivaled Elegance", lang: "en" },
+            { bad: "masterpiece met through the cloud", good: "A Masterpiece Unveiled in the Cloud", lang: "en" },
+            { bad: "WEEKLY BEST", good: "Masterpiece of the Week", lang: "en" },
+            
+            // Chinese (중국어 유니코드 의역)
+            // 무비교적 우아함, 클라우드로 만나는 걸작 -> 독보적인 우아함, 클라우드에 펼쳐지는 마스터피스
+            { bad: "\u65e0\u4e0e\u4f26\u6bd4\u7684\u4f18\u96c5\uff0c\u901a\u8fc7\u4e91\u7aef\u76f8\u9047\u7684\u6770\u4f5c", good: "\u72ec\u4e00\u65e0\u4e8c\u7684\u4f18\u96c5\uff0c\u4e91\u7aef\u5c55\u73b0\u7684\u81f3\u81fb\u6770\u4f5c", lang: "zh-CN" }
+        ];
+
+        function applyLuxuryTranslation() {
+            const currentCookie = document.cookie.match(/googtrans=\/ko\/([^;]+)/);
+            if (!currentCookie) return;
+            const currentLang = currentCookie[1];
+            
+            const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+            let node;
+            while (node = walker.nextNode()) {
+                if (node.parentElement && !['SCRIPT', 'STYLE'].includes(node.parentElement.tagName)) {
+                    let text = node.nodeValue;
+                    let changed = false;
+                    luxuryDictionary.forEach(item => {
+                        if (item.lang === currentLang && text.includes(item.bad)) {
+                            text = text.replace(new RegExp(item.bad, 'gi'), item.good);
+                            changed = true;
+                        }
+                    });
+                    if (changed) node.nodeValue = text;
+                }
+            }
+        }
+
+        const observer = new MutationObserver(() => {
+            if (document.documentElement.classList.contains('translated-ltr') || document.documentElement.classList.contains('translated-rtl')) {
+                applyLuxuryTranslation();
+            }
+        });
+        observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'], childList: true, subtree: true });
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script id="byelse-multilingual-router">
+/**
+ * 🏮 byelse Multilingual System v2.1 (The Final Masterpiece - Session Fixed)
+ */
+const AppState = {
+    lang: 'ko',
+    labelMap: { 'ko': 'KR ▾', 'en': 'EN ▾', 'zh-CN': 'CN ▾', 'ja': 'JP ▾', 'es': 'ES ▾', 'fr': 'FR ▾', 'de': 'DE ▾', 'ar': 'AR ▾' }
+};
+
+// 1. 초기 동기화 (첫 시작은 무조건 KR, 이후 세션 유지)
+function syncInitialState() {
+    // [핵심] 브라우저 세션에서 초기화 여부 확인
+    const isFirstStart = !sessionStorage.getItem('byelse_lang_initialized');
+
+    if (isFirstStart) {
+        // [A] 진짜 첫 시작이라면: 모든 번역 쿠키 삭제하고 한국어로 강제 고정
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; domain=" + location.hostname + "; path=/;";
+        document.cookie = "googtrans=/ko/ko; path=/; domain=" + location.hostname;
+        document.cookie = "googtrans=/ko/ko; path=/;";
+        AppState.lang = 'ko';
+        sessionStorage.setItem('byelse_lang_initialized', 'true');
+    } else {
+        // [B] 이미 접속 중인 세션이라면: 기존 쿠키 상태를 존중 (새로고침 대응)
+        const cookieMatch = document.cookie.match(/googtrans=\/ko\/([^;]+)/);
+        if (cookieMatch && cookieMatch[1]) {
+            AppState.lang = cookieMatch[1];
+        } else {
+            AppState.lang = 'ko';
+        }
+    }
+    
+    // UI 반영
+    const label = document.getElementById('current-lang-label');
+    if (label) label.innerText = AppState.labelMap[AppState.lang];
+}
+
+// 2. 언어 전환 실행 (수동 클릭 시에만 반응)
+window.triggerTranslation = function (targetLang) {
+    const dropdown = document.querySelector('.lang-dropdown');
+    if (dropdown) dropdown.classList.remove('active');
+
+    // 세션 초기화 완료 표시 (수동 클릭 시에도 확실히 처리)
+    sessionStorage.setItem('byelse_lang_initialized', 'true');
+
+    if (targetLang === 'ko') {
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; domain=" + location.hostname + "; path=/;";
+        location.href = location.pathname;
+        return;
+    }
+
+    AppState.lang = targetLang;
+    const label = document.getElementById('current-lang-label');
+    if (label) label.innerText = AppState.labelMap[targetLang];
+
+    const applyToGoogle = () => {
+        const select = document.querySelector("select.goog-te-combo");
+        if (select) {
+            select.value = targetLang;
+            select.dispatchEvent(new Event('change', { bubbles: true }));
+        } else {
+            setTimeout(applyToGoogle, 200);
+        }
+    };
+    applyToGoogle();
+};
+
+// 3. 상품 레이어 오픈 (절대 경로 보장)
+function openProduct(baseUrl, productId) {
+    // 🔥 [캐시 파괴] 깃허브 CDN 및 폰 브라우저 캐시를 무시하고 무조건 최신 파일 강제 다운로드
+    const cacheBuster = new Date().getTime();
+    let finalUrl = baseUrl.includes('?') ? baseUrl + '&v=' + cacheBuster : baseUrl + '?v=' + cacheBuster;
+
+    if (AppState.lang !== 'ko') {
+        finalUrl += '#googtrans(ko|' + AppState.lang + ')';
+    }
+
+    const frame = document.getElementById('product-frame');
+    const layer = document.getElementById('product-layer');
+    frame.src = finalUrl;
+    layer.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeProduct() {
+    const layer = document.getElementById('product-layer');
+    const frame = document.getElementById('product-frame');
+    layer.classList.remove('active');
+    setTimeout(() => { frame.src = ''; }, 600);
+    document.body.style.overflow = 'auto';
+}
+
+function initDropdown() {
+    const label = document.getElementById('current-lang-label');
+    const dropdown = document.querySelector('.lang-dropdown');
+    if (label && dropdown) {
+        label.onclick = (e) => {
+            e.stopPropagation();
+            dropdown.classList.toggle('active');
+        };
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    initDropdown();
+    syncInitialState();
+});
+
+</script>
+</body>
+
+</html>
