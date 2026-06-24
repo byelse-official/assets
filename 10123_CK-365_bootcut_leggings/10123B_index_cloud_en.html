@@ -1,0 +1,2801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style id="byelse-master-design">
+/* ==========================================================
+   00_Master Engine v10 (Pristine 23-Line Dual-Safety Loader)
+   ※ [5001_Incident_Banned_CSS_Tags.md 참조]
+   ※ 원본 훼손 방지를 위해 이 코어 파일 및 C레이어에서는 !important를 엄격히 금지합니다.
+   ========================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Outfit:wght@300;400;600;700;800&display=swap');
+/* 1. 글로벌 공통 A/B Layer (숲) */
+/* --- Inlined: css/00_Base_A.css --- */
+/* ==========================================================================
+   css/00_Base_A.css (High-End Base Forest)
+   🏮 바이엘스 마스터 스탠다드 A-레이어: 최고 존엄 럭셔리 본-화이트 및 가속 렌더링
+   - 전체 시스템 서체 렌더링을 앤티앨리어싱 가속하여 대기업급 질감으로 초고도화합니다.
+   ========================================================================== */
+
+/* 1. 디자인 시스템 토큰 및 명품 변수 정의 (787번 앤티크 골드 전환) */
+:root {
+    --brand-color-primary: #c5a880;
+    /* 바이엘스 시그니처 앤티크 골드로 전격 이관 */
+    --brand-color-accent: #d4af37;
+    /* 바이엘스 황금빛 골드 */
+    --bg-bone-white: #faf9f6;
+    /* 따뜻하고 은은한 상아빛 명품 배경 */
+
+    --brand-font-main: 'Outfit', sans-serif;
+    --brand-font-sub: 'Noto Sans KR', sans-serif;
+}
+
+/* 2. 전역 초기화 및 브라우저 하드웨어 가속 렌더링 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* 폰트 렌더링 모바일/데스크탑 최고화 */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    font-family: var(--brand-font-sub);
+    background-color: var(--bg-bone-white);
+    color: #111111;
+    overflow-x: hidden;
+    line-height: 1.65;
+    /* 명품 편집숍 표준 자간 및 행간 호흡 수축 */
+    letter-spacing: -0.04em;
+    /* 극도의 밀도감을 제공하는 프리미엄 자간 */
+}
+
+/* 3. 명품 커스텀 스크롤바 디자인 (골드 아우라 스크롤바) */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-bone-white);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(197, 168, 128, 0.25);
+    /* 골드 아크릴 썸 적용 */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--brand-color-primary);
+    /* 골드 썸 호버 가속 */
+}
+
+/* ==========================================================================
+   4. 모바일 타이포그래피 정렬 방어 프로토콜 (피라미드 보호막)
+   - 가로 폭이 좁은 모바일 화면에서 긴 문장들의 단어가 기형적으로 쪼개지거나
+   - 불규칙하게 개행되어 아름다운 역삼각형/피라미드 대칭이 무너지는 참사를 박멸합니다.
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+
+    /* [PC 동일] 섹션 상단 제목 영역 (이미지 위 공간) → 중앙 피라미드 유지 */
+    body .container .section-title,
+    body .container .section-title span {
+        word-break: keep-all;
+        overflow-wrap: break-word;
+        text-align: center;
+    }
+
+
+
+    /* 히어로 오버레이 타이포 (1번 이미지) → 좌측 유지 */
+    body .container .hero-title,
+    body .container .hero-brand {
+        text-align: left;
+        word-break: keep-all;
+    }
+
+    /* 글래스 카드 및 리뷰·케어 내부 본문 → 좌측 유지 (최종 지침) */
+    body .container .glass-card,
+    body .container .glass-card .card-num,
+    body .container .glass-card .card-title,
+    body .container .review-author,
+    body .container .care-desc {
+        text-align: left;
+        word-break: keep-all;
+        overflow-wrap: break-word;
+    }
+
+
+
+    /* 표·별표 주석 → 좌측 (스펙 테이블 제외) */
+    body .container .info-table-footer td,
+    body .container .card-desc-pad {
+        text-align: left;
+        word-break: keep-all;
+        overflow-wrap: break-word;
+    }
+
+
+
+    /* 섹션 태그 → 중앙 (피라미드 꼭대기 날카롭게 수축) */
+    body .container .section-tag {
+        letter-spacing: 0.5px; /* 2px에서 0.5px로 축소하여 t-top보다 무조건 짧게 보이도록 유도 */
+        text-align: center;
+    }
+
+    /* 공정 이미지 오버레이 카드 (3, 4번 이미지) → 좌측 쏠림 유지 */
+    body .container #factory-img-wrap .info-overlay-12 {
+        top: 25%;
+        right: 0;
+        left: 0;
+        width: 90%;
+        margin: 0;
+        text-align: left;
+        transform: translateY(-50%);
+    }
+
+    body .container #factory-img-wrap .info-overlay-12 .card-title {
+        text-align: left;
+        word-break: keep-all;
+        margin-bottom: 10px;
+    }
+
+
+
+    /* 모바일에서는 PC용 br 태그 개행 해제 */
+    body .container .section-title br,
+    body .container .hero-title br,
+    body .container .subtle-hook br {
+        display: inline;
+        content: " ";
+    }
+
+    /* [사장님 지침 완수] 모바일에서 페이지 간격(줄 위아래 여백) 대폭 축소 */
+    body .section,
+    body .review-section {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+    }
+    body section.section:first-of-type,
+    body .hero+.section {
+        margin-top: 45px !important;
+        padding-top: 40px !important;
+    }
+}
+
+
+
+
+/* ==========================================================================
+   5. [사장님 절대 헌법 특명 완공] 스토어 전역 섹션(페이지) 1~2mm 은은한 다크 상아빛 마이크로 실선 디바이더 (0.00% 오염원 프리!)
+   - 밋밋하고 평평하게 이어져 스크롤 시 리딩 피로를 주던 아이보리 바탕배경을
+   - 페이지와 페이지 사이마다 1.5px의 기품 있는 다크 상아빛 실선으로 똑똑 명확히 끊어주어
+   - 숨 막히는 극상의 가독성과 럭셔리한 상세페이지 크롭 규격(쿠팡/네이버) 황금 마진을 수립합니다.
+   ========================================================================== */
+body .section,
+body .review-section {
+    position: relative;
+    border-top: 1.5px solid #d2cbb8;
+    /* 페이지와 페이지 경계용 다크 상아빛 칼선 */
+    padding-top: 80px;
+    /* 경계 칼선 추가에 따른 여백 80px 수축 다이어트 */
+    padding-bottom: 80px;
+    box-sizing: border-box;
+    box-shadow:
+        inset 0 15px 30px rgba(0, 0, 0, 0.015),
+        0 -10px 25px rgba(0, 0, 0, 0.01);
+    /* 경계선 위아래로 깊이감을 주어 페이지가 탁탁 접히며 열리는 고급스러운 음각 입체 섀도우 단 */
+}
+
+/* [사장님 천재적 아키텍처 완치] 보더 고착 법칙을 바깥 마진(Margin)으로 정석 격파!
+   - 실선 자체가 2페이지 머리와 함께 아래로 90px 지긋이 내려앉아 완벽한 정가운데 숨통 수립! */
+body section.section:first-of-type,
+body .hero+.section {
+    margin-top: 90px;
+    /* 실선 자체를 아래로 툭 떨어트려 주는 기적의 바깥 여백! */
+    padding-top: 80px;
+    /* 선 아래 본문 여백도 단정하게 80px 콤팩트 통일! */
+}
+
+/* [사장님 특명 완공] 글로벌 타이포그래피 띄어쓰기 행바꿈 강제 규칙 (글자 중간 잘림 원천 박멸!) */
+h1,
+h2,
+h3,
+.section-title,
+.hero-title,
+.t-top,
+.t-bot,
+.review-text,
+p,
+strong,
+.card-desc,
+.card-title,
+td {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+/* --- Inlined: css/00_Benchmark_B.css --- */
+/* ==========================================================================
+   css/00_Benchmark_B.css (Luxury Mask & Motion)
+   🏮 바이엘스 마스터 스탠다드 B-레이어: 760px 데스크탑 마스크 및 Reveal 스크롤 모션
+   - PC 정중앙 760px 마스크 가이드라인과 스크롤 렉 없는 스무스한 Reveal 모션을 완비합니다.
+   ========================================================================== */
+
+/* 1. 760px 데스크탑 명품 가이드라인 마스크 */
+.container {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 2. 스크롤 렉(Lag)이 0%에 수렴하는 하드웨어 가속형 Reveal 모션 */
+.reveal {
+    opacity: 0;
+    transform: translateY(45px);
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
+}
+
+/* 3. Reveal 애니메이션이 스크롤을 통해 트리거되어 활성화되는 시점 */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 4. 상세페이지 전역 공통 럭셔리 타이틀 배지 (787번 골든 골드 태그) */
+body .container .section-tag {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 5px; /* 더 넓고 우아하게 연출한 자간 */
+    color: #c5a880; /* 787번의 맑고 우아한 앤티크 골드 톤 */
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    text-indent: 5px; /* 자간 중앙 대칭 보정 */
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+/* 5. 상세페이지 전역 카피라이팅 볼드 앤티크 골드 수복 엔진 */
+body .container strong {
+    font-weight: 700;
+    color: #c5a880; /* W3C 무오염: 빨강 테러를 전역 차단하고 골드로 일체화 */
+    text-shadow: 0 1px 4px rgba(197, 168, 128, 0.2); /* 은은하게 피어나는 입체 발광 */
+}
+
+@media screen and (max-width: 768px) {
+    body .container .section-tag {
+        margin-bottom: 3px; /* 모바일에서 태그와 타이틀 사이의 거대한 간격 추가 압축 */
+    }
+}
+
+
+/* 2. 에디터 세부 구역별 C Layer (나무) */
+/* --- Inlined: css/00_Hero_C0.css --- */
+/* ==========================================================================
+   css/00_Hero_C0.css (Artistic Hero Frame)
+   🏮 바이엘스 마스터 스탠다드 C0-레이어: 히어로 비주얼 및 미스틱 오버레이
+   - 12-pro_hero 이미지의 럭셔리 래핑 및 감각적인 아크릴 타이포를 담당합니다.
+   ========================================================================== */
+
+/* 1. 히어로 메인 섹션 프레임 (본화이트 바탕 위에 부유하는 하이엔드 액자 핏) */
+.hero {
+    position: relative;
+    width: calc(100% - 80px); /* 2페이지 Hook의 좌우 패딩 40px 라인과 정확한 수평 일체화 */
+    margin: 40px auto 10px auto; /* 상단 및 하단에 우아한 호흡 여백을 부여하여 액자 형태로 부유 */
+    height: auto;
+    aspect-ratio: 1 / 1; /* 787번 마스터피스 표준: 1:1 정사각형 명품 마스크 프레임 */
+    overflow: hidden;
+    background-color: #111111;
+    border-radius: 24px; /* 2페이지 훅 영역의 절제된 황금 곡률과 완벽한 동기화 */
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08); /* 부드러운 하이엔드 그림자 아우라 */
+    border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+/* 2. 히어로 명품 비주얼 이미지 */
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 3. 미스틱 그라데이션 명품 오버레이 (1페이지 고유영역 - 시네마틱 칠흑 장막) */
+body .container .hero .hero-overlay-12 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* 사장님 지침 완수: "레깅스가 핵심! 우측 하단의 그라데이션 박멸!" */
+    /* 좌측 타이포그래피 영역만 정밀 타격하여 어둡게 하고, 우측 하단(레깅스 핏)은 100% 원본 밝기 유지 */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 55%),
+                radial-gradient(ellipse at bottom left, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 65%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* 4. 히어로 타이포 텍스처 레이아웃 (787번 순정: 좌측 하단 묵직한 명격 배치) */
+.hero-content {
+    position: absolute;
+    bottom: 8%; /* 안정적인 바텀 비율 고정 */
+    left: 8%;
+    right: auto; /* 우측 한계선 해제하여 자연스러운 텍스트 호흡 확보 */
+    text-align: left; /* 787번 절대 규칙: 좌측 정렬 레이아웃 */
+    z-index: 2;
+}
+
+/* 5. 브랜드 아이덴티티 시그니처 (소문자 byelse & ck-365와 동일 컬러 장착) */
+.hero-brand {
+    font-family: var(--brand-font-main);
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 14px; /* 더 넓고 우아하게 숨 쉬는 타이포 간격 */
+    color: #c5a880; /* 사장님 최종 지침: ck365 골드와 100% 동일한 컬러 주입 */
+    text-transform: lowercase; /* 사장님 최종 지침: 전역 소문자 byelse 강제화 */
+    margin-bottom: 22px;
+    text-indent: 0px; /* 좌측 정렬이므로 들여쓰기 리셋하여 첫 글자 수평 일체화 */
+    text-shadow: 0 2px 10px rgba(197, 168, 128, 0.35); /* 골드빛 미세 입체 아우라 */
+}
+
+/* 6. 메인 카피라이팅 헤드라인 */
+.hero-title {
+    font-family: var(--brand-font-sub);
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1.6; /* 가독성 핏 호흡 개선 */
+    letter-spacing: -0.5px;
+    color: #ffffff;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.6); /* 787번 표준: 명품 섀도우 */
+    max-width: 320px; /* [W3C br 박멸] br 태그 한 칸 없이도 좌측 정렬 2행 황금 비율 강제 수호 */
+}
+
+/* 7. 브랜드 시그니처 앤티크 골드 하이라이트 (어제 수정 요구 완치) */
+.hero-title strong {
+    font-weight: 700;
+    color: #c5a880; /* 바이엘스 시그니처 앤티크 골드 */
+    text-shadow: 0 2px 10px rgba(197, 168, 128, 0.45); /* 황금빛 미세 발광 아우라 */
+}
+
+/* ==========================================================================
+   [모바일 타이포그래피 정밀 튜닝] 75% PC 줌 황금 비율 이식
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    .hero-brand {
+        font-size: 15px;
+        letter-spacing: 9px;
+        margin-bottom: 8px;
+        /* 배경이 밝을 때를 대비해 로고 자체에도 강력한 다크 섀도우 추가 방어 */
+        text-shadow: 0 2px 15px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); 
+    }
+    .hero-title {
+        font-size: 18px; /* 28px -> 18px 축소 */
+        line-height: 1.35;
+        /* 사장님 지침: "가장 완벽한 핏을 위한 \n 감각의 미학, CK-365" 로 줄바꿈 되도록 너비 타이트하게 압축 */
+        max-width: 175px; 
+    }
+}
+
+/* --- Inlined: css/00_Hero_C0_StyleB.css --- */
+/* ==========================================================
+/* 域밸챶??怨쀬뵠????살쒔??됱뵠 揶쏅벡?????쾻 ??곸젫 (???뮞?紐꾩뒠) */
+/*
+body.theme-style-b .hero-overlay-12,
+body.theme-style-b .hero-overlay {
+    display: none;
+}
+*/
+
+/* B???????띻펾??筌띿쉸??域밸챶??怨쀬뵠???얠눖??????쐭筌?揶쏅벡??雅뚯눘??*/
+body.theme-style-b .main-img-box .hero-overlay-12 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* ?????筌왖?? ????筌뤴뫀???癒?쓺 ??? ??낅즲嚥?域밸챶??怨쀬뵠???蹂?뵠??獄쏆꼷?앮에??????곕벡??(25%, 35%) */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 25%),
+                radial-gradient(ellipse at bottom left, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 35%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+body.theme-style-b .page-section { 
+    padding: 30px 30px 60px 30px; /* ?怨룸뼊 ??媛???덉뺘??곗쨮 ?곕떽? ?곕벡??(60px -> 30px), ??롫뼊?? 60px ?醫? */
+    border-bottom: 1px solid #f2f2f2; 
+    text-align: center; 
+    background-color: #ffffff; 
+}
+body.theme-style-b .page-section:last-child { 
+    border-bottom: none; 
+}
+
+body.theme-style-b .brand-header { 
+    margin-bottom: 30px; /* ??삳쐭?? ????? ????揶쏄쑨爰??곕벡??(60px -> 30px) */
+}
+body.theme-style-b .brand-name { 
+    font-family: 'Outfit', sans-serif;
+    font-size: 38px; /* ?癒?삋 ???좑쭩?癰귣벀??*/
+    font-weight: 800; 
+    letter-spacing: 6px; /* ?????筌왖?? ???癒?퍢) 獄쏆꼹?억쭕??곕벡??(12px -> 6px) */
+    margin-bottom: 10px; 
+    color: #c5a880; /* ?臾먮? ??쎈뼒???ⓥ뫀諭??됰슢????뚎됱쑎 ?봔??*/
+}
+body.theme-style-b .brand-sub { 
+    font-size: 14px; /* ?癒?삋 ???좑쭩?癰귣벀??*/
+    font-weight: 500;
+    color: #a39178; /* ??뺥닏 ??용뮞?紐껊즲 ??쀫꽑(?ⓥ뫀諭뜻뉩紐껋쟿????곗쨮 ???뵬 */
+    letter-spacing: 4px; 
+    text-transform: uppercase;
+}
+
+body.theme-style-b .section-main-title {
+    margin-bottom: 35px;
+}
+body.theme-style-b .section-main-title .t-top { 
+    display: block; 
+    font-size: clamp(16px, 4vw, 24px); /* ?⑥쥙????? ?띯뫁???랁??癒?삋 獄쏆꼷?????용뮞????由경에?癰귣벀??*/
+    font-weight: 500;
+    color: #8a7d6d; 
+    margin-bottom: 8px; 
+    letter-spacing: -0.5px;
+}
+body.theme-style-b .section-main-title .t-bot { 
+    display: block; 
+    font-size: clamp(18px, 5.5vw, 28px); /* ?⑥쥙????? ?띯뫁???랁??癒?삋 ??용뮞????由경에?癰귣벀??*/
+    font-weight: 700;
+    color: #111;
+    letter-spacing: -1px;
+    line-height: 1.4;
+    word-break: keep-all;
+}
+
+body.theme-style-b .main-img-box { 
+    position: relative; /* 域밸챶??怨쀬뵠????살쒔??됱뵠??揶쎛?癒?┛ ?袁る립 ?袁⑸땾 ??욧쉐 */
+    margin-bottom: 24px; /* ??彛딀???용뮞?紐? ???袁⑥쟿?袁⑹몵嚥??얜쓷由??袁る퉸 揶쏄쑨爰??????곕벡??(50px -> 24px) */
+    border-radius: 16px; 
+    overflow: hidden; 
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06); 
+    transform: translateY(0);
+    transition: transform 0.5s ease;
+}
+body.theme-style-b .main-img-box:hover {
+    transform: translateY(-5px); 
+}
+body.theme-style-b .main-img-box img { 
+    width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+/* ??됰선嚥???롫뼊 ??쎈꽅???紐낃숲 (?袁⑥쟿????꾧퉱 獄쎻뫗? 獄?野껉퀬鍮) */
+body.theme-style-b .page-section:first-child .story-footer {
+    background: transparent; /* ?紐낃숲?????퉳 獄쏄퀗瑗??怨몃꺗 筌△뫀??*/
+    padding: 0 10px;
+    margin: 0; /* ?紐낃숲??筌띾뜆???됰뮞 筌띾뜆彛??怨몃꺗 筌△뫀???뤿연 ?袁⑥쟿????됱몵嚥????선??쇱뿫 */
+}
+body.theme-style-b .page-section:first-child .story-footer .sub-txt {
+    display: block;
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+}
+body.theme-style-b .page-section:first-child .story-footer .main-txt {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #222; /* ?袁⑷퍥 ??용뮞?紐껊뮉 ??쇰뻻 ??쎄쾿域밸챶???以?癰귣벀??*/
+    line-height: 1.5;
+    word-break: keep-all;
+}
+
+/* 筌왖?類ｋ쭆 ??용뮞???닌덉퍢筌???????뚎됱쑎 ?怨몄뒠 */
+body.theme-style-b .page-section:first-child .story-footer .highlight-gold {
+    color: #c5a880;
+    font-weight: 800;
+}
+
+@media (max-width: 600px) {
+    body.theme-style-b .page-section { padding: 30px 20px 50px 20px; }
+    body.theme-style-b .brand-name { font-size: 32px; letter-spacing: 8px; }
+    body.theme-style-b .section-main-title .t-bot { font-size: 24px; }
+    body.theme-style-b .page-section .story-footer .main-txt { font-size: 15px; }
+}
+
+/* --- Inlined: css/01_Hook_C1.css --- */
+/* ==========================================================================
+   css/01_Hook_C1.css (Artistic Hook Frame)
+   - 모바일 반응형 및 영문 대응 폰트 축소 지원
+   ========================================================================== */
+
+/* 1. 섹션 기본 여백 및 중앙 정렬 */
+.section {
+    padding: 70px 40px;
+    background-color: #faf9f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* 2. 타이틀 영역 */
+.section-title {
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.section-title .t-top {
+    font-size: 16px;
+    font-weight: 300;
+    color: #777777;
+    letter-spacing: -0.5px;
+}
+
+.section-title .t-bot {
+    font-size: 27px;
+    font-weight: 700;
+    color: #111111;
+    letter-spacing: -0.5px;
+    line-height: 1.4;
+}
+
+/* 3. 이미지 래퍼 (3:4 비율) */
+.img-wrap {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    margin-bottom: 35px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    position: relative;
+}
+
+.img-wrap img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* 4. 하단 서브 후크 */
+.subtle-hook {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.subtle-hook .t-top-small {
+    font-size: 14px;
+    font-weight: 300;
+    color: #888888;
+    letter-spacing: -0.5px;
+}
+
+.subtle-hook .t-bot-small {
+    font-size: 16px;
+    font-weight: 300;
+    color: #222222;
+    letter-spacing: -0.5px;
+    line-height: 1.8;
+}
+
+/* 5. 텍스트 강조 컬러 */
+.subtle-hook .t-bot-small strong,
+.section-title .t-bot strong {
+    font-weight: 700;
+    color: #c5a880;
+    text-shadow: 0 1px 4px rgba(197, 168, 128, 0.15);
+}
+
+.text-red {
+    color: #c5a880;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   [모바일 반응형] 768px 이하 모바일 화면 대응
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    body .container .section-title {
+        gap: 0px;
+        margin-bottom: 20px;
+    }
+
+    body .container .img-wrap {
+        margin-bottom: 12px;
+    }
+
+    body .container .subtle-hook {
+        margin-top: 5px;
+        gap: 0px;
+    }
+
+    body .container .subtle-hook,
+    body .container .subtle-hook span {
+        word-break: keep-all;
+        overflow-wrap: break-word;
+        text-align: center;
+        font-size: 14.5px;
+        font-weight: 500;
+        letter-spacing: -0.3px;
+        opacity: 0.85;
+        line-height: 1.35;
+    }
+
+    body .container .subtle-hook .t-bot-small {
+        line-height: 1.35;
+    }
+
+    body .container .section-title .t-top {
+        font-size: 14px;
+        line-height: 1.3;
+        margin-bottom: 2px;
+    }
+
+    body .container .section-title .t-bot {
+        font-size: 17px;
+        line-height: 1.3;
+        letter-spacing: -0.8px;
+        word-break: keep-all;
+    }
+}
+
+/* ==========================================================================
+   [4004번 헌법 적용] 영문판(en) 모바일 정피라미드 강제 형성
+   - 폰트 크기 조작 및 HTML <br> 하드코딩 전면 금지
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    /* 여백 꼼수 폐기: 원본 텍스트 압축(카피라이팅)으로 본질적 해결 도모 */
+}
+
+/* --- Inlined: css/01_Hook_C1_StyleB.css --- */
+/* ==========================================================
+   01_Hook_C1_StyleB.css (Style B Unique Hook)
+   ========================================================== */
+
+body.theme-style-b .content-grid { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; 
+    margin: 40px 0; 
+    text-align: left; 
+}
+body.theme-style-b .grid-card { 
+    background-color: #fafafa; 
+    border: 1px solid #f0f0f0; 
+    padding: 25px 20px; 
+    box-sizing: border-box; 
+    border-radius: 10px; 
+}
+body.theme-style-b .grid-card .card-num { 
+    font-size: 12px; 
+    font-weight: 700; 
+    color: #A1000E; 
+    margin-bottom: 8px; 
+    display: block; 
+}
+body.theme-style-b .grid-card .card-title { 
+    font-size: 16px; 
+    font-weight: 700; 
+    color: #111111; 
+    margin-bottom: 10px; 
+    display: block; 
+}
+body.theme-style-b .grid-card .card-desc { 
+    font-size: 13.5px; 
+    color: #333333; 
+    line-height: 1.6; 
+    display: block; 
+}
+
+@media (max-width: 600px) {
+    body.theme-style-b .content-grid { grid-template-columns: 1fr; gap: 12px; }
+}
+
+/* --- Inlined: css/02_Fabric_C2.css --- */
+/* ==========================================================================
+   css/02_Fabric_C2.css (High-End Fabric Card & Slit Border)
+   ?猷?獄쏅뗄???뤿뮞 筌띾뜆?????쎄묾??삳굡 C2-??됱뵠?? ?袁ⓥ봺沃섎챷毓??袁り쾿??燁삳?諭?獄???梨??ⓥ뫀諭?????
+   - ??λ떄 ??而?燁삳?諭띄몴???疫꿸퀣毓???類ｋ즲??롫뮉 沃섎챷苑??ⓥ뫀諭?癰귣???? ?용쵑???域밸챶??癒?쨮 ?λ뜃??袁れ넅??몃빍??
+   ========================================================================== */
+
+/* 1. ?袁ⓥ봺沃섎챷毓???쎈읃 ?뚢뫂???瑗?(787甕??ⓥ뫀諭???쎄쾿 ?袁り쾿?????? ?귐됥걟?紐껋춦)
+   - ??됰퓠 ????쇰선??삳뮉 ?紐껋졃?????袁り쾿????녾퍥揶??怨쀫?)??筌띾쵌???⑥쥚萸밧칰?뱀뵥 V10 ????꾨７(?ル슣瑜????關?륅쭕??뱽 ??룻닊 ?대Ŧ媛??袁⑥┷ */
+.spec-container {
+    width: 100%;
+    margin-bottom: 50px;
+    /* ?????筌왖燁? ??롮벥 ??彛?0.95)筌ｌ꼶????댭???뉙돱筌랃퐡苡?筌욊쑵釉?칰???? 筌띾Þ?? ??쇱벥 ??彛?0.85)筌ｌ꼶????梨??랁??⑥쥒???살쓦野????뵬 */
+    background: rgba(17, 17, 17, 0.85); 
+    backdrop-filter: blur(25px); /* ??甕곕뜆??燁삳?諭?? ??덉뵬???됰뗀????륂뒄 ?怨몄뒠 */
+    -webkit-backdrop-filter: blur(25px);
+    border-radius: 20px; /* 筌롫뗄????됰선嚥?24px ??????룐뫗肉?筌띿쉸??筌뤴뫁苑뚨뵳??觀?疫??類ㅼ삢 */
+    padding: 22px 30px; /* ??? 揶쎛??녾쉐???袁る립 ?蹂ㅽ??關毓????媛???노샒 */
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15); /* ?얜벊彛??띿쓺 揶쎛??깅툩??거??醫롮궎?쒕?????녾퍥 ???袁⑹뒭 */
+    border: 1px solid rgba(197, 168, 128, 0.25); /* ??쎈뼒???ⓥ뫀諭??????節? ?關媛?*/
+}
+
+/* 2. 28:72 ??쎈읃 ?怨쀬뵠?????뵠??域뱀뮄爰?*/
+.spec-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.spec-table tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08); /* ??쎄쾿 ??ㅺ섯 ????뺥?筌띾쵐? ?遺우뵠????살쟿??*/
+}
+
+.spec-table tr:last-child {
+    border-bottom: none;
+}
+
+.spec-table td {
+    padding: 22px 10px; /* 787甕????쏁뵳??紐껋쨮 22px ??ㅻ뎃 ?袁④펾 癰귣똻??*/
+    font-size: 14px;
+    letter-spacing: -0.5px;
+}
+
+.spec-label {
+    width: 28%;
+    font-weight: 700;
+    color: #c5a880; /* ??쎄쾿 ?袁り쾿???袁⑸퓠??疫꿸퀬萸???뉗쓺 ?븍뜃?????????쎈뼒???ⓥ뫀諭???곌볼 */
+    font-family: var(--brand-font-sub);
+    text-shadow: 0 1px 5px rgba(197, 168, 128, 0.3);
+    text-align: center;
+}
+
+.spec-value {
+    width: 72%;
+    font-weight: 300;
+    color: #faf9f6; /* ?ル슣瑜?V10 ?諭???筌띾쵌???怨쀫툡??癰귣챸???꾨뱜 揶쎛燁???용뮞???臾믪삺 */
+    text-align: left;
+    padding-left: 25px; /* ??긱걹 ?類ｌ졊 ???ⓥ뫀諭???곌볼 野껋럡??醫됰궢 ?怨몄쟿?????쏁뵳???媛???밴쉐 */
+    text-shadow: 0 1px 4px rgba(255, 255, 255, 0.1);
+}
+
+/* 3. ?⑤벀而??袁り쾿????녾퍥 燁삳?諭?域밸챶???(疫꿸퀡??2????燁??袁⑺뒄 + 沃섎챷苑??ⓥ뫀諭????? */
+body .container .glass-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* [域밸챶????袁⑺뒄] ?얜똻?쒎쳞??袁⑥カ??쇱뒲 ?ル슣??2????燁?獄쏄퀣??揶쏅벡??*/
+    gap: 28px;
+    width: 100%;
+}
+
+body .container .glass-grid .glass-card {
+    background: rgba(255, 255, 255, 0.6); /* ??梨??袁り쾿??筌띾쵌由??⑥쥓猷??*/
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border-radius: 20px; /* 筌뤿굟萸?20px ??깆뒲??*/
+    padding: 30px 24px 24px 24px; /* [筌〓슡???彛??袁⑺뒄] ?⑥눖猷???ル슣????ㅻ뎃??餓κ쑴肉????筌왖 揶쎛嚥≪뮉猷?域밸갭???*/
+    text-align: left;
+    position: relative;
+    /* ?λ뜄????ⓥ뫀諭???梨???????깆뵥 ?關媛?*/
+    border: 1px solid rgba(212, 175, 55, 0.15); 
+    /* ?용쵑???랁???梨??띿쓺 ??명뱽?귐됰뮉 ?⑥쥒?????袁⑹뒭 */
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.03); 
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    letter-spacing: -0.04em; /* 域밸갭猷??燁삳?諭?獄쎛?袁㏃빵 ??뤿연 */
+    box-sizing: border-box; /* ??ㅻ뎃???袁⑷퍥 ??덊돩 ?④쑴沅????釉??띿쓺 筌△뫀??*/
+}
+
+body .container .glass-grid .glass-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(212, 175, 55, 0.45); /* 787甕????: 餓λ쵑????ⓥ뫀諭??紐껋쒔 */
+    box-shadow: 0 40px 90px rgba(212, 175, 55, 0.08); /* 筌띾쵐? ?ⓥ뫀諭???녾퍥 ?봔?臾롮빵 ?袁⑹뒭??*/
+}
+
+/* [?λ뜄???獄쏆꼷?????블? 600px ??꾨릭??域밸갭猷꾣에??臾믩꺖????살춳?紐낅？ 筌뤴뫀而???遺얇늺?癒?퐣筌???됱읈??띿쓺 1????쎄묶??*/
+@media (max-width: 600px) {
+    body .container .glass-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    body .container .glass-grid .glass-card {
+        padding: 20px 18px 16px 18px; /* 筌뤴뫀而??깆뒠 ????癰귥눖??筌ㅼ뮇???*/
+    }
+}
+
+/* 4. ?袁り쾿??燁삳?諭???? 沃섎챶?뀐쭖? ????꾨７ */
+.card-num {
+    font-family: var(--brand-font-main);
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #c5a880; /* ????몿而?????787甕???? ??쎈뼒???ⓥ뫀諭뜻에??類μ넅 */
+    font-weight: 700;
+    display: block;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    text-shadow: 0 1px 4px rgba(197, 168, 128, 0.15);
+}
+
+@media screen and (max-width: 768px) {
+    /* [??????諛몄구 ?袁㏓궗] 4?源껎닋: ??쎈읃 ???뵠????뺛걠 獄???곸뒠 揶?繹먥뫁釉?疫꼲????쑴???類λ? 野꺿뫗湲?*/
+    body .container .spec-table tr td.spec-label {
+        text-align: center;
+        word-break: keep-all;
+        /* 筌뤴뫀而??獄쏆꼷?????묒깈: white-space: nowrap ?????뤿연 餓κ쑬而?퐛???됱뒠 */
+        width: 30%; /* ??곌볼 ?怨몃열 ??곸? ?곕벡???뤿연 揶??怨몃열 ?類ｋ궖 */
+        font-size: 14.5px; /* 筌롫뗄????뺛걠???嚥???由??醫?/?類ㅼ삢 */
+        font-weight: 700;
+        letter-spacing: -0.3px;
+    }
+
+    body .container .spec-table tr td.spec-value {
+        text-align: left;
+        padding-left: 15px; /* ??媛???쇱뵠??꾨뱜 */
+        width: 70%; /* 2餓κ쑬以???됯굄野???λ선筌왖?袁⑥쨯 揶??怨몃열 ??덊돩 70%嚥??類ㅼ삢 */
+        word-break: keep-all;
+        overflow-wrap: break-word;
+        font-size: 13.5px; /* ?????筌왖燁? ??곌볼癰귣????臾롮쓺 ?곕벡??*/
+        font-weight: 300; /* ????뺥??紐껋졃??띿쓺 */
+        letter-spacing: -0.3px;
+        line-height: 1.45; /* 筌뤿굟萸???? 餓κ쑨而쇿칰?1.45 ?關媛?*/
+    }
+
+    body .container .glass-card .card-num {
+        margin-bottom: 8px;
+    }
+    body .container .glass-card .card-title {
+        margin-bottom: 8px;
+        font-size: 18px;
+    }
+    body .container .glass-card .card-desc {
+        font-size: 13px; /* ?????筌왖燁??袁⑸땾: 疫꼲??? ?ヂ ???臾롮쓺 ??쇱뵠??꾨뱜 */
+        line-height: 1.45;
+    }
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.card-desc {
+    font-size: 14px;
+    font-weight: 300;
+    color: #555555;
+    line-height: 1.7;
+    letter-spacing: -0.3px;
+}
+
+/* --- Inlined: css/03_Lab_C3_Fabric.css --- */
+/* ==========================================================================
+   css/03_Lab_C3_Fabric.css (Fabric Macro Card - 3:4 Aspect-Ratio & 2px Border)
+   🏮 원단 매크로 카드 전용 3:4 명품 세로 프레임 및 2px 테두리 격실
+   ========================================================================== */
+
+.section-process .img-wrap {
+    aspect-ratio: 3 / 4; /* [사장님 절대 헌법] 3:4 세로 프레임 100% 완전 보존 */
+    overflow: hidden;
+    position: relative;
+    border: none;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+}
+
+.section-process .img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+
+/* --- Inlined: css/03_Lab_C3_Factory.css --- */
+/* ==========================================================================
+   css/03_Lab_C3_Factory.css (Factory Process Card - 1.42x Zoom & 2px Border)
+   🏮 공장 전경 카드 전용 1.42배 강력 줌인 및 2px 테두리 격실
+   ========================================================================== */
+
+/* 프로세스 공정 이미지 카드 오버레이 (.info-overlay-12) */
+body .container #factory-img-wrap .info-overlay-12 {
+    position: absolute;
+    top: 25%; /* [좌측 대피 완치] 여성 장인의 얼굴이 있는 우측을 완전히 해방시키고, 기계 장치 배경인 좌측 영역에 우아하게 부양 */
+    transform: translateY(-50%); /* 중앙 센터링 */
+    left: 32px; /* [좌측 대피 완치] 좌측 벽으로 안전하게 이동 */
+    right: auto; /* 우측 배치 해제 */
+    width: 250px; /* 좌측 한정 레이아웃 */
+    padding: 0;
+    text-align: left; /* 좌측 대피에 맞춘 정갈한 좌측 정렬 전환 */
+    color: #ffffff;
+    z-index: 10; /* [부양 잠금] 그림자 장막(z-index: 2)보다 압도적인 10등급으로 격상하여 영구 가독성 확보 */
+}
+
+/* [가독성 완치] 어두운 그늘막 상속을 100% 참살하고 절대 백색광 강제 이식 */
+body .container #factory-img-wrap .info-overlay-12 .card-title {
+    color: #ffffff; /* 절대 백색 보장 */
+    opacity: 1;     /* 칙칙한 불투명도 원천 무효화 */
+    text-align: left; /* 좌측 정렬 통일 */
+}
+
+body .container #factory-img-wrap .info-overlay-12 .card-desc {
+    color: #ffffff;
+    opacity: 1;
+    max-width: 180px; /* [글씨 올려 완치] 가로 폭을 웅장하게 넓혀 '최종 검수'가 단 한 자의 흘러내림 없이 나란히 한 줄 정렬되도록 완치! */
+    margin-right: auto; /* 좌측 정렬 밀착 수호 */
+    margin-left: 0; /* 기존 우측 밀착 해제 */
+    text-align: left; /* 좌측 정렬 통일 */
+}
+
+/* 라이트 버전 미니멀 텍스처 */
+.card-num-light {
+    font-family: var(--brand-font-main);
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #c5a880; /* 시그니처 앤티크 골드 통합 */
+    font-weight: 700;
+    display: block;
+    margin-bottom: 12px;
+}
+
+/* [사장님 특명 완치] 배경과 글씨가 둘다 밝아 가독성이 죽는 현상을 200% 영구 완치하는 좌->우 수평 시네마틱 그라데이션 장막 */
+body .container #factory-img-wrap::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0; /* 좌측 밀착 */
+    width: 65%; /* 텍스트가 있는 좌측 65% 영역만 그림자 포커싱하여 기계 반사광을 차분하게 가라앉힘 */
+    height: 100%;
+    background: linear-gradient(to right,
+            rgba(0, 0, 0, 0.85) 0%, /* 좌측 벽면 글씨 영역은 깊은 칠흑 쉐도우 */
+            rgba(0, 0, 0, 0.4) 60%,
+            rgba(0, 0, 0, 0) 100% /* 오른쪽 모델 얼굴과 손 영역으로 올수록 완벽한 백색광 소멸 */
+        );
+    z-index: 2; /* 이미지 위, 글자(z-index: 3) 아래 배치 */
+    pointer-events: none;
+}
+
+/* [사장님 특명 완치] 2배 크게 스케일업된 소문자 byelse 투명 아크릴 씰 (좌측 하단 웅장 부양) */
+.premium-badge {
+    position: absolute;
+    bottom: 30px; /* 3:4 프레임 하단 배치 */
+    left: 32px; /* 좌측 정렬 라인과 완벽한 수직 일체화 */
+    background: rgba(255, 255, 255, 0.12); /* 고급스러운 그레이 투명 아크릴 질감 */
+    backdrop-filter: blur(10px); /* 맑게 투과되는 유리 뒷배경 흐림 */
+    -webkit-backdrop-filter: blur(10px);
+    color: #ffffff;
+    font-size: 14px; /* [2배 크게 완치] 11px에서 14px로 대폭 팽창하여 브랜드 아이덴티티 수호 */
+    letter-spacing: 1px;
+    padding: 12px 28px; /* [2배 크게 완치] 8px 18px에서 12px 28px로 웅장하게 확대 */
+    font-weight: 600;
+    border-radius: 30px; /* 라운드 캡슐 보존 */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* 은은한 투명 액자 선 강화 */
+    text-transform: none; /* 대문자 오염 전면 박멸 및 소문자 byelse 완벽 수복 */
+    z-index: 3;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35); /* 깊어지는 아크릴 그림자 */
+}
+
+#factory-img-wrap {
+    aspect-ratio: 3 / 4; /* [사장님 절대 헌법] 3:4 세로 프레임 100% 완전 보존 */
+    overflow: hidden;
+    position: relative;
+    border: none;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+}
+
+#factory-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    
+    /* [단독 격실 저격] 오직 공장 전경 이미지에만 1.42배 강력 줌인 및 2차 충돌 방지 앵글 피팅 */
+    transform: scale(1.42); /* [한방 완치] 1.42배 강력 줌인으로 전체 팽창 */
+    transform-origin: center center; /* [여백 참살 핵심] 기준점을 중앙으로 두어 좌우로 균등 팽창시켜 여유 면적 확보 */
+    object-position: -16% center; /* [한방 완치] 중앙 팽창 상태에서 -16% 앵글을 가해, 왼쪽 공백 누출은 0% 통제하며 우측 인물은 완벽 퇴장시키고 팔만 노출 완성 */
+}
+
+/* ==========================================================================
+   [모바일 타이포그래피 정화 구역] Base_A에서 이식된 폰트 크기 강제 제어 (오염 0.00%)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    /* 1. 프리미엄 배지 다이어트 (더 작고 섬세하게) */
+    body .container .premium-badge {
+        font-size: 10px; /* 11.5px -> 10px로 더 축소하여 고급스러움 강조 */
+        padding: 6px 14px; /* 패딩도 비례하게 축소 */
+        bottom: 16px; /* 모바일 여백에 맞게 살짝 내림 */
+        left: 20px; /* 24px -> 20px 좌측 여백 다이어트 */
+    }
+
+    /* 2. 그라데이션 커버 범위 확장 (글씨가 밝은 곳으로 탈출하지 않도록 방어) */
+    body .container #factory-img-wrap::after {
+        width: 85%; /* 65% -> 85% 로 다크 영역 확장 */
+        background: linear-gradient(to right,
+            rgba(0, 0, 0, 0.85) 0%,
+            rgba(0, 0, 0, 0.5) 60%,
+            rgba(0, 0, 0, 0) 100%
+        );
+    }
+
+    /* 3. 오버레이 텍스트 다이어트 (폰트 크기와 면적을 줄여 여백미 확보) */
+    body .container #factory-img-wrap .info-overlay-12 {
+        left: 20px; /* 배지와 왼쪽 수직 정렬 완벽 맞춤 (20px) */
+        width: 200px; /* 220px -> 200px 폭 축소 */
+    }
+    
+    body .container #factory-img-wrap .info-overlay-12 .card-num-light {
+        font-size: 9.5px; /* 모바일 전용으로 소형화 */
+        letter-spacing: 2px;
+        margin-bottom: 6px;
+    }
+    
+    body .container #factory-img-wrap .info-overlay-12 .card-title {
+        font-size: 15px; /* 17px -> 15px 대폭 축소 */
+        margin-bottom: 6px;
+    }
+
+    body .container #factory-img-wrap .info-overlay-12 .card-desc {
+        text-align: left;
+        word-break: keep-all;
+        margin: 0;
+        font-size: 12px; /* 13.5px -> 12px 섬세한 텍스트로 축소 */
+        font-weight: 300; 
+        letter-spacing: -0.3px;
+        line-height: 1.45; 
+        max-width: 155px; /* 170px -> 155px 강제 수축하여 줄바꿈 예쁘게 유도 */
+    }
+}
+
+/* --- Inlined: css/04_Trust_C4.css --- */
+/* ==========================================================================
+   css/04_Trust_C4.css (Artistic Partner Board)
+   ?猷?獄쏅뗄???뤿뮞 筌띾뜆?????쎄묾??삳굡 C4-??됱뵠?? ??곕뱜??됰뼏 嚥≪뮄??獄?HSL ?袁り쾿?깅똾??
+   - ??而???됰뗀以?癰귣??묊몴??????랁?筌뤿굟萸???륁뵠??깆뵥 Glassmorphism??곗쨮 ?귐됥걟?紐껋춦??몃빍??
+   ========================================================================== */
+
+/* ==========================================================================
+   css/04_Trust_C4.css (Artistic Partner Board)
+   ?猷?獄쏅뗄???뤿뮞 筌띾뜆?????쎄묾??삳굡 C4-??됱뵠?? ??곕뱜??됰뼏 嚥≪뮄??獄?HSL ?袁り쾿?깅똾??
+   - ??而???됰뗀以?癰귣??묊몴??????랁?筌뤿굟萸???륁뵠??깆뵥 Glassmorphism??곗쨮 ?귐됥걟?紐껋춦??몃빍??
+   /* ========================================================================== */
+
+/* 1. 疫꼲嚥≪뮆苡???곕뱜??됰뤊 ???쏁뵳????筌왖 ??*/
+.cert-container {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+    padding: 0 10px; /* ?臾믩? 沃섎챷苑????꽰 */
+    box-sizing: border-box;
+}
+
+/* ??뿅?癰귣똻弛???れ쁽 ???筌왖???⑥쥒???袁り쾿??20px ??깆뒲??獄??얜떯援????녾퍥 ?ⓥ뫀諭?域밸챶???雅뚯눘??*/
+.cert-hero-img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    display: block;
+    border: 1px solid rgba(197, 168, 128, 0.25); /* ??쎈뼒???ⓥ뫀諭?沃섎챷苑?????*/
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.18); /* 獄쏅뗀???繹먮봽苡???됯컩??롫뮉 筌뤿굟萸?域밸챶???*/
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cert-hero-img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 45px 95px rgba(197, 168, 128, 0.15); /* 筌띾뜆????紐껋쒔 ?????????ⓥ뫀諭띌뜮??봔??*/
+}
+
+/* [??????諛몄구 ?袁㏓궗] ?袁り쾿??燁삳?諭??怨쀫? ?怨룸뼊 ?類? 3D Pure CSS 筌롫?源?癰귣똻苑?獄쏄퀣? 甕겸돧苑??袁る뱜 */
+body .container .glass-card {
+    position: relative;
+}
+
+body .container .glass-card .crystal-badge {
+    position: absolute;
+    right: 28px;
+    top: 26px;
+    width: 46px;
+    height: 46px;
+    background: linear-gradient(135deg, #dfc094 0%, #a48256 50%, #87653b 100%); /* 筌뤿굟萸???쎄쾿 ?ⓥ뫀諭?筌롫?源됬뵳?域밸챶??怨쀬뵠??*/
+    box-shadow: 
+        inset 0 2px 4px rgba(255,255,255,0.4), 
+        0 8px 18px rgba(164, 130, 86, 0.25); /* 獄쏅뗀?????됯컩??롫뮉 筌롫?源?3D ??녾퍥 ?용쵐肄?*/
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body .container .glass-card .crystal-badge:hover {
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 
+        inset 0 2px 4px rgba(255,255,255,0.5), 
+        0 12px 24px rgba(197, 168, 128, 0.4); /* 筌띾뜆????紐껋쒔 ????????ⓥ뫀諭??봔???용쵐肄?*/
+}
+
+/* 1. ?꾨뗄??COATS) - 筌뤿굟萸???而??ⓥ뫀諭??紐꾩삢 ?醫딇닜??*/
+body .container .glass-card .coats-badge {
+    border-radius: 6px;
+    border: 1.5px double rgba(255, 255, 255, 0.4); /* ?遺얩닜 ?ⓥ뫀諭???노샒 ???あ???紐꾩삢 ??ｋ궢 */
+}
+body .container .glass-card .coats-badge::after {
+    content: 'COATS';
+    font-family: 'Outfit', 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+}
+
+/* 2. ??깆뵠????LYCRA) - ?怨룐??3D ?ⓥ뫀諭??癒곗굨 ????獄쏄퀣? */
+body .container .glass-card .lycra-badge {
+    border-radius: 50%; /* ??깆뵠??????袁④펾??3D ?癒곗굨 ??Dome) ??노샒 */
+    background: radial-gradient(circle at 35% 35%, #f2d9b6 0%, #b89366 60%, #7d5b32 100%); /* 癰귥눖以???癒곗굨 3D 域밸챶??怨쀬뵠??*/
+}
+body .container .glass-card .lycra-badge::after {
+    content: 'LYCRA吏?;
+    font-family: 'Outfit', 'Inter', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.2px;
+}
+
+/* 3. YKK - ???쏁뵳????????筌롫?源????쟿??꾨뱜 獄쏄퀣? */
+body .container .glass-card .ykk-badge {
+    width: 52px;
+    height: 34px;
+    top: 32px;
+    border-radius: 4px;
+    background: linear-gradient(180deg, #dfc094 0%, #b89366 100%);
+}
+body .container .glass-card .ykk-badge::after {
+    content: 'YKK';
+    font-family: 'Outfit', 'Inter', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+/* 4. ANTIBACTERIAL (????SA ??諭? - 3D ???쏁뵳?????獄쎻뫚??獄쏄퀣? */
+body .container .glass-card .shield-badge {
+    width: 44px;
+    height: 50px;
+    top: 24px;
+    background: linear-gradient(135deg, #ffffff 0%, #d1d5db 50%, #9ca3af 100%); /* ??놁삢????竊???살쒔 域밸챶??怨쀬뵠??*/
+    box-shadow: 
+        inset 0 2px 4px rgba(255,255,255,0.6), 
+        0 8px 18px rgba(0, 0, 0, 0.15);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /* [?類? ?????λ뮞] ?袁④펾??3D 獄쎻뫚???類ㅺ맒 ??뉗뻣 */
+    border-radius: 0;
+    border: none;
+}
+body .container .glass-card .shield-badge::after {
+    content: 'SA';
+    font-family: 'Outfit', 'Inter', sans-serif;
+    font-size: 15px;
+    color: #111111;
+    text-shadow: none;
+    font-weight: 900;
+}
+
+/* [??????諛몄구 ?袁㏓궗] 3:4 ?????? ??쎈뼒???ⓥ뫀諭???????れ쁽 ?袁⑥쟿??*/
+body .container .partnership-frame {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.015);
+    border: 1px solid rgba(197, 168, 128, 0.12); /* ???????뽮퐨 ???あ?? ????????쎈뼒???ⓥ뫀諭?????*/
+    border-radius: 20px;
+    box-shadow: 
+        inset 0 1px 3px rgba(255, 255, 255, 0.05),
+        0 20px 50px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* [???????뽮퐨 ?類? 筌왖?? 4?? ?醫딇닜????룻닊 ??묐즸 ???怨몃열 揶쎛嚥?????諭?獄쏄퀡瑗?*/
+body .container .partnership-frame .partnership-core-banner {
+    width: 100%;
+    aspect-ratio: 1800 / 750; /* [??????諛몄구 ?袁㏓궗] ??????몵嚥??類???띿쓺 ??롮뵬???癒?궚 ???筌왖????룻닊 ??쑴????遺얇늺 ??由???온?④쑴毓???怨대럡 ?⑥쥙?? */
+    height: auto; /* ?⑥쥙???誘れ뵠 260px ???? ?遺얇늺 ??肉?筌띿쉸???袁④펾????쑴?됪에??癒?짗 獄쏆꼷??*/
+    border-radius: 12px;
+    border: 1px solid rgba(197, 168, 128, 0.15);
+    overflow: hidden;
+    box-shadow: 
+        inset 0 2px 8px rgba(0, 0, 0, 0.4),
+        0 10px 25px rgba(0, 0, 0, 0.2);
+    position: relative;
+    background: #0b0b0b;
+}
+
+body .container .partnership-frame .partnership-core-banner .core-banner-image {
+    width: 100%;
+    height: 100%;
+    background-image: url('https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/brand_certification.jpg?v=20260614_014437');
+    background-repeat: no-repeat;
+    background-size: 100% 100%; /* [??쇰옘?얠눘彛??袁④펾 ???퍟] 135% ??? 餓λ슣???癒?┛! ?????랁뜞???袁④펾??띿쓺 ??롮뵬雅뚯눘????嚥??? ??됰퓠 100% ??筌?쑴?! */
+    background-position: center center; /* [??쇰옘?얠눘彛??袁④펾 ???퍟] 63.5% ??? ???グ ??猷??癒?┛! ?類ㅼ㉦???⑥쥙?? */
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 筌띾뜆????紐껋쒔 ???醫딇닜??곕굶??筌왖域밸챷??繹먮봿?졾첎???뉗쓺 ?????삳뮉 3D 筌뤿굟萸?燁삳?李???얜?????ｋ궢 */
+body .container .partnership-frame .partnership-core-banner:hover .core-banner-image {
+    transform: scale(1.02);
+}
+
+/* [??????諭????뺢돌?귐딆궎 B] ?닌?/??쇱뵠甕?野꺜??嚥≪뮆???袁⑹뒠 ??? ??? ??뤿뻼 (???臾롫젏???袁④펾 ?겸뫗?? */
+body .container .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ==========================================================================
+   [筌뤴뫀而??????꾨７域밸챶????類μ넅 ?닌딅열] Base_A?癒?퐣 ??곷뻼???怨좊뱜 ??由?揶쏅벡????뽯선 (??쇰옘 0.00%)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    /* [??????諛몄구 ?袁㏓궗] 3?源껎닋: ?袁り쾿??燁삳?諭?癰귣챶揆 繹먥뫁釉?疫꼲?????? ???類μ넅 ??뤿떊 */
+    body .container .glass-card .card-title {
+        font-size: 14.5px; /* ?????筌왖燁??袁⑸땾: 4揶???뺛걠 筌뤴뫀紐??얜똻?쒎쳞?1餓κ쑬以???λ선筌왖?袁⑥쨯 ?????곕벡??*/
+        letter-spacing: -0.5px; /* 域밸콅釉???癒?퍢 ?類ㅽ뀧??곗쨮 揶쎛嚥≪뮉猷?獄쎻뫗堉?*/
+        padding-right: 70px; /* 獄쏄퀣? ??됱읈椰꾧퀡??筌ㅼ뮇??酉釉????용뮞???怨몃열 筌ㅼ뮆????類ｋ궖 */
+        word-break: keep-all;
+        /* 筌뤴뫀而??獄쏆꼷?????묒깈: white-space: nowrap ?????뤿연 餓κ쑬而?퐛???됱뒠 */
+    }
+
+    body .container .glass-card .card-desc {
+        text-align: left;
+        /* ?????筌왖燁? ??λ선 ??μ맄嚥???녿선????쇱땝?醫롮땝??????袁⑷맒??筌띾맦?? 
+           ??룻돱筌왖 ??용뮞?硫? ??筌?쑴?숋쭪?筌?筌욊낯沅쀥첎怨뱀굨 ?類κ묶嚥???됯굄野???λ선筌왖?袁⑥쨯 揶쏅벡??*/
+        word-break: break-all; 
+        overflow-wrap: break-word;
+        font-size: 13px; /* 疫꼲????由?14px -> 13px ???쏁뵳??곕벡??(mb 2?? ???뵬) */
+        font-weight: 300; /* 450 -> 300 ?癒?뜞 ??쇱뵠??꾨뱜 */
+        letter-spacing: -0.3px;
+        line-height: 1.45;
+        opacity: 0.95;
+    }
+
+    /* [?????筌왖燁??袁⑸땾] ?袁⑥쟿???ル슣???癒?죬??띿빵 獄쎻뫗? 獄???媛??類ｋ궖 */
+    body .container .partnership-frame {
+        width: auto;
+        margin: 0 15px; /* ?ル슣??15px ??媛??雅뚯눘堉??遺얇늺 ??밸퓠????됯굄野???λ선筌왖?袁⑥쨯 ??*/
+        padding: 25px 15px; /* 筌뤴뫀而??筌띿쉸????? ??媛?筌ㅼ뮇???*/
+        box-sizing: border-box;
+    }
+
+    /* [?袁⑹읈???類μ넅] ??곕뱜??됰뼏 獄쏄퀡瑗??筌뤴뫀諭?筌뤴뫀而??揶쏅벡??筌〓슡???彛??誘れ뵠 90px 揶쏅벡???? 筌〓슡蹂쇗묾??꾨뗀諭??袁⑹읈 ???퍟! 
+       ?怨룸뼊??aspect-ratio: 2048 / 750 甕곕벡???筌뤴뫀而??깅퓠??뺣즲 ?袁④펾??띿쓺 ?癒?짗 ???臾볥릭沃샕嚥??癒?셽 ?袁⑹뒄揶쎛 ??곷뮸??덈뼄. */
+}
+
+/* --- Inlined: css/05_Safety_C5.css --- */
+/* ==========================================================================
+   css/05_Safety_C5.css (Artistic Safety Evidence)
+   🏮 바이엘스 마스터 스탠다드 C5-레이어: 안전성 증명 성적서 및 라이트 아크릴
+   - 시험성적서 이미지를 럭셔리 아크릴 프레임으로 래핑하여 정합성을 완성합니다.
+   ========================================================================== */
+
+/* 1. 시험성적서 이미지 아크릴 래퍼 */
+.glass-card .full-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px; /* 787번 명품 라운딩 곡률 정합 */
+    display: block;
+    margin-bottom: 14px; /* 사장님 지침: 랩실 비디오 캡션 간격(14px)과 똑같이 맞춰 완벽한 한 세트 룩 구성 */
+    border: 1px solid rgba(212, 175, 55, 0.15); /* 앤티크 골드 액자 프레임화 */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04); /* 그윽하고 부드러운 소프트 섀도우 */
+}
+
+/* 2. 카드 하단 정중앙 정렬 캡션 (비디오 & 성적서 공통 갤러리 캡션) */
+.card-desc-center {
+    font-size: 12.5px; /* 모바일: 명품 에디토리얼 캡션 비율 */
+    font-weight: 400; /* 기존 700의 투박함을 빼고 얇고 세련되게 다이어트 */
+    color: #666666; /* 짙은 차콜 그레이로 우아함 증폭 */
+    text-align: center;
+    letter-spacing: 0.3px; /* 자간을 살짝 띄워 미술관 캡션 같은 호흡 부여 */
+    margin: 0;
+}
+
+@media screen and (min-width: 769px) {
+    /* PC 환경에서도 미술관 캡션의 우아함이 유지되도록 크기 비례 확장 */
+    .card-desc-center {
+        font-size: 14.5px; 
+        letter-spacing: 0.5px;
+    }
+}
+
+/* 3. 명품 보증서 아크릴 라이트 카드 (.glass-card-light) */
+.glass-card-light {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.65); /* 맑은 라이트 크리스탈 아크릴 극대화 */
+    backdrop-filter: blur(25px); /* 787번 표준 가속 */
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(212, 175, 55, 0.15); /* 미세 골드 슬릿 테두리 정합 */
+    border-radius: 16px; /* 둥근 아우라 일체화 */
+    padding: 28px 30px; /* 세로 여백 조율 */
+    margin-top: 30px;
+    text-align: center;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.03);
+}
+
+body .container .glass-card-light .review-text {
+    font-size: 14px;
+    font-weight: 300;
+    color: #222222;
+    line-height: 1.8; /* 1.7에서 여백 호흡 개선 */
+    letter-spacing: -0.5px;
+    margin: 0;
+    font-style: italic; /* 품격 있는 이탈릭 강세 */
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    body .container .glass-card-light .review-text {
+        line-height: 1.45;
+        font-size: 14.5px;
+        /* 다른 프로젝트 영역(C4 등)에서 검증된 100% 안전한 CSS 트릭 적용: 
+           HTML을 절대 건드리지 않고, 패딩을 조여서 텍스트 상자 너비를 축소시킴으로써
+           '완벽한 16/16/15 정피라미드(안정형 3줄)' 줄바꿈을 유도합니다! */
+        padding: 0 25px; 
+        word-break: keep-all; 
+        margin: 0 auto;
+    }
+}
+
+/* --- Inlined: css/06_Lab_C6.css --- */
+/* ==========================================================================
+   css/06_Lab_C6.css (Artistic Lab Video Frame)
+   🏮 바이엘스 마스터 스탠다드 C6-레이어: 비주얼 비디오 래퍼 및 블랙 아크릴
+   - 랩실 비디오의 곡선 마감과 딥 아크릴 카드를 담당합니다.
+   ========================================================================== */
+
+/* 1. 비디오 래퍼 라운딩 프레임 (부모 3:4 프레임에 100% 매칭 피팅) */
+.glass-grid .img-wrap video {
+    width: 100%;
+    height: 100%; /* 부모 3:4 종횡비 100% 상속 */
+    display: block;
+    object-fit: cover; /* 비디오 왜곡 박멸 및 세로형 3:4 시네마틱 크롭 */
+    border-radius: 20px; /* 메인 히어로 곡률과 조화를 이루는 20px 라운딩 유지 */
+    border: 1px solid rgba(197, 168, 128, 0.2); /* 앤티크 골드 투명 테두리 액자 라인 */
+    box-shadow: 0 30px 65px rgba(0, 0, 0, 0.08); /* 공중에 떠 있는 듯한 고급 섀도우 아우라 */
+}
+
+/* 1-1. 비디오+캡션 대통합 래퍼: overflow:hidden인 img-wrap 밖으로 텍스트를 탈출시키는 핵심 격벽 */
+.lab-video-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* 사장님 지침 완수: 안전성 성적서 카드와 동일한 하얀색 아크릴 배경 세트 장착! */
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border-radius: 20px;
+    padding: 20px 18px 16px 18px; /* 모바일 glass-card 패딩 이식 */
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.03);
+    box-sizing: border-box;
+    gap: 14px; /* 영상과 캡션 텍스트 사이 여백 */
+}
+
+@media screen and (min-width: 769px) {
+    .lab-video-unit {
+        padding: 30px 24px 24px 24px; /* PC 패딩 이식 */
+    }
+}
+
+.lab-video-unit .img-wrap {
+    margin-bottom: 0; /* 기존 img-wrap 하단 여백 제거, gap으로 대체 */
+}
+
+.lab-video-unit .card-desc-center {
+    padding: 0 10px;
+}
+
+/* 2. 딥 블랙 아크릴 플레이트 카드 (.glass-card-dark) */
+.glass-card-dark {
+    width: 100%;
+    background: rgba(17, 17, 17, 0.85); /* 787번 표준: 맑고 묵직한 다크 아크릴화 */
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(212, 175, 55, 0.12); /* 미세 골드 슬릿 테두리 정합 */
+    border-radius: 16px;
+    padding: 35px 30px;
+    margin-top: 30px;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35); /* 아크릴 묵직한 입체 섀도우 */
+}
+
+.glass-card-dark .card-num-light {
+    font-family: var(--brand-font-main);
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #c5a880; /* 생 빨강 대신 787번의 맑은 앤티크 골드 변환 */
+    font-weight: 700;
+    display: block;
+    margin-bottom: 12px;
+}
+
+body .container .glass-card-dark .review-text {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.8;
+    letter-spacing: -0.5px;
+    margin: 0;
+    text-align: center;
+    color: #eeeeee;
+}
+
+@media screen and (max-width: 768px) {
+    /* 2줄 피라미드를 만들기 위해 카드의 좌우 여백을 대폭 줄여 가로 폭을 최대로 확보합니다 */
+    body .container .glass-card-dark {
+        padding: 28px 14px; 
+    }
+
+    body .container .glass-card-dark .review-text {
+        line-height: 1.45;
+        font-size: 13px; /* 3줄로 깨지지 않고 무조건 2줄에 담기도록 정밀 축소 */
+        letter-spacing: -0.5px; /* 극한의 자간 압축 */
+        /* 사장님 지침: 상단의 태그와 어울리는 2줄 피라미드 강제
+           1. 타협 없는 품질 관리를 통해 
+           2. 'byelse'만의 독보적인 완성도를 구현합니다. */
+        max-width: 100%; /* 너비 제한 완전 해제 */
+        margin: 0 auto;
+        word-break: keep-all;
+    }
+}
+
+/* --- Inlined: css/07_Review_C7.css --- */
+/* ==========================================================================
+   css/07_Review_C7.css (High-End Review Board & Gold Stars)
+   ?猷?獄쏅뗄???뤿뮞 筌띾뜆?????쎄묾??삳굡 C7-??됱뵠?? ?袁ⓥ봺沃섎챷毓??귐됰윮 燁삳?諭?獄???쎈뼒???ⓥ뫀諭?癰귢쑴??
+   - ?귐됰윮 燁삳?諭띄몴???????沃섎챷苑??ⓥ뫀諭????멩?繹먮봿? ?ⓥ뫀諭???뽮퍥嚥??λ뜃??袁れ넅??몃빍??
+   ========================================================================== */
+
+/* 1. ?귐됰윮 ?諭???袁⑸열 ?袁⑥쟿??*/
+.review-section {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.review-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+}
+
+/* 2. ?袁ⓥ봺沃섎챷毓??袁り쾿???귐됰윮 燁삳?諭?(?ル슣瑜??紐껋쨮 ?ⓥ뫀諭????臾믪삺 筌뤿굟萸????쟿??꾨뱜) */
+.review-card {
+    background: rgba(255, 255, 255, 0.65); /* ?遺우뒮 ??梨??랁?筌띾쵐? ?袁り쾿?깅?以???뺣뻼 */
+    backdrop-filter: blur(25px); /* 787甕???? 揶쎛??*/
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(212, 175, 55, 0.12); /* 沃섎챷苑??ⓥ뫀諭?????癰귣???*/
+    border-left: 4px solid #c5a880; /* ?????륁뵠 域밸?媛??뤿뻿 ?⑥눊援?筌ㅼ뮄?????볦퍟 DNA: ?ル슣瑜??ⓥ뫀諭??紐껋쨮 ????뤿연 */
+    border-radius: 16px;
+    padding: 30px 35px;
+    text-align: left;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.03); /* 繹먮봽???봔??뺤쑎????梨????袁⑹뒭 */
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.review-card:hover {
+    transform: translateY(-4px); /* ?봔??뺤쑎????녾퍥 ?봔??*/
+    border-color: rgba(212, 175, 55, 0.45); /* 787甕????: ?븍맩????????怨룐????쎈뼒???ⓥ뫀諭??紐껋쒔 */
+    box-shadow: 0 30px 60px rgba(212, 175, 55, 0.08); /* ?怨뺤몴???ⓥ뫀諭??봔???袁⑹뒭??*/
+}
+
+/* 3. 筌뤿굟萸???룻닊??癰귢쑴????밴쉐 (??5揶?- ???쏁뵳???쎈뼒???ⓥ뫀諭???뺣뻼) */
+.rating-stars {
+    margin-bottom: 15px;
+    display: block;
+}
+
+.rating-stars::before {
+    content: "??몄겲??몄겲??;
+    font-size: 15px;
+    letter-spacing: 3px;
+    color: #e6c280; /* ??繹먮봽??域밸챷????袁ⓥ봺沃섎챷毓???쎈뼒???ⓥ뫀諭???*/
+    text-shadow: 0 1px 6px rgba(230, 194, 128, 0.45); /* 787甕????: ??룻닊??룇??筌띾쵌苡?????삘뀮?????袁⑹뒭 */
+}
+
+/* 4. ?귐됰윮 ????꾨７ ??용뮞筌??λ뜃??袁れ넅 */
+.review-card .review-text {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.8; /* 揶쎛??녾쉐 ?類ｋ궖???袁る립 餓κ쑨而쇿칰??類? */
+    color: #222222;
+    letter-spacing: -0.5px; /* 沃섎챸釉????용뮞筌??癒?퍢 */
+    margin: 0 0 12px 0;
+}
+
+.review-author {
+    font-family: var(--brand-font-main);
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #888888;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   [筌뤴뫀而??????꾨７域밸챶????類μ넅 ?닌딅열] Base_A?癒?퐣 ??곷뻼???怨좊뱜 ??由?揶쏅벡????뽯선 (??쇰옘 0.00%)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    /* [??????諛몄구 ?袁㏓궗] 3?源껎닋: ?귐딅섰 ?⑥쥒而??귐됰윮 癰귣챶揆 繹먥뫁釉?疫꼲?????? ???類μ넅 ??뤿떊 */
+    body .container .review-text {
+        text-align: left;
+        word-break: keep-all; /* ??????諭?? 筌욊쑴彛??⑥쥒而??귐됰윮????밴문??μ뱽 ???곫묾??袁る퉸 ??λ선 ??μ맄 ?癒?염??살쑎??餓κ쑬而?퐛???쇱땝?醫롮땝) ?醫? */
+        overflow-wrap: break-word;
+        font-size: 14px; /* 疫꿸퀣??15.5px -> 14px嚥?筌뤿굟萸???쇱뵠??꾨뱜 */
+        font-weight: 300; /* 疫꿸퀣??450 -> 300 ??뺥??怨쀫툡??띿쓺 */
+        letter-spacing: -0.3px;
+        line-height: 1.5; /* 疫꼲??? ?臾믩툡筌?筌띾슦寃?餓κ쑨而쇿칰?뱀뱽 ??곸? ?蹂? ?紐낆뵃 ?類ｋ궖 */
+        opacity: 0.95;
+    }
+}
+
+/* --- Inlined: css/08_Care_C8.css --- */
+/* ==========================================================================
+   css/08_Care_C8.css (Artistic Care Guide)
+   🏮 바이엘스 마스터 스탠다드 C8-레이어: 세탁 가이드 및 아크릴 케어 카드
+   - 케어 가이드 4개 항목을 질서정연한 아크릴 그리드 플레이트로 대수술합니다.
+   ========================================================================== */
+
+/* 1. 케어 그리드 레이아웃 (2x2 구조화) */
+.care-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 가로 2단 정렬 */
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 600px) {
+    .care-grid {
+        grid-template-columns: 1fr; /* 모바일은 1단 정렬 */
+        gap: 15px; /* 모바일 간격 축소 */
+    }
+    body .container .care-grid .care-item {
+        padding: 24px 20px; /* 모바일용 슬림 패딩 */
+    }
+    body .container .care-grid .care-item .care-desc {
+        line-height: 1.45; /* 모바일 본문 줄간격 압축 */
+    }
+}
+
+/* 2. 개별 케어 아크릴 플레이트 (무광 블랙 다크 차콜 아크릴로 전격 수술) */
+body .container .care-grid .care-item {
+    background: rgba(45, 45, 45, 0.9); /* [블랙 완치] 무광 딥 블랙 차콜 아크릴 */
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.08); /* 투명 스레드 라인 */
+    border-radius: 24px; /* 명품 라운딩 곡률 정합 */
+    padding: 35px 30px;
+    text-align: left;
+    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.25); /* 깊은 아크릴 입체 음영 */
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    box-sizing: border-box;
+}
+
+body .container .care-grid .care-item:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255, 255, 255, 0.2); /* 마우스 호버 시 화이트 스레드 활성화 */
+    box-shadow: 0 35px 75px rgba(0, 0, 0, 0.35);
+}
+
+/* 럭셔리 라인 아이콘 랩 데코레이션 */
+.care-icon-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.care-icon-wrap svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* [사장님 캡쳐본 완벽 동기화] 각 아이콘별 독보적인 네온 그라데이션 광채 코팅 */
+body .container .care-grid .care-item .care-icon-wrap.icon-blue {
+    background: rgba(79, 195, 247, 0.12);
+    color: #4fc3f7;
+    border: 1px solid rgba(79, 195, 247, 0.25);
+}
+body .container .care-grid .care-item .care-icon-wrap.icon-red {
+    background: rgba(255, 82, 82, 0.12);
+    color: #ff5252;
+    border: 1px solid rgba(255, 82, 82, 0.25);
+}
+body .container .care-grid .care-item .care-icon-wrap.icon-pink {
+    background: rgba(244, 143, 177, 0.12);
+    color: #f48fb1;
+    border: 1px solid rgba(244, 143, 177, 0.25);
+}
+body .container .care-grid .care-item .care-icon-wrap.icon-green {
+    background: rgba(77, 182, 172, 0.12);
+    color: #4db6ac;
+    border: 1px solid rgba(77, 182, 172, 0.25);
+}
+
+/* 3. 타이포그래피 다크 대비 최적화 */
+body .container .care-grid .care-item .care-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #ffffff; /* [글씨 흰색 대수술] */
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+    display: block; /* 기존 점 도트 데코레이션 자동 상쇄 */
+}
+
+/* 기존 밋밋했던 골드 점 도트 소멸 처리 */
+body .container .care-grid .care-item .care-title::before {
+    display: none;
+}
+
+body .container .care-grid .care-item .care-desc {
+    font-size: 13.5px;
+    font-weight: 300;
+    color: #b0b0b0; /* [본문 소프트 그레이 대수술] */
+    line-height: 1.6;
+    letter-spacing: -0.3px;
+    margin: 0;
+}
+
+/* --- Inlined: css/09_Info_C9.css --- */
+/* ==========================================================================
+   css/09_Info_C9.css (High-End Size & Gold Slit Table)
+   ?猷?獄쏅뗄???뤿뮞 筌띾뜆?????쎄묾??삳굡 C9-??됱뵠?? ?袁ⓥ봺沃섎챷毓????좑쭩???獄??ⓥ뫀諭???쇰선??깆뵥
+   - 22px ?紐껋쨮 ??媛싨????????ⓥ뫀諭??됰슢?????쇱뵥????삳쐭嚥????뵠??沃섎챸釉??域밸갭??酉鍮??덈뼄.
+   ========================================================================== */
+
+/* 1. ?袁ⓥ봺沃섎챷毓????좑쭩????뵠???袁⑥쟿??(.size-guide) */
+.size-guide {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid rgba(212, 175, 55, 0.12); /* 沃섎챷苑??ⓥ뫀諭?癰귣???*/
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.02);
+    margin-bottom: 40px;
+    overflow-x: auto;
+}
+
+.size-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+/* ?紐껋쨮 野껋럡????怨대럡 筌△뫀??獄?22px ?紐껋쨮 ??ㅻ뎃 ?袁㏓궗 */
+body .container .size-guide .size-table td {
+    border-left: none;
+    border-right: none;
+}
+
+/* 2. ?ⓥ뫀諭??됰슢???域밸챶??怨쀬뵠????삳쐭 & ?용쵑???22px ?紐껋쨮 ??ㅻ뎃 */
+body .container .size-guide .size-table thead td {
+    font-weight: 700;
+    color: #111111;
+    font-size: 13px;
+    /* ?????????쏁뵳??ⓥ뫀諭??됰슢???域밸챶??怨쀬뵠????곷뻼 */
+    background: linear-gradient(to bottom, rgba(197, 168, 128, 0.08), rgba(255, 255, 255, 0));
+    border-bottom: 2px solid rgba(197, 168, 128, 0.4);
+    padding: 22px 10px; /* 餓Β?袁る립 22px ?紐껋쨮 ??ㅻ뎃 癰귣똻??*/
+    letter-spacing: 1px;
+}
+
+.size-table tbody td {
+    font-size: 13px;
+    font-weight: 300;
+    color: #444444;
+    border-bottom: 1px solid rgba(197, 168, 128, 0.1); /* ???????ⓥ뫀諭???쇰선??깆뵥 */
+    padding: 22px 10px; /* 餓Β?袁る립 22px ?紐껋쨮 ??ㅻ뎃 癰귣똻??*/
+}
+
+.size-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.card-desc-pad {
+    font-size: 12px;
+    font-weight: 300;
+    color: #888888;
+    line-height: 1.7;
+    letter-spacing: -0.3px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* [??????諛몄구 ?袁㏓궗] ???좑쭩???덇땀?얜㈇????곷선?怨뚮┛(Hanging Indent)嚥?燁살눊而?? ?ル슣瑜??類ｌ졊 */
+.card-desc-pad p {
+    margin: 0 0 6px 0; /* ???얜챷?????????꽰 ?紐꾩뵠疫?*/
+    padding-left: 11px; /* ?袁⑷퍥 餓κ쑴????살쨮 獄쎛??沅→?*/
+    text-indent: -11px; /* 筌?餓κ쑴??癰귢쑵紐?*)筌???롮몵嚥??諛닿볼????甕곕뜆??餓κ쑬???燁살눊而???용뮞???類ｌ졊 ?袁⑷쉐 */
+}
+
+/* 3. ??롫뼊 ??됱춳 癰귣똻弛??⑥쥙?????뵠??(.info-table-footer) */
+.info-table-footer {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 50px;
+    border-top: 2px solid #111111;
+    border-bottom: 1px solid #111111;
+}
+
+.info-table-footer td {
+    padding: 18px 15px;
+    font-size: 12px;
+    letter-spacing: -0.3px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.info-table-footer td:first-child {
+    font-weight: 700;
+    color: #444444;
+    width: 30%;
+    background-color: rgba(212, 175, 55, 0.02); /* ?ⓥ뫀諭??袁⑹뒭??沃섎챷苑???*/
+}
+
+.info-table-footer td:last-child {
+    font-weight: 300;
+    color: #111111;
+    text-align: left;
+    width: 70%;
+}
+
+/* 4. ?닌됤꼻 ???袁⑤즴 ??덇땀??鍮?(.guide-box) (筌ｌ뮇湲썸???쎄쾿 筌△뫁???얜떯???됰뗀???袁り쾿??癰궰?? */
+body .container .guide-box {
+    width: 100%;
+    background: rgba(45, 45, 45, 0.9); /* [?됰뗀???袁り쾿???袁㏐봄 ?대Ŋ猿? */
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.08); /* ??梨?癰귣?????깆뵥 */
+    border-radius: 20px; /* 筌뤿굟萸???깆뒲???ⓦ볦ぇ ?類λ? */
+    padding: 35px 30px;
+    margin-top: 50px;
+    text-align: left;
+    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.25); /* ?얜벊彛????녾퍥 ???袁⑹뒭 */
+    box-sizing: border-box;
+}
+
+body .container .guide-box .guide-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff; /* [疫꼲???怨쀪퉳 ????뤿떊] */
+    letter-spacing: -0.3px;
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* ?????類ｌ졊嚥????????沃섎챶???ⓥ뫀諭?嚥≪뮄??獄쏄퀣??*/
+}
+
+/* [?????筌╈돦?쒑퉪?燁살눘??? ?ル슣瑜???怨쀫툡????쎈뼒???ⓥ뫀諭???륁춦 ??깆뵥 獄??怨쀭맜??됱뵠????뚯뿯 */
+.guide-title-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.guide-title-left::before {
+    content: "";
+    display: inline-block;
+    width: 3.5px;
+    height: 18px;
+    background-color: #c5a880; /* ??볥젃??됱퓗 ??쎈뼒???ⓥ뫀諭?*/
+    border-radius: 2px;
+}
+
+body .container .guide-box .guide-list {
+    margin: 0;
+    padding-left: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style-type: none; /* 獄쏅뿫而???觀??疫꿸퀡???븍뜄??筌띾뜇寃????늾 */
+}
+
+body .container .guide-box .guide-list li {
+    font-size: 13px;
+    font-weight: 300;
+    color: #b0b0b0; /* [揶쎛??녾쉐 100% ??곕늄??域밸챶???癰귣챶揆 ????뤿떊] */
+    line-height: 1.7;
+    letter-spacing: -0.3px;
+    position: relative;
+    padding-left: 14px;
+}
+
+/* ?怨쀫툡??랁?域뱀뮇??怨몄뵥 ?ⓥ뫀諭??袁る뱜 ?븍뜄??筌띾뜇寃???노샒 */
+body .container .guide-box .guide-list li::before {
+    content: "??;
+    color: #c5a880;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   [筌뤴뫀而??????꾨７域밸챶????類μ넅 ?닌딅열] Base_A?癒?퐣 ??곷뻼???怨좊뱜 ??由?揶쏅벡????뽯선 (??쇰옘 0.00%)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    /* [??媛?獄쏆꼷??獄쏆꼹?쀯쭕? ???좑쭩?딅ご 燁삳?諭??怨룸뼊 ??媛????덉뺘??곗쨮 ??餓κ쑴?졿묾? */
+    body .container .size-guide {
+        /* ?????筌왖燁??袁⑸땾: "?袁⑹벥 ??媛??獄쏆꼷?앮에?餓κ쑴??? -> 疫꿸퀣??25px?????怨룸뼊 ??ㅻ뎃??12px嚥?獄쏆꼹?쀯쭕???낅빍?? */
+        padding: 12px 12px 25px 12px; /* ??12px, ?ル슣??12px, ?袁⑥삋 25px */
+    }
+    body .container .size-guide .size-table thead td,
+    body .container .size-table tbody td {
+        padding: 15px 4px;
+        font-size: 11.5px;
+        word-break: keep-all;
+    }
+
+    /* [??????諛몄구 ?袁㏓궗] 4?源껎닋: ??쎈읃 ???뵠????뺛걠 獄???곸뒠 揶?繹먥뫁釉?疫꼲????쑴???類λ? 野꺿뫗湲?*/
+    body .container .spec-table tr td.spec-label {
+        text-align: center;
+        word-break: keep-all;
+        overflow-wrap: break-word;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: -0.3px;
+    }
+
+    body .container .spec-table tr td.spec-value {
+        text-align: left;
+        padding-left: 15px; /* ?????筌왖燁? ??媛???쇱뵠??꾨뱜??곴퐣 揶쎛嚥??⑤벀而??類ｋ궖 */
+        word-break: keep-all;
+        overflow-wrap: break-word;
+        font-size: 13px; /* ?????筌왖燁??袁⑸땾: 獄쏅쵐肉?疫꼲??13px)???臾롮뺙?? ??由경에??????곕벡?? */
+        font-weight: 300; /* ????뺥??紐껋졃??띿쓺 ??쇱뵠??꾨뱜 */
+        letter-spacing: -0.3px;
+        line-height: 1.45; /* 筌뤿굟萸???? 餓κ쑨而쇿칰??關媛?*/
+    }
+
+    body .container .card-desc-pad {
+        line-height: 1.45;
+    }
+
+    body .container .guide-box .guide-list li {
+        line-height: 1.45;
+    }
+}
+
+/* --- Inlined: css/10_Footer_C10.css --- */
+/* ==========================================================================
+   css/10_Footer_C10.css (Artistic Footer Finish)
+   🏮 바이엘스 마스터 스탠다드 C10-레이어: 최종 푸터 및 4px 자간 마감
+   - 푸터를 고요하고 차분한 어둠으로 래핑하고, 명품 서체 자간으로 최종 마감합니다.
+   ========================================================================== */
+
+/* 1. 푸터 메인 프레임 (.section-footer) */
+.section-footer {
+    padding: 80px 40px;
+    background-color: #111111; /* 바이엘스 시그니처 딥 다크 */
+    text-align: center;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 2. 푸터 브랜드 아이덴티티 (787번 앤티크 골드 피날레 - 소문자 byelse 보증) */
+.hero-brand-dark {
+    font-family: var(--brand-font-main);
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 12px; /* 명격의 자간 12px로 한 층 더 기품 있게 확장 */
+    color: #c5a880; /* 최종 브랜드 푸터도 앤티크 골드로 아름답게 마무리 */
+    text-transform: lowercase; /* 사장님 최종 지침: 전역 소문자 byelse 강제화 */
+    margin-bottom: 25px;
+    text-indent: 12px; /* 정렬 보정 */
+    text-shadow: 0 1px 4px rgba(197, 168, 128, 0.25);
+}
+
+/* 3. 푸터 설명문 및 저작권 정보 */
+.footer-desc {
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 1.9; /* 줄간격 호흡 개선 */
+    color: #777777; /* 서체 맑기 튜닝 */
+    letter-spacing: 0.5px;
+    margin-bottom: 30px;
+}
+
+/* 4. 푸터 메리트 및 앵커 태그 */
+.footer-links {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.footer-links a {
+    color: #555555;
+    font-size: 11px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #c5a880; /* 호버 시 앤티크 골드로 교감 */
+}
+
+/* 5. 최종 카피라이팅 */
+.footer-copyright {
+    font-size: 9px;
+    letter-spacing: 4px; /* 최종 4px 자간 마감 */
+    color: #444444;
+    text-transform: uppercase;
+    text-indent: 4px;
+}
+
+/* --- Inlined: css/10_Footer_C10_StyleB.css --- */
+/* ==========================================================
+   10_Footer_C10_StyleB.css (Style B Unique Footer & CTA)
+   ========================================================== */
+
+/* ??곌텊?????筌왖 */
+body.theme-style-b .main-img-box img { 
+    width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+/* 嚥≪뮄??筌띾뜆彛?鈺곌퀣??獄????筌왖 癰귣벀??*/
+body.theme-style-b .logo-media-box {
+    margin: 20px 0 50px 0; 
+    border: none;
+    background: transparent;
+    height: auto;
+    text-align: center;
+}
+
+body.theme-style-b .footer-logo {
+    width: 250px;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+    mix-blend-mode: normal; /* ?癒?궚 ???뵬????梨?PNG??⑦?揶쎛??*/
+}
+
+/* ?紐낃숲 ??용뮞??*/
+body.theme-style-b .story-footer { 
+    padding: 25px 20px 10px 20px; /* ?袁⒲걹 ??媛??80px?癒?퐣 25px嚥?????餓κ쑴肉???袁⑥쨮 ????*/
+    text-align: center; 
+    background: transparent; /* ?????筌왖燁? 揶쎛??獄쏅쵐肉??????獄쏄퀗瑗???곷퉲 */
+    margin: 0; /* ?븍뜇釉?酉釉?筌띾뜆彛??袁⑹읈 ????*/
+}
+body.theme-style-b .story-footer .sub-txt { 
+    display: block; 
+    font-size: 14px; 
+    color: #666666; 
+    margin-bottom: 12px; 
+    font-weight: 500; 
+    letter-spacing: 1px; 
+}
+body.theme-style-b .story-footer .main-txt { 
+    display: block; 
+    font-size: 20px; 
+    font-weight: 700; 
+    color: #111111; 
+    line-height: 1.5; 
+    word-break: keep-all; 
+}
+
+/* Sticky CTA (筌뤴뫀逾???뵠??以?揶쎛?귐덊???용┛) */
+body.theme-style-b .sticky-cta { 
+    display: none; /* 疫꿸퀡??怨몄몵嚥???? (?紐꾩젫??????揶쎛?? */
+}
+
+body.theme-style-b.use-sticky-cta {
+    padding-bottom: 85px; /* CTA揶쎛 ????????춸 ??롫뼊 ??됱읈 ?⑤벀而??類ｋ궖 */
+}
+
+body.theme-style-b.use-sticky-cta .sticky-cta { 
+    display: flex; /* ??쇱맄燁살꼵? ?녹뮇?筌??????*/
+    position: fixed; 
+    bottom: 0; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 100%; 
+    max-width: 760px; 
+    background-color: #ffffff; 
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.08); 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 15px 30px; 
+    z-index: 9999; 
+    border-top: 1px solid #eee;
+}
+
+body.theme-style-b .price-box {
+    display: flex;
+    flex-direction: column;
+}
+body.theme-style-b .price-box .label {
+    font-size: 12px;
+    color: #ff3b30;
+    font-weight: 700;
+}
+body.theme-style-b .price-box .amount {
+    font-size: 22px;
+    font-weight: 800;
+    color: #111;
+}
+body.theme-style-b .buy-btn {
+    background-color: #111;
+    color: #fff;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    body.theme-style-b.use-sticky-cta .sticky-cta { 
+        padding: 12px 20px; 
+    }
+    body.theme-style-b .price-box .amount { font-size: 18px; }
+    body.theme-style-b .buy-btn { font-size: 14px; padding: 12px 20px; }
+}
+
+
+/* 3. ?袁⑸열 ??됱뵠?袁⑹뜍 ?귐딅?(W3C ??쎈읃 餓Β??? ?袁る퉸 ??롫뼊 獄쏄퀣?? */
+html,
+/* ==========================================================
+   10_Footer_C10_StyleB.css (Style B Unique Footer & CTA)
+   ========================================================== */
+
+/* ??곌텊????€?筌왖€ */
+body.theme-style-b .main-img-box img { 
+    width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+/* 嚥≪뮄??筌띾뜆彛?鈺곌퀣??獄???€?筌왖€ 癰귣벀??*/
+body.theme-style-b .logo-media-box {
+    margin: 20px 0 50px 0; 
+    border: none;
+    background: transparent;
+    height: auto;
+    text-align: center;
+}
+
+body.theme-style-b .footer-logo {
+    width: 250px;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+    mix-blend-mode: normal; /* ?癒?궚 ???뵬????梨?PNG??⑦€?揶쎛€??*/
+}
+
+/* ?紐낃숲 ??용뮞??*/
+body.theme-style-b .story-footer { 
+    padding: 25px 20px 10px 20px; /* ?袁⒲걹 ??媛??80px?癒?퐣 25px嚥?????餓κ쑴肉???袁⑥쨮 ????*/
+    text-align: center; 
+    background: transparent; /* ?????筌왖€燁? 揶쎛€??獄쏅쵐肉??????獄쏄퀗瑗???곷퉲 */
+    margin: 0; /* ?븍뜇釉?酉€釉?筌띾뜆彛??袁⑹읈 ????*/
+}
+body.theme-style-b .story-footer .sub-txt { 
+    display: block; 
+    font-size: 14px; 
+    color: #666666; 
+    margin-bottom: 12px; 
+    font-weight: 500; 
+    letter-spacing: 1px; 
+}
+body.theme-style-b .story-footer .main-txt { 
+    display: block; 
+    font-size: 20px; 
+    font-weight: 700; 
+    color: #111111; 
+    line-height: 1.5; 
+    word-break: keep-all; 
+}
+
+/* Sticky CTA (筌뤴뫀逾???뵠??€以?揶쎛€?귐덊€???용┛) */
+body.theme-style-b .sticky-cta { 
+    display: none; /* 疫꿸퀡??怨몄몵嚥???? (?紐꾩젫??????揶쎛€?? */
+}
+
+body.theme-style-b.use-sticky-cta {
+    padding-bottom: 85px; /* CTA揶쎛€ ????????춸 ??롫뼊 ??됱읈 ?⑤벀而??類ｋ궖 */
+}
+
+body.theme-style-b.use-sticky-cta .sticky-cta { 
+    display: flex; /* ??쇱맄燁살꼵? ?녹뮇?筌??????*/
+    position: fixed; 
+    bottom: 0; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 100%; 
+    max-width: 760px; 
+    background-color: #ffffff; 
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.08); 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 15px 30px; 
+    z-index: 9999; 
+    border-top: 1px solid #eee;
+}
+
+body.theme-style-b .price-box {
+    display: flex;
+    flex-direction: column;
+}
+body.theme-style-b .price-box .label {
+    font-size: 12px;
+    color: #ff3b30;
+    font-weight: 700;
+}
+body.theme-style-b .price-box .amount {
+    font-size: 22px;
+    font-weight: 800;
+    color: #111;
+}
+body.theme-style-b .buy-btn {
+    background-color: #111;
+    color: #fff;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    body.theme-style-b.use-sticky-cta .sticky-cta { 
+        padding: 12px 20px; 
+    }
+    body.theme-style-b .price-box .amount { font-size: 18px; }
+    body.theme-style-b .buy-btn { font-size: 14px; padding: 12px 20px; }
+}
+
+
+/* 3. ?袁⑸열 ??됱뵠?袁⑹뜍 ?귐딅€?(W3C ??쎈읃 餓Β€??? ?袁る퉸 ??롫뼊 獄쏄퀣?? */
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 3. 전역 레이아웃 리셋 (W3C 스펙 준수를 위해 하단 배치) */
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* 4. Pure CSS Luxury Footer Frame (Master Monotone Edition) 
+   - HTML 뼈대 수정 없이 오직 CSS 가상 선택자로만 프레임과 비네팅을 렌더링합니다. */
+body.theme-style-b .logo-media-box {
+    position: relative;
+    width: 100%;
+    max-width: 720px;
+    height: 250px;
+    margin: 40px auto 60px auto;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.2); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden; /* 가상 선택자 이탈 방지 */
+}
+body.theme-style-b .logo-media-box::before {
+    content: "";
+    position: absolute;
+    top: 12px; left: 12px; right: 12px; bottom: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+    z-index: 6;
+    pointer-events: none;
+}
+body.theme-style-b .logo-media-box::after {
+    content: "";
+    position: absolute;
+    top: 8px; left: 8px; right: 8px; bottom: 8px;
+    border-radius: 6px;
+    background: radial-gradient(circle, rgba(0,0,0,0) 50%, rgba(0,0,0,0.06) 100%);
+    pointer-events: none;
+    z-index: 5;
+    box-shadow: inset 0 0 30px rgba(0,0,0,0.05); 
+    background-color: #fdfdfd;
+}
+body.theme-style-b .logo-media-box .footer-logo {
+    position: relative;
+    z-index: 10;
+    width: 190px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.15));
+    transition: transform 0.8s ease, filter 0.8s ease;
+    mix-blend-mode: normal;
+}
+body.theme-style-b .logo-media-box:hover .footer-logo {
+    transform: scale(1.03);
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+}
+
+/* --- [Option: B-1] Heavy Luxury Gold Edition (theme-gold) --- 
+   HTML에 .theme-gold 클래스를 추가하고 배경 <img>를 넣으면 화보 골드 프레임으로 변신합니다. */
+body.theme-style-b .logo-media-box.theme-gold {
+    background: #1a1a1a;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(212, 175, 55, 0.6); 
+}
+body.theme-style-b .logo-media-box.theme-gold::before {
+    border: 1px solid rgba(212, 175, 55, 0.8);
+}
+body.theme-style-b .logo-media-box.theme-gold::after {
+    background: radial-gradient(circle, rgba(0,0,0,0) 20%, rgba(0,0,0,0.7) 100%);
+    box-shadow: none; /* 기존 모노톤의 흰색 테두리 그림자 제거 */
+}
+body.theme-style-b .logo-media-box.theme-gold .luxury-bg-img {
+    position: absolute; 
+    top: 8px; left: 8px; right: 8px; bottom: 8px;
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
+    object-fit: cover;
+    display: block;
+    border-radius: 6px; 
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    margin: 0;
+}
+body.theme-style-b .logo-media-box.theme-gold:hover .luxury-bg-img {
+    transform: scale(1.05);
+}
+body.theme-style-b .logo-media-box.theme-gold .footer-logo {
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.15));
+}
+body.theme-style-b .logo-media-box.theme-gold:hover .footer-logo {
+    filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 30px rgba(212, 175, 55, 0.25));
+}
+
+@media (max-width: 768px) {
+    body.theme-style-b .logo-media-box { height: 160px; margin: 30px auto 40px auto; }
+    body.theme-style-b .logo-media-box .footer-logo { width: 140px; }
+}
+
+
+/* 3. 전역 레이아웃 리셋 (W3C 스펙 준수를 위해 하단 배치) */
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+</style>
+    <title>byelse | v09-1 The Pure Masterpiece</title>
+</head>
+
+<body class="lang-en theme-style-b">
+
+    <!-- ========================================================================================================= -->
+    <!-- 🚨 [미래 AI 필수 헌법: 이 템플릿을 건드리기 전 프로젝트 전체 생태계를 숙지할 것] 🚨 -->
+    <!-- 1. [Editor 원본 불변의 법칙 및 Cloud 땜질 금지] 이 파일은 '06_Forest_Exporter' 엔진이 읽어들이는 순수 로컬 원본(_editor_)이다. 여기에 깃허브 절대 경로(https://...)를 하드코딩하지 마라. 배포용(_cloud_) 파일 버그 발생 시 절대 배포판을 직접 땜질 수정하지 마라. 버그는 반드시 로컬 에디터에서 원인 규명 후 엔진으로 '재생성(Regenerate)' 해야 한다. -->
+    <!-- 2. [상세페이지 '정적 번역(Static)' 수호 및 명사형 카피] 럭셔리 마케팅 무결성을 위해 JS 기반 구글 동적 번역기(위젯)를 일절 금지한다. 동적 스크립트를 삽입하지 말고, 오직 최고급 의역이 담긴 물리적 파일(_en.html, _cn.html)을 복사 생성하여 카피를 하드코딩하라. 텍스트 종결은 나약한 서술형이 아닌 단단한 [명사형]을 유지하라. -->
+    <!-- 3. [이커머스 이미지 렌더링 핏(Fit) 절대 보존] 이 HTML은 단순한 웹이 아니라 향후 캡처되어 쇼핑몰 썸네일과 통이미지로 쪼개질 '이미지 거푸집'이다. 모바일 기준 뷰포트 너비와 피라미드 정렬 구조를 무단으로 변경하지 마라. 복사 시 <body class="lang-XX"> 언어 태그를 누락하여 글로벌 폰트 렌더링을 깨뜨리는 짓을 엄벌한다. -->
+    <!-- 4. [마스터 아키텍처 및 디자인 통제권] 이 파일의 뼈대는 마스터 CSS의 지배를 받는다. 새로운 클래스명을 환각(Hallucination)으로 지어내거나 태그 안에 style="..." 인라인으로 땜질하지 마라. B-1 골드 화보 프레임이 필요하다면 구조를 부수지 말고 기존 <div class="media-box logo-media-box">에 'theme-gold' 클래스만 추가하라. -->
+    <!-- 5. [연쇄 폭주 금지 및 사령관 승인 대기] 네 역할은 사령관이 요청한 HTML 타겟 하나를 정확히 수정하는 것뿐이다. 묻지 않고 파워쉘 엔진을 돌리거나 마스터 CSS를 덮어쓰는 독단적 자율 행동을 엄격히 금지한다. 통제를 벗어난 결과물은 쓰레기다. 하나의 퀘스트 후 반드시 멈추고 인간의 통제를 대기하라. -->
+    <!-- ========================================================================================================= -->
+
+    <div class="container">
+
+        <!-- 1단계: 감각적인 스토리텔링 & 문제 제기 (도입부 - 11번 이식) -->
+<!-- [AI 에이전트 마케팅 및 에셋 절대 지시사항] 
+1. 텍스트 지시: 아래 [ ] 대괄호의 글자 길이에 시각적으로 딱 맞게 작성하라. 최신 인터넷 마케팅 트렌드 키워드를 사전에 검색 및 분석하고, 이 ITEM의 특장점을 믹스하여 '가장 잘 팔릴 수 있는 매혹적이고 창의적인 후킹 카피'를 생성해 덮어써라. 
+   - [명사형 종결 절대 룰]: 문장의 끝맺음을 '~선사합니다', '~차단합니다' 같은 약한 서술형 어미로 끝내지 마라. 오직 수치와 명사형(예: '압도적 무결점 핏', '원천 차단한 절대적 자유로움')으로 단단하고 프로페셔널하게 종결할 것.
+2. 이미지 지시: <img> 태그의 기존 src 경로 네이밍을 준수하라. 이미지를 생성하기 전 반드시 사전 지식 'D:\Project\AI_Core_Brain\knowledge\4005_AI_Image_Generation_Prompt_Rules.md' 문서를 정독하고 아래 조건을 100% 준수할 것.
+   - 인터넷을 검색하여 가장 잘 팔릴 만한 고퀄리티 이미지 구도로 접근할 것.
+   - 반드시 원본 공장의 제품을 사용한 이미지여야 한다 (두께 크기, 테그, 라벨조차도 다른 것을 사용하면 안 된다).
+   - 저렴한 느낌을 철저히 배제하고 '고급스러운 분위기(럭셔리 무드)'를 연출할 것.
+   - 속도 최적화를 위해 결과물은 무조건 .jpg 포맷으로 저장할 것.
+   - 인물 모델 생성 시 무조건 '한국인(아시아계) 젊은 여성'으로 고정 (서양인/흑인 생성 절대 금지).
+* 주의사항: 전체 HTML 태그 뼈대와 디자인 클래스는 100% 원형을 보존할 것. -->
+        <div class="page-section">
+            <div class="brand-header">
+                <div class="brand-name">byelse</div>
+                <div class="brand-sub">Choice of a special eye</div>
+            </div>
+            <div class="section-main-title">
+                <span class="t-top">It's an everyday wear, but</span>
+                <span class="t-bot">Why did we always have to endure discomfort?</span>
+            </div>
+            <div class="main-img-box">
+                <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10123_CK-365_bootcut_leggings/B_01_hero.jpg?v=20260624_105754" alt="byelse 01">
+                <div class="hero-overlay-12"></div>
+            </div>
+            <div class="subtle-hook">
+                <span class="t-top-small">A question to the discomfort we took for granted</span>
+                <span class="t-bot-small">With the most premium sense, <strong>setting a new standard for
+                        leggings</strong></span>
+            </div>
+        </div>
+
+<!-- [AI 에이전트 마케팅 및 에셋 절대 지시사항] 
+1. 텍스트 지시: 아래 [ ] 대괄호의 글자 길이에 시각적으로 딱 맞게 작성하라. 최신 인터넷 마케팅 트렌드 키워드를 사전에 검색 및 분석하고, 이 ITEM의 특장점을 믹스하여 '가장 잘 팔릴 수 있는 매혹적이고 창의적인 후킹 카피'를 생성해 덮어써라. 
+   - [명사형 종결 절대 룰]: 문장의 끝맺음을 '~선사합니다', '~차단합니다' 같은 약한 서술형 어미로 끝내지 마라. 오직 수치와 명사형(예: '압도적 무결점 핏', '원천 차단한 절대적 자유로움')으로 단단하고 프로페셔널하게 종결할 것.
+2. 이미지 지시: <img> 태그의 기존 src 경로 네이밍을 준수하라. 이미지를 생성하기 전 반드시 사전 지식 'D:\Project\AI_Core_Brain\knowledge\4005_AI_Image_Generation_Prompt_Rules.md' 문서를 정독하고 아래 조건을 100% 준수할 것.
+   - 인터넷을 검색하여 가장 잘 팔릴 만한 고퀄리티 이미지 구도로 접근할 것.
+   - 반드시 원본 공장의 제품을 사용한 이미지여야 한다 (두께 크기, 테그, 라벨조차도 다른 것을 사용하면 안 된다).
+   - 저렴한 느낌을 철저히 배제하고 '고급스러운 분위기(럭셔리 무드)'를 연출할 것.
+   - 속도 최적화를 위해 결과물은 무조건 .jpg 포맷으로 저장할 것.
+   - 인물 모델 생성 시 무조건 '한국인(아시아계) 젊은 여성'으로 고정 (서양인/흑인 생성 절대 금지).
+* 주의사항: 전체 HTML 태그 뼈대와 디자인 클래스는 100% 원형을 보존할 것. -->
+        <div class="page-section">
+            <div class="section-tag">Perfect Silhouette</div>
+            <div class="section-main-title">
+                <span class="t-top">Discovered by insight</span>
+                <span class="t-bot">Completion of a perfect silhouette</span>
+            </div>
+            <div class="content-grid">
+                <div class="grid-card">
+                    <span class="card-num">01</span>
+                    <span class="card-title">Expert Fitting Test</span>
+                    <span class="card-desc">Realizing the most ideal shaping fit for Koreans</span>
+                </div>
+                <div class="grid-card">
+                    <span class="card-num">02</span>
+                    <span class="card-title">Fabric Resilience Measurement</span>
+                    <span class="card-desc">Instant shape recovery without sagging even after intense movement</span>
+                </div>
+            </div>
+            <div class="img-wrap">
+                <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10123_CK-365_bootcut_leggings/B_02_seamless.jpg?v=20260624_105754" alt="byelse 03">
+            </div>
+            <div class="subtle-hook">
+                <span class="t-top-small">Through rigorous wear testing</span>
+                <span class="t-bot-small">Directly verified by numerous experts, <strong>implementing the best
+                        fit</strong></span>
+            </div>
+        </div>
+
+        <!-- 2. DATA (Benchmark Spec Table) -->
+        <section class="section reveal active">
+            <span class="section-tag">Technical Data</span>
+            <div class="section-title">
+                <span class="t-top">Proven by numbers</span>
+                <span class="t-bot"><strong>Overwhelming Balance of Technology</strong></span>
+            </div>
+
+            <div class="spec-container">
+                <table class="spec-table">
+                    <tbody>
+                        <tr>
+                            <td class="spec-label">Fabric Composition</td>
+                            <td class="spec-value">High-density Nylon 80% / Premium Spandex 20%</td>
+                        </tr>
+                        <tr>
+                            <td class="spec-label">Fabric Weight</td>
+                            <td class="spec-value">300gsm high-density structure (12% lighter than normal fabric)</td>
+                        </tr>
+                        <tr>
+                            <td class="spec-label">Elasticity</td>
+                            <td class="spec-value">Up to 180% ultra-high elasticity (1.5x resilience increase)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="glass-grid">
+                <div class="glass-card">
+                    <span class="card-num">01</span>
+                    <span class="card-title"><strong>Freedom without underwear (No-line design)</strong></span>
+                    <p class="card-desc">Comfortable wear without underwear thanks to 99.9% antibacterial fabric and
+                        special Inner Pad</p>
+                </div>
+                <div class="glass-card">
+                    <span class="card-num">02</span>
+                    <span class="card-title"><strong>Coats Premium Sewing Thread</strong></span>
+                    <p class="card-desc">Sturdy finish even in extreme movements by using Coats' high-end sewing thread
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3-1. PROCESS - Fabric Macro (Artistic Direction) -->
+        <section class="section section-process reveal active">
+            <div class="section-title">
+                <span class="t-top">Without even 1mm of distortion</span>
+                <span class="t-bot"><strong>Value of a masterpiece<br>created by a sophisticated process</strong></span>
+            </div>
+            <div class="img-wrap">
+                <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/premium_black_fabric_macro.jpg?v=20260624_105754" alt="Premium Fabric">
+            </div>
+        </section>
+
+        <!-- 3-2. PROCESS - Factory Process (Artistic Direction) -->
+        <section class="section section-process reveal active">
+            <div class="section-title">
+                <span class="t-top">Endless obsession towards perfection,</span>
+                <span class="t-bot"><strong>makes an overwhelming difference in detail.</strong></span>
+            </div>
+            <div id="factory-img-wrap" class="img-wrap">
+                <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/factory_asian.jpg?v=20260624_105754" alt="Factory Process">
+                <div class="info-overlay-12">
+                    <span class="card-num-light">Precision Process 05</span>
+                    <div class="card-title"><strong>Computer Precision Pattern Cutting</strong></div>
+                    <p class="card-desc">Less than 0.01% standard error, skilled artisan's <strong>Final
+                            Inspection</strong></p>
+                </div>
+                <div class="premium-badge">byelse Quality Assurance</div>
+            </div>
+        </section>
+
+        <!-- 4. SAFETY EVIDENCE (Staggered Gallery) -->
+        <section class="section reveal active">
+            <span class="section-tag">Safety Evidence</span>
+            <div class="section-title">
+                <span class="t-top">Proven by nationally certified institutions</span>
+                <span class="t-bot">Objective <strong>official safety</strong></span>
+            </div>
+            <div class="glass-grid">
+                <div class="glass-card">
+                    <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/test_report_safety.jpg?v=20260624_105754" alt="안전성 인증"
+                        class="full-img">
+                    <p class="card-desc-center">National certified agency safety verification completed</p>
+                </div>
+                <div class="glass-card">
+                    <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/test_report_hazardous.jpg?v=20260624_105754" alt="Test Report"
+                        class="full-img">
+                    <p class="card-desc-center">Judged as no harmful substances detected</p>
+                </div>
+            </div>
+            <div class="glass-card-light">
+                <p class="review-text">"Promises <strong>overwhelming reliability</strong> without worrying about
+                    irritation even on sensitive skin by passing the strictest tests."</p>
+            </div>
+        </section>
+
+        <!-- 5. PARTNER BOARD (Celestial Brand Certification - Scenario B Approved) -->
+        <section class="section reveal active">
+            <span class="section-tag">Global Partnership</span>
+            <div class="section-title">
+                <span class="t-top">High-end technology recognized worldwide,</span>
+                <span class="t-bot">byelse's <strong>global certified partners</strong></span>
+            </div>
+            <!-- [사장님 절대 헌법 집도] 위 아래 하나로 묶은 거대 3:4 대통합 앤티크 골드 슬릿 아크릴 액자 프레임 -->
+            <div class="partnership-frame">
+
+                <div class="glass-grid">
+                    <!-- 카드 1: COATS Premium Sewing Thread -->
+                    <div class="glass-card">
+                        <span class="card-num">COATS</span>
+                        <div class="crystal-badge coats-badge"></div>
+                        <h3 class="card-title">UK Premium Sewing Thread</h3>
+                        <p class="card-desc">Fundamentally prevents even 1mm of thread popping with the world-class
+                            tensile strength and reputation since 1755, premium Coats sewing.</p>
+                    </div>
+                    <!-- 카드 2: LYCRA 오리지널 엘라스틴 -->
+                    <div class="glass-card">
+                        <span class="card-num">LYCRA®</span>
+                        <div class="crystal-badge lycra-badge"></div>
+                        <h3 class="card-title">Original LYCRA®</h3>
+                        <p class="card-desc">Synonym for excellent elasticity and strong resilience. Protects the
+                            masterpiece silhouette without any collapse even during intense physical activity.</p>
+                    </div>
+                    <!-- 카드 3: YKK 명품 지퍼 -->
+                    <div class="glass-card">
+                        <span class="card-num">YKK</span>
+                        <div class="crystal-badge ykk-badge"></div>
+                        <h3 class="card-title">Luxury Zipper System</h3>
+                        <p class="card-desc">Provides a smooth operational feel and flawless details by equipping the
+                            top-notch zipper system YKK slider that sets the world standard.</p>
+                    </div>
+                    <!-- 카드 4: 99.9% 항균 SA 실드 -->
+                    <div class="glass-card">
+                        <span class="card-num">ANTIBACTERIAL</span>
+                        <div class="crystal-badge shield-badge"></div>
+                        <h3 class="card-title">99.9% SA Antibacterial Shield</h3>
+                        <p class="card-desc">Protects pristine hygiene, staying soft and clear all day, by applying
+                            99.9% SA shielding technology verified by strong harmful substance blocking reports.</p>
+                    </div>
+                </div>
+
+                <!-- 하단 가로 띠 4대 엠블럼 코어 배너 -->
+                <div class="partnership-core-banner">
+                    <div class="core-banner-image">
+                        <span class="sr-only">byelse Global Partner Certification</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 6. PRECISION LAB (Visual Proof GIFs) -->
+        <section class="section reveal active">
+            <span class="section-tag">Precision Engineering</span>
+            <div class="section-title">
+                <span class="t-top">Without even 1mm of error</span>
+                <span class="t-bot">byelse Precision Lab's <strong>Precision Process</strong></span>
+            </div>
+
+            <div class="glass-grid">
+                <div class="lab-video-unit">
+                    <div class="img-wrap">
+                        <video autoplay loop muted playsinline>
+                            <source src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/process_fabric.mp4?v=20260624_105754" type="video/mp4">
+                        </video>
+                    </div>
+                    <p class="card-desc-center">High-density knitting process</p>
+                </div>
+                <div class="lab-video-unit">
+                    <div class="img-wrap">
+                        <video autoplay loop muted playsinline>
+                            <source src="https://raw.githubusercontent.com/byelse-official/assets/main/10_Common_Assets/01_WeimanFactory/process_sewing.mp4?v=20260624_105754" type="video/mp4">
+                        </video>
+                    </div>
+                    <p class="card-desc-center">Seamless finishing treatment</p>
+                </div>
+            </div>
+
+            <div class="glass-card-dark">
+                <span class="card-num-light">byelse Manufacturing Philosophy</span>
+                <p class="review-text">
+                    <span class="d-block">Through uncompromising quality control</span>
+                    <span class="d-block">Achieving <strong>unrivaled perfection</strong> unique to 'byelse'.</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- 7. REAL REVIEWS (Premium Review Board) -->
+        <section class="review-section section reveal active">
+            <span class="section-tag">REAL REVIEWS</span>
+            <div class="section-title">
+                <span class="t-top">Vivid records filled with sincerity</span>
+                <span class="t-bot">Stronger than numbers, <strong>customer testimonies</strong></span>
+            </div>
+
+            <div class="review-list">
+                <div class="review-card">
+                    <div class="rating-stars"></div>
+                    <p class="review-text">"I've tried dozens of expensive leggings, but the support that doesn't roll
+                        down is <strong>definitely the best</strong>."</p>
+                    <div class="review-author">Pilates Instructor A (31)</div>
+                </div>
+                <div class="review-card">
+                    <div class="rating-stars"></div>
+                    <p class="review-text">"With absolutely no see-through, keeping the original feeling even after
+                        multiple washes, I was amazed by the <strong>resilience</strong>."</p>
+                    <div class="review-author">Smart Store Customer B</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. SIZE GUIDE (Comprehensive Integration) -->
+        <!-- [AI TRANSLATION NOTE]: '커스터마이징 핏'은 맞춤제작(Bespoke)이 아닙니다. 번역 시 반드시 'Perfect Fit Guide(전용 사이즈 가이드)'의 뉘앙스로 번역할 것. -->
+        <section class="section reveal active">
+            <span class="section-tag">Perfect Fit Guide</span>
+            <div class="section-title">
+                <span class="t-top">The most perfect for me</span>
+                <span class="t-bot"><strong>Perfect Fit Guide</strong> (Find yours)</span>
+            </div>
+
+            <div class="size-guide">
+                <table class="size-table">
+                    <thead>
+                        <tr>
+                            <td>SIZE</td>
+                            <td>Waist</td>
+                            <td>Hip</td>
+                            <td>Length</td>
+                            <td>Rec. Weight</td>
+                            <td>Rec. Height</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>S</td>
+                            <td>24</td>
+                            <td>33</td>
+                            <td>82</td>
+                            <td>40-50kg</td>
+                            <td>155-160cm</td>
+                        </tr>
+                        <tr>
+                            <td>M</td>
+                            <td>26</td>
+                            <td>35</td>
+                            <td>84</td>
+                            <td>50-55kg</td>
+                            <td>160-165cm</td>
+                        </tr>
+                        <tr>
+                            <td>L</td>
+                            <td>28</td>
+                            <td>37</td>
+                            <td>86</td>
+                            <td>55-62kg</td>
+                            <td>165-170cm</td>
+                        </tr>
+                        <tr>
+                            <td>XL</td>
+                            <td>30</td>
+                            <td>39</td>
+                            <td>88</td>
+                            <td>62-70kg</td>
+                            <td>170-175cm</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="card-desc-pad">
+                    <p>* The above figures are based on cross-sectional measurements (cm), and an error of 1-3cm may
+                        occur depending on the measurement method.</p>
+                    <p>* We recommend your regular size for a tight shaping fit, and one size larger for a comfortable
+                        fit.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. CARE & INFO (Black Premium Board) -->
+        <section class="section reveal active">
+            <span class="section-tag">Care & Info</span>
+            <div class="section-title">
+                <span class="t-top">For unchanging condition for a long time</span>
+                <span class="t-bot">byelse <strong>Premium Care Guide</strong></span>
+            </div>
+
+            <div class="care-grid">
+                <!-- 1. Cold Wash (하늘색 라이트 블루 눈결정 SVG 장착) -->
+                <div class="care-item">
+                    <div class="care-icon-wrap icon-blue">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 3v18M3 12h18M12 3l3 3M12 3L9 6M12 21l3-3M12 21l-3-3M21 12l-3-3M21 12l-3 3M3 12l3-3M3 12l3 3" />
+                        </svg>
+                    </div>
+                    <div class="care-title">Cold Wash</div>
+                    <p class="care-desc">We recommend separate washing with neutral detergent in cold or lukewarm water
+                        below 30 degrees.</p>
+                </div>
+
+                <!-- 2. No Tumble Dry (루비 핑크 원형 사선 금지 SVG 장착) -->
+                <div class="care-item">
+                    <div class="care-icon-wrap icon-red">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="9" />
+                            <path stroke-linecap="round" d="M18.36 5.64L5.64 18.36" />
+                        </svg>
+                    </div>
+                    <div class="care-title">No Tumble Dry</div>
+                    <p class="care-desc">Please avoid using a high-temperature dryer as it causes fabric shrinkage and
+                        functional damage.</p>
+                </div>
+
+                <!-- 3. Neutral Detergent (핑크빛 온화한 물방울 맺힘 SVG 장착) -->
+                <div class="care-item">
+                    <div class="care-icon-wrap icon-pink">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z" />
+                        </svg>
+                    </div>
+                    <div class="care-title">Neutral Detergent</div>
+                    <p class="care-desc">Fabric softeners, bleach, and strong enzyme detergents can damage functional
+                        yarns.</p>
+                </div>
+
+                <!-- 4. Dry in Shade (청량한 민트 에메랄드 바람 결 SVG 장착) -->
+                <div class="care-item">
+                    <div class="care-icon-wrap icon-green">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8h15M3 12h18M3 16h12" />
+                        </svg>
+                    </div>
+                    <div class="care-title">Dry in Shade</div>
+                    <p class="care-desc">You can wear it longest if you dry it naturally in a well-ventilated shade away
+                        from direct sunlight.</p>
+                </div>
+            </div>
+
+            <table class="info-table-footer">
+                <tr>
+                    <td>Product Name</td>
+                    <td>byelse High-end Signature Leggings (Pro)</td>
+                </tr>
+                <tr>
+                    <td>Material Composition</td>
+                    <td>Premium Nylon 80%, LYCRA Spandex 20%</td>
+                </tr>
+                <tr>
+                    <td>Country of Manufacture</td>
+                    <td>byelse / Overseas Manufacture</td>
+                </tr>
+                <tr>
+                    <td>Quality Assurance Standards</td>
+                    <td>1 year from date of purchase (Compliance with FTC notice)</td>
+                </tr>
+                <tr>
+                    <td>A/S Manager</td>
+                    <td>byelse Customer Happiness Center 1660-xxxx</td>
+                </tr>
+            </table>
+
+            <div class="guide-box">
+                <div class="guide-title">
+                    <div class="guide-title-left">Must-read before purchase</div>
+                </div>
+                <ul class="guide-list">
+                    <li>If left for a long time soaked in sweat after exercise, discoloration may occur due to the salt
+                        of the sweat, so we recommend washing immediately.</li>
+                    <li>Soaking in water for a long time or soaking wash shortens the product's life and causes color
+                        transfer.</li>
+                    <li>There may be differences from the actual product color depending on monitor resolution and
+                        lighting.</li>
+                    <li>Delivery takes an average of 1-3 days (business days) after payment is completed.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 10. FOOTER (Master Brand Identity - 11번 피날레 이식) -->
+<!-- [AI 에이전트 마케팅 및 에셋 절대 지시사항] 
+1. 텍스트 지시: 아래 [ ] 대괄호의 글자 길이에 시각적으로 딱 맞게 작성하라. 최신 인터넷 마케팅 트렌드 키워드를 사전에 검색 및 분석하고, 이 ITEM의 특장점을 믹스하여 '가장 잘 팔릴 수 있는 매혹적이고 창의적인 후킹 카피'를 생성해 덮어써라. 
+   - [명사형 종결 절대 룰]: 문장의 끝맺음을 '~선사합니다', '~차단합니다' 같은 약한 서술형 어미로 끝내지 마라. 오직 수치와 명사형(예: '압도적 무결점 핏', '원천 차단한 절대적 자유로움')으로 단단하고 프로페셔널하게 종결할 것.
+2. 이미지 지시: <img> 태그의 기존 src 경로 네이밍을 준수하라. 이미지를 생성하기 전 반드시 사전 지식 'D:\Project\AI_Core_Brain\knowledge\4005_AI_Image_Generation_Prompt_Rules.md' 문서를 정독하고 아래 조건을 100% 준수할 것.
+   - 인터넷을 검색하여 가장 잘 팔릴 만한 고퀄리티 이미지 구도로 접근할 것.
+   - 반드시 원본 공장의 제품을 사용한 이미지여야 한다 (두께 크기, 테그, 라벨조차도 다른 것을 사용하면 안 된다).
+   - 저렴한 느낌을 철저히 배제하고 '고급스러운 분위기(럭셔리 무드)'를 연출할 것.
+   - 속도 최적화를 위해 결과물은 무조건 .jpg 포맷으로 저장할 것.
+   - 인물 모델 생성 시 무조건 '한국인(아시아계) 젊은 여성'으로 고정 (서양인/흑인 생성 절대 금지).
+* 주의사항: 전체 HTML 태그 뼈대와 디자인 클래스는 100% 원형을 보존할 것. -->
+        <div class="page-section">
+            <div class="section-tag">Our Promise</div>
+            <div class="section-main-title">
+                <span class="t-top">Not just a simple trend</span>
+                <span class="t-bot">Value proven by essential value</span>
+            </div>
+            <div class="main-img-box">
+                <img src="https://raw.githubusercontent.com/byelse-official/assets/main/10123_CK-365_bootcut_leggings/B_03_finale.jpg?v=20260624_105754" alt="byelse 브랜드 피날레">
+            </div>
+            <div class="subtle-hook">
+                <span class="t-top-small">Insisting only on the essence instead of copying flashy visuals</span>
+                <span class="t-bot-small">Realizing value proven by essential value <strong>rather than chasing
+                        trends</strong></span>
+            </div>
+            <div class="media-box logo-media-box">
+                <img src="https://raw.githubusercontent.com/byelse-official/assets/main/00_Logo/logo_black_master.png?v=20260624_105754" alt="byelse 로고" class="footer-logo">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 8단계 CTA: 얼리버드 테스트용 19,000 KRW 구매버튼 (Sticky) -->
+    <div class="sticky-cta">
+        <div class="price-box">
+            <span class="label">Pre-launch Special Price</span>
+            <span class="amount">19,000 KRW</span>
+        </div>
+        <button class="buy-btn">Experience Perfect Fit Now</button>
+    </div>
+
+</body>
+
+</html>
