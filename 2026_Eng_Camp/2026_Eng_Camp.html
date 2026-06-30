@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 동네작은학교 영어캠프</title>
+    <style>
+        body { font-family: 'Malgun Gothic', sans-serif; margin: 0; padding: 0; background: url('https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1920&auto=format&fit=crop') no-repeat center center fixed; background-size: cover; color: #333; }
+        .container { width: 95%; max-width: 800px; margin: 30px auto; background-color: rgba(255, 255, 255, 0.92); box-shadow: 0 0 20px rgba(0,0,0,0.5); border-radius: 12px; overflow: hidden; padding-bottom: 30px; }
+        .logo-section { text-align: center; padding: 20px; background-color: rgba(255, 255, 255, 0.95); border-bottom: 3px solid #c8e6c9; }
+        .logo-section img { height: 75px; width: auto; max-width: 100%; }
+        .banner img { width: 100%; height: auto; display: block; }
+        .content { padding: 25px; }
+        h2 { border-left: 5px solid #2e7d32; padding-left: 12px; margin-top: 35px; color: #1b5e20; }
+        .info-section { background-color: rgba(232, 245, 233, 0.8); padding: 15px; border-radius: 8px; margin-bottom: 20px; text-align: center; line-height: 1.6; border: 1px solid #c8e6c9; }
+        .info-section a { color: #d84315; font-weight: bold; text-decoration: none; font-size: 1.2em; display: inline-block; padding: 8px 25px; border: 2px solid #d84315; border-radius: 25px; margin-top: 10px; background-color: #fff; }
+        
+        .poster-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 15px; }
+        .poster-grid img { width: 100%; aspect-ratio: 2/3; object-fit: cover; border-radius: 8px; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+        
+        .multi-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 15px; }
+        .multi-grid img { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+        
+        .crew-info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 15px; }
+        .crew-info-grid img { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px; cursor: pointer; border: 2px solid #c8e6c9; box-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+        
+        .prayer-thumb-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 10px; margin-top: 15px; }
+        .prayer-thumb-grid img { width: 100%; aspect-ratio: 2/3; object-fit: cover; border-radius: 8px; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+        
+        .schedule-thumb { width: 100%; max-width: 400px; margin: 15px auto; display: block; border-radius: 8px; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+        .scroll-container { display: flex; overflow-x: auto; gap: 8px; padding: 15px 0; scrollbar-width: thin; }
+        .scroll-container::-webkit-scrollbar { display: none; }
+        .scroll-item { flex: 0 0 150px; text-align: center; background: #fff; padding: 5px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .scroll-item img { width: 100%; height: 100px; object-fit: cover; border-radius: 4px; cursor: pointer; }
+        .scroll-item figcaption { font-size: 0.85em; margin-top: 5px; color: #555; font-weight: bold; }
+        
+        #lightbox { display: none; position: fixed; z-index: 1000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); justify-content: center; align-items: center; }
+        #lightbox img { max-width: 90%; max-height: 90%; border-radius: 8px; }
+        .back-btn { position: absolute; top: 20px; left: 20px; color: #fff; background: rgba(0,0,0,0.5); padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: bold; cursor: pointer; border: 1px solid rgba(255,255,255,0.3); z-index: 1001; font-size: 1em; box-shadow: 0 2px 5px rgba(0,0,0,0.5); backdrop-filter: blur(4px); }
+        .back-btn:active { background: rgba(255,255,255,0.2); }
+        
+        details { background-color: rgba(255, 255, 255, 0.9); border: 1px solid #c8e6c9; border-radius: 5px; margin-bottom: 10px; overflow: hidden; }
+        summary { background-color: #e8f5e9; padding: 15px; font-weight: bold; cursor: pointer; color: #2e7d32; }
+        .details-content { padding: 15px; line-height: 1.6; }
+        .crew-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; font-size: 0.9em; }
+        
+        .theme-showcase { display: flex; align-items: center; gap: 20px; background-color: #f1f8e9; padding: 15px; border-radius: 8px; border: 1px solid #c8e6c9; margin: 40px 0; }
+        .theme-image { flex: 1; max-width: 50%; }
+        .theme-image img { width: 100%; border-radius: 8px; }
+        .theme-dialogue { flex: 1; font-size: 0.95em; line-height: 1.6; color: #2e7d32; }
+        .dialogue-bubble { background: #fff; padding: 12px 15px; border-radius: 10px; margin-bottom: 10px; }
+        .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 15px; }
+        .video-card { background: #000; border-radius: 8px; overflow: hidden; aspect-ratio: 16 / 9; }
+        .video-card video { width: 100%; height: 100%; object-fit: cover; }
+        .video-title { text-align: center; font-size: 0.9em; padding: 8px; background: #2e7d32; color: #fff; margin: 0; }
+        
+        .map-container { position: relative; width: 100%; height: 300px; margin-top: 15px; border-radius: 8px; overflow: hidden; }
+        .map-container iframe { width: 100%; height: 100%; border: 0; }
+        .prayer-main-img { width: 35%; border-radius: 8px; margin-bottom: 15px; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.2); transition: transform 0.2s; }
+
+        /* Staff Devotional CSS */
+        .devo-details { border: 2px solid #81c784 !important; border-radius: 12px !important; margin-bottom: 15px !important; background: url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=800&auto=format&fit=crop') no-repeat center center !important; background-size: cover !important; box-shadow: 0 4px 10px rgba(0,0,0,0.15) !important; }
+        .devo-summary { background-color: rgba(232, 245, 233, 0.95) !important; color: #1b5e20 !important; font-size: 1.15em !important; padding: 18px !important; text-shadow: 1px 1px 0px #fff !important; }
+        .devo-content { padding: 20px !important; color: #1b5e20 !important; font-family: 'Malgun Gothic', sans-serif !important; }
+        .devo-content h3 { color: #004d40 !important; border-bottom: 2px dashed #81c784 !important; padding-bottom: 8px !important; margin-top: 35px !important; font-size: 1.3em !important; text-shadow: 1px 1px 2px #fff !important; background: rgba(255,255,255,0.7) !important; padding: 10px !important; border-radius: 8px !important; }
+        .devo-content p { line-height: 1.8 !important; font-size: 0.95em !important; background: rgba(255, 255, 255, 0.9) !important; padding: 15px 18px !important; border-radius: 10px !important; margin-bottom: 15px !important; box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important; border-left: 5px solid #81c784 !important; word-break: keep-all !important; }
+
+        @media (max-width: 600px) { 
+            .theme-showcase { flex-direction: column; } 
+            .theme-image { max-width: 100%; } 
+            .prayer-main-img { width: 75%; }
+            .prayer-thumb-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+    </style>
+</head>
+<body>
+<div id="lightbox">
+    <div class="back-btn" onclick="closeLightbox()">◀ Back to List</div>
+    <img id="lightbox-img" src="">
+</div>
+<div class="container">
+<div class="banner"><img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/banner_camp.jpg"></div>
+    <div class="content">
+        <div class="info-section">
+            <h2>2026 English Camp</h2>
+            <p><strong>일시:</strong> 7. 1(수) 저녁 ~ 7. 4(토) | <strong>장소:</strong> 계명수련원</p>
+            <a href="tel:010-4713-7051">📞 참가문의: 010-4713-7051</a>
+        </div>
+
+        <h2>Camp Poster</h2>
+        <div class="poster-grid">
+            <img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/p1.jpg" onclick="openLightbox(this.src)">
+            <img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/p2.jpg" onclick="openLightbox(this.src)">
+            <img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/p3.jpg" onclick="openLightbox(this.src)">
+        </div>
+
+        <h2>Understanding Multiculturalism</h2>
+        <div class="multi-grid">
+            <img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/d1.jpg" onclick="openLightbox(this.src)">
+            <img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/d2.jpg" onclick="openLightbox(this.src)">
+            <img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/d3.jpg" onclick="openLightbox(this.src)">
+            <img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/d4.jpg" onclick="openLightbox(this.src)">
+        </div>
+
+        <h2>Camp Info & Crew Structure</h2>
+        <div class="crew-info-grid">
+            <img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/crew1.jpg" onclick="openLightbox(this.src)">
+            <img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/crew2.jpg" onclick="openLightbox(this.src)">
+        </div>
+
+        <h2>Camp Crews</h2>
+        <details><summary>▶ Crew 1 (6명)</summary><div class="details-content"><ul class="crew-list"><li>누리사</li><li>정현우</li><li>임예준</li><li>임혜율</li><li>임연경</li><li>계 샤</li></ul></div></details>
+        <details><summary>▶ Crew 2 (6명)</summary><div class="details-content"><ul class="crew-list"><li>이하늘</li><li>지승민</li><li>함정아</li><li>남궁미나</li><li>이사라</li><li>윤성우</li></ul></div></details>
+        <details><summary>▶ Crew 3 (6명)</summary><div class="details-content"><ul class="crew-list"><li>이이삭</li><li>오민준</li><li>문도윤</li><li>김이레</li><li>신이엘</li><li>이영호</li></ul></div></details>
+        <details><summary>▶ Crew 4 (6명)</summary><div class="details-content"><ul class="crew-list"><li>지현민</li><li>김민호</li><li>김이엘</li><li>최영재</li><li>오민지</li><li>김사랑</li></ul></div></details>
+        <details><summary>▶ Crew 5 (6명)</summary><div class="details-content"><ul class="crew-list"><li>손광일</li><li>기정원</li><li>오예나</li><li>얼뻐나</li><li>김 신</li><li>이예인</li></ul></div></details>
+        <details><summary>▶ Crew 6 (7명)</summary><div class="details-content"><ul class="crew-list"><li>조세민</li><li>임현미</li><li>반한남</li><li>김하엘</li><li>김은수</li><li>신민준</li><li>황잔나</li></ul></div></details>
+
+        <h2>Camp Schedule</h2>
+        <img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/sch.jpg" class="schedule-thumb" onclick="openLightbox(this.src)">
+
+
+<h2>Camp Menu</h2>
+        <img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/new_menu_final.jpg" class="schedule-thumb" onclick="openLightbox(this.src)">
+
+        
+        <h2>Facility Preview</h2>
+        <div class="scroll-container">
+            <figure class="scroll-item"><img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/fac_entrance.jpg" onclick="openLightbox(this.src)"><figcaption>입구</figcaption></figure>
+            <figure class="scroll-item"><img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/fac_auditorium_1.jpg" onclick="openLightbox(this.src)"><figcaption>대강당1</figcaption></figure>
+            <figure class="scroll-item"><img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/fac_auditorium_2.jpg" onclick="openLightbox(this.src)"><figcaption>대강당2</figcaption></figure>
+            <figure class="scroll-item"><img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/fac_room_1.jpg" onclick="openLightbox(this.src)"><figcaption>숙소</figcaption></figure>
+            <figure class="scroll-item"><img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/fac_lounge.jpg" onclick="openLightbox(this.src)"><figcaption>휴게공간</figcaption></figure>
+            <figure class="scroll-item"><img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/fac_restroom.jpg" onclick="openLightbox(this.src)"><figcaption>화장실</figcaption></figure>
+            <figure class="scroll-item"><img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/fac_cafeteria.jpg" onclick="openLightbox(this.src)"><figcaption>식당</figcaption></figure>
+            <figure class="scroll-item"><img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/fac_classroom.jpg" onclick="openLightbox(this.src)"><figcaption>강의실</figcaption></figure>
+            <figure class="scroll-item"><img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/fac_pool.jpg" onclick="openLightbox(this.src)"><figcaption>수영장</figcaption></figure>
+            <figure class="scroll-item"><img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/fac_field.jpg" onclick="openLightbox(this.src)"><figcaption>운동장</figcaption></figure>
+            <figure class="scroll-item"><img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/fac_basketball.jpg" onclick="openLightbox(this.src)"><figcaption>농구장</figcaption></figure>
+            <figure class="scroll-item"><img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/fac_landscape.jpg" onclick="openLightbox(this.src)"><figcaption>전경</figcaption></figure>
+        </div>
+
+        <div class="theme-showcase">
+            <div class="theme-image"><img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/bg_forest.jpg"></div>
+            <div class="theme-dialogue">
+                <div class="dialogue-bubble" style="border-left: 4px solid #fbc02d; font-weight: bold;">"친구들! 저기 큰 숲이랑 곰 있잖아, 저거 다 누가 만들었을까?"</div>
+                <div class="dialogue-bubble" style="border-left: 4px solid #81c784;">"음... 하나님이 만들었어요! 엄청 멋져요!"</div>
+                <div class="dialogue-bubble" style="border-left: 4px solid #fbc02d; font-weight: bold;">"맞아! 우리 캠프에서 하나님의 엄청난 솜씨를 같이 찾아보자!"</div>
+            </div>
+        </div>
+
+        <h2>Dance / Action Songs</h2>
+        <div class="video-grid">
+            <div class="video-card"><video src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/01_god_is.mp4" controls></video><p class="video-title">01. God is</p></div>
+            <div class="video-card"><video src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/02_majestic.mp4" controls></video><p class="video-title">02. Majestic</p></div>
+            <div class="video-card"><video src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/03_all_creatures.mp4" controls></video><p class="video-title">03. All Creatures</p></div>
+            <div class="video-card"><video src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/04_you_know_me.mp4" controls></video><p class="video-title">04. You Know Me</p></div>
+            <div class="video-card"><video src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/08_god_loves_us_so.mp4" controls></video><p class="video-title">08. God Loves Us</p></div>
+            <div class="video-card"><video src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/09_leaning_on.mp4" controls></video><p class="video-title">09. Leaning On</p></div>
+        </div>
+
+        <h2>Daily 5-Minute Prayer</h2>
+        <div style="text-align: center;"><img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/daily_5m.jpg" class="prayer-main-img" onclick="openLightbox(this.src)"></div>
+        <div class="prayer-thumb-grid">
+            <img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/kr2.jpg" onclick="openLightbox(this.src)">
+            <img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/kr3.jpg" onclick="openLightbox(this.src)">
+            <img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/kr4.jpg" onclick="openLightbox(this.src)">
+            <img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/kr5.jpg" onclick="openLightbox(this.src)">
+            <img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/kr6.jpg" onclick="openLightbox(this.src)">
+            <img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/kr7.jpg" onclick="openLightbox(this.src)">
+            <img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/en1.jpg" onclick="openLightbox(this.src)">
+            <img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/en2.jpg" onclick="openLightbox(this.src)">
+            <img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/en3.jpg" onclick="openLightbox(this.src)">
+            <img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/en7.jpg" onclick="openLightbox(this.src)">
+            <img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/en8.jpg" onclick="openLightbox(this.src)">
+        </div>
+
+        <h2>Location</h2>
+        <div class="map-container">
+            <iframe src="https://maps.google.com/maps?q=인천%20강화군%20양도면%20강화남로518번길%206-41%20계명수련원&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        
+        <h2>Staff Notice (NAS Guides)</h2>
+        <details>
+            <summary>📸 사진 & 동영상 공유 (Cloud 업로드)</summary>
+            <div class="details-content">
+                <p><strong>[Media Team Notice]</strong></p>
+                <p>내 폰 용량은 0MB, 학교 추억은 무제한 저장! 카톡방 대신 학교 자체운영 NAS 공간에 올려주세요.</p>
+                <ul>
+                    <li>NO Storage Limits </li>                   
+                    <li>NO Time Limits</li>               
+                    <li>NO File Count Limits</li>                
+                    <li>NO Speed Limits</li>                    
+                    <br>
+                     <li>     "제한은 빼고, 추억은 더하고.!"</li>                   
+                </ul>
+            
+            </div>
+        </details>
+        <details>
+            <summary>⚙️ 기기별 FTP 접속 방법</summary>
+            <div class="details-content">
+                <p><strong>Host:</strong> localsmallschool.ipdisk.co.kr<br>
+                <strong>ID:</strong> 2026SummerSchool<br>
+                <strong>PW:</strong> 2026summerschool<br>
+                <strong>Port:</strong> 21</p>
+                <ul>
+                    <li>Android: CX파일탐색기 설치</li>
+                    <li>iPhone: Documents 앱 설치</li>
+                    <li>PC: ipTIME ipDISK Drive 설치</li>
+                </ul>
+                <p><strong>* 설정이 어려우신 분은 미디어팀장(진정우)님께 문의하세요!</strong></p>
+            </div>
+        </details>
+    
+        <h2>스탭 묵상집 <br><span style="font-size:0.65em; color:#777;">Staff Devotional Guide</span></h2>
+        <details class="devo-details">
+            <summary class="devo-summary">🌿 📖 한국어 스탭 기도 가이드 (Korean)</summary>
+            <div class="details-content devo-content">
+                <p>2026 동네작은학교 여름영어캠프 스탭</p>
+<p>묵상집</p>
+<h3>D 1. Nature Notes</h3>
+<p>하나님은 우리의 창조주이십니다</p>
+<p>“여호와께서 지으신 모든 것들아, 그의 모든 나라에 있는 너희여, 여호와를 송축하라.”(시편 103:22)</p>
+<p>묵상</p>
+<p>레인포레스트 폴스(Rainforest Falls)에 오신 것을 환영합니다!</p>
+<p>이번 한 주 동안 우리는 아름다운 열대우림을 함께 탐험하며 하나님이 어떤 분이신지 알아가게 됩니다. 열대우림의 수많은 생명들을 바라보며, 하나님이 얼마나 놀라우신 창조주이신지 함께 발견해 봅시다.</p>
+<p>두번째 장에 있는 여러 창조물 가운데 가장 눈에 들어오는 것을 하나 선택해 보세요. 그리고 이렇게 생각해 보세요.</p>
+<p>“이 생명은 하나님의 어떤 모습을 보여 주고 있을까요?”</p>
+<p>이제 한 가지를 더 생각해 봅시다.  이번 한 주 동안 하나님께서 여러분의 삶 가운데 이루어 주시기를 바라는 것을 가장 잘 나타내는 그림을 하나 선택해 보세요.</p>
+<h3>예를 들어, 개미를 선택했다면 이렇게 기도할 수 있습니다.</h3>
+<p>“하나님, 이번 한 주를 잘 감당할 수 있도록 제게도 개미처럼 힘을 주세요.”</p>
+<p>잠시 하나님을 생각하며 묵상하고, 마음에 떠오르는 것을 적어 보세요.</p>
+<h3>함께 기도해요</h3>
+<p>사랑의 하나님 아버지, 우리를 지으시고 아름다운 세상을 허락하신 창조주 하나님을 찬양합니다. 이번 한 주 동안 하나님께서 맡기신 일을 기쁨으로 감당할 수 있도록 필요한 힘과 지혜를 채워 주세요. 우리 안에서 하나님의 능력이 나타나게 하시고, 우리의 삶을 통해 많은 사람들이 하나님의 사랑을 경험하게 하소서.예수님의 이름으로 기도합니다.</p>
+<p>아멘.</p>
+<p style="font-weight:bold; color:#1b5e20;">Rainforest Creations</p>
+<div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:10px; margin-top:15px;">
+    <img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/devo_img_01.png" style="width:100%; border-radius:8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border: 2px solid #c8e6c9;" onclick="openLightbox(this.src)">
+    <img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/devo_img_02.png" style="width:100%; border-radius:8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border: 2px solid #c8e6c9;" onclick="openLightbox(this.src)">
+    <img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/devo_img_03.png" style="width:100%; border-radius:8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border: 2px solid #c8e6c9;" onclick="openLightbox(this.src)">
+    <img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/devo_img_04.png" style="width:100%; border-radius:8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border: 2px solid #c8e6c9;" onclick="openLightbox(this.src)">
+    <img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/devo_img_05.png" style="width:100%; border-radius:8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border: 2px solid #c8e6c9;" onclick="openLightbox(this.src)">
+    <img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/devo_img_06.png" style="width:100%; border-radius:8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border: 2px solid #c8e6c9;" onclick="openLightbox(this.src)">
+</div>
+
+
+<h3>D 2: 무엇이 보이나요?</h3>
+<p>● 성경 핵심: 하나님은 모든 것을 아십니다.● 성경 이야기: 다윗이 하나님께서 모든 것을 아심을 찬양하다. (시편 139편)“여호와여, 주께서 나를 살펴보셨으므로 나를 아시나이다.” (시편 139:1)</p>
+<p>오늘 D2의 주제는 "하나님은 모든 것을 아신다"입니다. 시편 139편 1절 말씀을 읽으세요. 하나님은 우리의 마음속까지도 보십니다.</p>
+<p>이제 Rainforest Falls에 있는 아이들을 바라보는 우리의 시선과 종이 도시락 봉투를 가진 사람의 시선을 비교해 봅시다. 우리는 아이들을 보면서 "대충 이런 아이겠구나" 하고 어느 정도는 알 수 있습니다. 하지만 그 아이들의 마음속까지는 분명하게 볼 수 없습니다. 반면 하나님은 모든 것을 아십니다. 하나님은 투명한 비닐봉지를 가진 사람들이 안을 훤히 볼 수 있는 것처럼, 아이들의 마음까지도 분명하게 보고 계십니다.</p>
+<p>• 만약 여러분도 이렇게 사람들의 마음을 분명히 볼 수 있다면, 사람들을 대하는 방식이 어떻게 달라질까요? (잠시 생각해 보는 시간을 갖습니다.)</p>
+<p>우리는 우리가 섬기는 아이들의 마음속에서 어떤 일이 일어나고 있는지 볼 수 없습니다. 하지만 하나님께 기도하며 아이들을 향한 하나님의 마음과 시선을 달라고 구할 수 있습니다.</p>
+<p>• 어제 오늘 만난 아이들에 대해 새롭게 알게 된 것이 있다면 무엇인가요?</p>
+<p>어떤 분은 "이 아이는 정말 훌륭한 리더십이 있구나." 또는 "놀라운 지혜를 가진 아이구나." 같은 좋은 점을 발견했을 수도 있습니다. 그런 모습을 볼 때, 하나님께서 그 은사를 사용하실 수 있도록 그 아이의 가능성을 하나님의 시선으로 바라보며 기도할 수 있습니다. 또 어떤 분은 "이 아이는 슬픔을 겪고 있구나." 또는 "협력하는 데 어려움을 겪고 있구나."와 같이 힘든 모습을 보았을 수도 있습니다. 그럴 때에도 하나님께서 우리에게 그 아이를 향한 사랑과 은혜가 가득한 하나님의 마음을 주시도록 기도할 수 있습니다.</p>
+<h3>기도 :</h3>
+<p>하나님, 우리를 보시고, 우리에 대해 모든 것을 아시면서도 여전히 사랑해 주셔서 감사합니다.  이번 주 우리가 만나는 모든 아이들의 아픔과 강점, 그리고 하나님께서 주신 가능성을 볼 수 있도록 우리의 눈을 열어 주세요. 아이들을 하나님의 사랑의 눈으로 바라볼 수 있도록 도와주세요. 예수님의 이름으로 기도드립니다. 아멘.</p>
+
+<p>D3: 열대우림의 피난처</p>
+<p>● 성경 핵심: 하나님은 우리의 안전한 피난처이십니다.● 성경 이야기: 다윗이 사울을 피해 숨다. (사무엘상 23–24장)● 성경 말씀: “여호와여, 내가 주께 부르짖어 말하기를 ‘주는 나의 피난처이십니다.’라고 말합니다.” (시편 142:5)</p>
+<p>D3의 주제는 하나님은 우리의 안전한 피난처이시다입니다.  피난처(refuge)는 우리 주변 세상이 안전하지 않을 때 찾아갈 수 있는 안전한 장소입니다. 폭풍이 올 때 우리는 대피소에서 피할 수 있고, 동물들은 사람의 위협으로부터 보호해 주는 야생동물 보호구역에서 안전한 피난처를 찾을 수 있습니다. • 이러한 예들을 생각해 볼 때, 하나님은 여러분의 삶에서 어떻게 피난처가 되어 주셨나요?(잠시 생각하고 써봅니다.)______________________________________________________</p>
+<p>삶에는 어렵고 두려운 일들이 일어납니다. 그리스도인이 된다고 해서 나쁜 일이 전혀 일어나지 않는 것은 아닙니다. 그러나 피난처가 어려운 일이 생겼을 때 안전하게 피할 곳을 제공하듯이, 하나님은 우리가 어려움을 겪을 때 의지할 수 있는 안전한 분이 되어 주시며, 삶의 폭풍 속에서도 평안과 위로를 주십니다.</p>
+<p>Rainforest Falls에서 우리는 아이들이 활기차고 푸르른 열대우림의 피난처를 경험하도록 돕고 있습니다. 하나님께서는 열대우림에도 안전한 장소를 만들어 두셨습니다. 그 중 한 가지 예가 바로 캐노피층(canopy layer)입니다. 캐노피층은 열대우림 동물 대부분이 살아가는 곳이며, 하나님께서는 그곳을 그들에게 필요한 모든 것으로 채워 두셨습니다. 또한 캐노피층은 아래 땅이 너무 많은 비나 강한 햇빛을 받지 않도록 보호해 줍니다. 그래서 토양이 비옥하게 유지되고 열대우림이 계속 자라갈 수 있습니다.</p>
+<p>• 아이들이 교회에서 안전하다고 느끼게 할 수 있도록 돕는 것 한 가지를 생각해 봅시다.신체적인 안전뿐 아니라 정서적, 사회적, 영적, 정신적인 필요도 함께 생각해 보세요. 예를 들어, "아이들의 이야기를 잘 들어 주기", "아이들의 슬픈 마음을 인정해 주기" 등등   _______________________________________________________</p>
+<p>하나님은 우리의 안전한 피난처이십니다. 그리고 우리도 이곳에서 아이들에게 그런 피난처가 되어 줄 수 있습니다. 아이들을 섬기면서, Rainforest Falls이 아이들이 교회 밖에서 경험하는 거친 세상으로부터 잠시 쉴 수 있는 피난처가 되도록 함께 만들어 갑시다.</p>
+<p>(기도)  하나님, 우리의 피난처가 되어 주셔서 감사합니다. 우리가 아이들에게도 하나님의 피난처를 보여 주는 사람이 되게 하시고, 아이들이 이곳에서 안전함을 느끼고, 이해받고, 사랑받는 곳을 만들 수 있도록 도와주세요. 예수님의 이름으로 기도드립니다. 아멘.</p>
+
+<p>D4: 그의 신실한 사랑은 영원합니다</p>
+<p>● 성경 핵심: 하나님은 사랑이십니다.● 성경 이야기: 예수님께서 죽으시고 다시 살아나셔서 하나님의 사랑을 보여 주시다. (누가복음 22:39–24:12)● 성경 말씀:“여호와께 감사하라. 그는 선하시며 그의 인자하심이 영원함이로다.” (시편 136:1)</p>
+<p>D4의 주제는 하나님은 사랑이시다입니다. 우리는 하나님께서 우리를 위해 예수님을 보내셔서 십자가에서 죽게 하심으로 보여 주신 놀라운 사랑을 살펴볼 것입니다. 오늘의 성경 말씀은 시편 136편에서 왔습니다. 이 시편은 하나님께서 그의 백성에게 베푸신 모든 사랑의 일들을 찬양하는 시입니다.</p>
+<p>이 시편은 선창과 후창(call-and-response) 형식으로 기록되어 있습니다. 한 사람이 한 줄을 읽으면, 다른 사람들이 “그의 인자하심이 영원함이로다.”라고 응답합니다.</p>
+<p>시편 136편 1–3절을 읽어 봅시다.</p>
+<p>이제 이번 주 Rainforest Falls에서, 그리고 우리의 삶에서 하나님께서 행하신 사랑의 일들을 함께 기뻐해 봅시다. 마음이 이끄시는 대로 여러분만의 한 줄을 만들어 보세요.</p>
+<p>예를 들어, “우리 크루가 좋은 친구들이 되도록 도와주신 하나님께 감사드립니다.”라고 말할 수 있습니다. 그러면 다른 모든 사람들은 함께 응답합니다.  “그의 인자하심이 영원함이로다.”</p>
+<h3>(기도)</h3>
+<p>하나님, 끝이 없는 사랑을 베풀어 주셔서 감사합니다. 아이들이 하나님의 사랑을 경험하게 하시고 예수님을 그들의 하나님으로 믿게 도와주세요. 오늘 아이들의 삶과 마음속에서 역사하시는 하나님의 사랑을 우리가 볼 수 있도록 도와주세요. 예수님의 이름으로 기도드립니다. 아멘.</p>
+
+<p>D5: 끝없는 덩굴 (Endless Vine)</p>
+<p>● 성경 핵심: 하나님은 영원하십니다.● 성경 이야기: 하나님께서 요한에게 천국의 환상을 보여 주시다. (요한계시록 7:17; 21–22장)● 성경 말씀:“우리는 이제부터 영원까지 여호와를 송축하리로다. 할렐루야!” (시편 115:18)</p>
+<p>오늘은 Rainforest Falls의 마지막 날입니다! 이번 주는 끝나가지만, 우리는 하나님은 영원하신 분이라는 것을 배우고 있습니다. 그리고 하나님의 가족은 하나님과 함께하는 영원한 천국을 소망하며 살아갑니다. 오늘 우리는 그에 대해 함께 알아볼 것입니다.</p>
+<p>하나님께서 영원하신 분이라는 사실은 우리의 삶에 큰 영향을 줍니다. 영원한 삶에는 무엇이 없을 것인지에 대한 약속을 들어 봅시다. 요한계시록 21:3–4을 읽어 봅시다.</p>
+<p>천국에서는 죽음도, 슬픔도, 아픔도 영원히 사라질 것입니다. 그리고 소망, 기쁨, 평안과 같은 좋은 것들은 영원히 계속될 것입니다.</p>
+<p>이제 뫼비우스 띠(Möbius strip)를 생각해 봅시다. 뫼비우스 띠는 시작과 끝이 분명하지 않은 띠입니다. 만드는 방법은 다음과 같습니다. 아래의 선을 따라 종이를 오려 띠를 만드세요. 종이를 곧게 잡은 다음 한 번 비틀어 양 끝을 테이프로 붙입니다. 이것은 열대우림의 덩굴을 떠올리게도 합니다.</p>
+<p>이제 여러분이 영원히 계속되기를 바라는 것을 생각해 보고, 그것을 종이에 적어 보세요. 손가락으로 정글 덩굴(뫼비우스 띠)을 따라 계속 따라가 보세요. (손가락으로 뫼비우스 띠를 따라가면서, 적어 놓은 단어들을 몇 가지를 읊조리세요.)  어떤 기분이 들었나요? 어떤 생각이나 느낌이 떠올랐나요? 아래에 적어 보세요.</p>
+<h3>(기도)</h3>
+<p>하나님, 하나님을 사랑하고 따르는 사람들에게 하나님과 함께하는 완전한 미래를 약속해 주셔서 감사합니다. 정말 소망이 되는 놀라운 약속입니다. 오늘 우리 캠프 가운데 천국의 기쁨을 조금이나마 경험하게 해 주세요. 오늘 하루가 (여러분이 생각하고 적은  단어들)로 가득하게 해 주세요. 예수님의 이름으로 기도드립니다. 아멘.</p>
+
+<p>✂ Cut here (여기에서 자르세요)</p>
+            
+            </div>
+        </details>
+        <details class="devo-details">
+            <summary class="devo-summary">🌿 📖 English Staff Devotional Guide</summary>
+            <div class="details-content devo-content">
+                <p>2026</p>
+<p>Dongne</p>
+<p>Little School Summer English Camp Staff Devotional Guide</p>
+<h3>D 1: Nature Notes</h3>
+<p>Bible Point: God is our creator. (p. 1)</p>
+<p>Bible Story: God creates the world. (Genesis 1)</p>
+<p>Bible Verse: “Praise the Lord, everything he has created, everything in all his kingdom.” (Psalm 103:22) (p. 1)</p>
+<p>Welcome to Rainforest Falls! As we dive deep into the hot and humid rainforest, we’ll explore the nature of God. And that includes exploring the things God made in the rainforest, because God is our creator!</p>
+<p>Let’s look at some of God’s creative work in the rainforest (Rainforest Creations handout).</p>
+<p>Look at the various creations on your handout. Choose one that stands out to you and think about this: What does it show you about the nature of God? (Pause and think.)</p>
+<p>Now let’s try something else with these images. Choose one that represents something you hope God will do through our program this week. For example, maybe the ant will remind you that you need God’s strength to power you through this week! I’ll give you another moment to reflect. (Pause and think and write).</p>
+<p>(PRAY)God, thank you that you are our almighty creator and that you’ve given us everything we need to do your work this week. We pray for your power to move through us and change lives this week! In Jesus’ name, amen.</p>
+<p style="font-weight:bold; color:#1b5e20;">Rainforest Creations</p>
+<div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:10px; margin-top:15px;">
+    <img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/devo_img_01.png" style="width:100%; border-radius:8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border: 2px solid #c8e6c9;" onclick="openLightbox(this.src)">
+    <img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/devo_img_02.png" style="width:100%; border-radius:8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border: 2px solid #c8e6c9;" onclick="openLightbox(this.src)">
+    <img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/devo_img_03.png" style="width:100%; border-radius:8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border: 2px solid #c8e6c9;" onclick="openLightbox(this.src)">
+    <img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/devo_img_04.png" style="width:100%; border-radius:8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border: 2px solid #c8e6c9;" onclick="openLightbox(this.src)">
+    <img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/devo_img_05.png" style="width:100%; border-radius:8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border: 2px solid #c8e6c9;" onclick="openLightbox(this.src)">
+    <img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/devo_img_06.png" style="width:100%; border-radius:8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border: 2px solid #c8e6c9;" onclick="openLightbox(this.src)">
+</div>
+
+
+<h3>D 2: What Do You See?</h3>
+<p>Bible Point: God knows everything.</p>
+<p>Bible Story: David celebrates all God knows. (Psalm 139)</p>
+<p>Bible Verse: “O Lord, you have examined my heart and know everything about me.” (Psalm 139:1)</p>
+<p>D 2 is about God knows everything. Listen to this verse from Psalm 139:1. God sees what’s inside our hearts.</p>
+<p>Let’s compare our view of kids at Rainforest Falls to the group with the paper lunch bags. We can get a general feel for what kids are like, but we can’t really see clearly into their hearts.</p>
+<p>But God knows everything. He sees those kids as clearly as those of you with the plastic bags could see inside.</p>
+<p>How might you treat people differently if you could see their hearts clearly, like this? (Pause and reflect)</p>
+<p>We can’t see what’s going on inside the kids we serve. But we can pray and ask God for his heart and vision for kids.</p>
+<p>What’s one thing you’ve discovered about a child so far this week?</p>
+<p>Maybe you thought something wonderful about a kid, like that they’re a great leader or they’re full of amazing wisdom. When we see those things, we can pray for God’s view of their potential to use those gifts.</p>
+<p>Or maybe you shared something harder, like that a kid is struggling through grief or has a hard time cooperating. When we see those things, we can pray for God to give us a view that’s as loving and full of grace as his.</p>
+<p>(PRAY)God, thank you for seeing us, knowing everything about us… and still loving us. We pray that you will open our eyes to see the hurts, the strengths, and the opportunities for each child we interact with this week. Help us view them through your loving eyes. In Jesus’ name, amen.</p>
+
+<p>D 3: A Rainforest Refuge</p>
+<p>Bible Point: God is our safe place.</p>
+<p>Bible Story: David hides from Saul. (1 Samuel 23–24)</p>
+<p>Bible Verse: “Then I pray to you, O Lord. I say, ‘You are my place of refuge.’ ” (Psalm 142:5)</p>
+<p>D3 is to discover that God is our safe place. Listen to what it says in Psalm 142:5.</p>
+<p>A refuge is a safe place to go when the world around you is unsafe. We might find refuge from a storm in a storm shelter, or animals might find refuge at a wildlife preserve that keeps away human threats.</p>
+<p>Thinking about those examples, how has God been a refuge in your life? (pause and reflect)</p>
+<p>Difficult and scary things will happen in life. Being a Christian doesn’t mean nothing bad will ever happen to us. But just as a refuge gives us a safe place to go when bad things happen, God gives us a safe place to turn with our struggles, helping us find peace and comfort in life’s storms.</p>
+<p>At Rainforest Falls, we’re immersing kids in a lively, lush rainforest refuge. So let’s think about that!</p>
+<p>God made some safe places in the rainforest! One example is the canopy layer. The canopy layer is where most animals in the rainforest live—God filled it with everything they need! The canopy layer also protects the ground below from getting too much rain or sun. That keeps the soil fertile so the rainforest can keep on growing.</p>
+<p>Let’s name name one thing that helps kids feel safe at church. This can include physical safety, but also think of emotional, social, spiritual, and mental health needs. You might say, “Listening when kids speak” or “Acknowledging a kid’s sad feelings.”) ______________________________________________________________</p>
+<p>God is our safe place. And we can show that to kids by being a refuge for them here, too. As we serve kids, let’s make Rainforest Falls be a refuge from the stormy world they experience outside of church.</p>
+<p>(PRAY)God, thank you for being our refuge. Help us be a picture of that to kids and create a place where they feel safe, known, and loved. In Jesus’ name, amen.</p>
+
+<p>D 4: His Faithful Love Endures</p>
+<p>Bible Point: God is love.</p>
+<p>Bible Story: Jesus dies and comes to life to show God’s love. (Luke 22:39–24:12)</p>
+<p>Bible Verse: “Give thanks to the Lord, for he is good! His faithful love endures forever.” (Psalm 136:1)</p>
+<p>D4 is all about how God is love. We’ll look at the amazing act of love God showed when he sent Jesus to die on the cross for us. Today’s Bible verse comes from Psalm 136, which is a psalm that celebrates all the loving things God had done for his people.</p>
+<p>This psalm is written like a call-and-response, a person reads a line and the others respond, “His faithful love endures forever.” Read Psalm 136:1-3.</p>
+<p>Now let’s celebrate God’s loving actions in our lives and here at Rainforest Falls this week. As you feel led, create your own line. For example, you might write, “Give thanks to God, who helped my Crew become great friends.”</p>
+<p>______________________________________________________________________________</p>
+<p>______________________________________________________________________________</p>
+<p>(PRAY)God, thank you for your never-ending love. Help our kids to experience your love through Jesus and receive Him as their Lord.  Help us see your love at work in kids’ lives and hearts today. In Jesus’ name, amen.</p>
+
+<p>D 5: Endless Vine</p>
+<p>Bible Point: God is forever.</p>
+<p>Bible Story: God gives John a vision of heaven. (Revelation 7:17; 21–22)</p>
+<p>Bible Verse: “But we can praise the Lord both now and forever! Praise the Lord!” (Psalm 115:18)</p>
+<p>It’s our last day at Rainforest Falls! Although this week may be coming to an end, we’re discovering that God is forever. And God’s family has an eternity with him in heaven to look forward to. We’ll learn all about that today.</p>
+<p>Knowing that God is forever has a huge impact on our lives. Listen to this promise about what will not be in eternity. Read Revelation 21:3–4.</p>
+<p>In heaven, death, sadness, and pain will be gone forever. Think about the good things that will last forever—things like hope, joy, and peace!</p>
+<p>Think about a Möbius strip—a strip with no clear beginning or end. Here’s how to make one. Cut along the line below to make a paper strip. Hold your paper strip straight, then give it one twist. Then tape the ends together. This can also remind us of a rainforest vine!</p>
+<p>Now think about something you're excited will last forever, and write it on the paper. Trace your finger around and around your jungle vine. Allow time.</p>
+<p>(As you trace your finger around your Möbius strip, call out some of the words you wrote.) How did you feel? What thoughts or reflections came to your mind? Write them down.</p>
+<p>(PRAY)</p>
+<p>God, thank you that you’ve promised a perfect future with you for those who love and follow you. What an awesome thing to look forward to. Bring a little bit of heaven to our camp today. Please fill this day with (the words you thought and wrote). In Jesus’ name, amen.</p>
+
+<p>cut here _______________________________________________________________________</p>
+            
+            </div>
+        </details>
+
+    <div class="logo-section" style="border-top: 3px solid #c8e6c9; border-bottom: none; margin-top: 20px;"><img src="https://raw.githubusercontent.com/byelse-official/assets/main/2026_Eng_Camp/logo_school.jpg"></div>
+
+    </div>
+</div>
+<script>
+    function openLightbox(src) {
+        document.getElementById('lightbox-img').src = src;
+        document.getElementById('lightbox').style.display = 'flex';
+    }
+    function closeLightbox() {
+        document.getElementById('lightbox').style.display = 'none';
+    }
+</script>
+</body>
+</html>
